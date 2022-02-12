@@ -6,15 +6,16 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
+        <title>PRLX ETF - Dashboard</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <Header title="PRLX ETF - Dashboard" />
+        <Header title="UNDER CONSTRUCTION" />
         <p className="description">
           Parallax Decentralized Finance
         </p>
-        </main>
+      </main>
 
       <Footer />
     </div>
