@@ -4,6 +4,8 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ce654043-3f4d-4c29-8412-01b29760fe5a/deploy-status)](https://app.netlify.com/sites/keen-panini-593524/deploys)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ce654043-3f4d-4c29-8412-01b29760fe5a/deploy-status)](https://app.netlify.com/sites/prlx-etf-staking/deploys)
+
 This is a [Next.js](https://nextjs.org/) v12 project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and set up to be instantly deployed to [Netlify](https://url.netlify.com/SyTBPVamO)!
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/next-netlify-starter&utm_source=github&utm_medium=nextstarter-cs&utm_campaign=devex-cs)
