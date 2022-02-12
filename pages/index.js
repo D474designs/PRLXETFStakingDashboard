@@ -6,11 +6,11 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <meta charset="UTF-8"></meta>
+        <meta charset="UTF-8" />
         <title>PRLX ETF - Dashboard</title>
-        <link rel="icon" href="/favicon.ico" /></link>
-        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css'></link>
-        <link rel='stylesheet' href='https://unicons.iconscout.com/release/v3.0.6/css/line.css'><link rel="stylesheet" href="./style.css"></link>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' />
+        <link rel='stylesheet' href='https://unicons.iconscout.com/release/v3.0.6/css/line.css'><link rel="stylesheet" href="./style.css" />
       </Head>
 
       <main>
