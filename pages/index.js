@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8"></meta>
         <title>PRLX ETF - Dashboard</title>
         <link rel="icon" href="/favicon.ico" /></link>
         <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css'></link>
