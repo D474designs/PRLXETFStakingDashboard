@@ -17,9 +17,6 @@ export default function Home() {
         <p className="description">
           Parallax Decentralized Finance
         </p>
-
-
-
         </main>
 
       <Footer />
