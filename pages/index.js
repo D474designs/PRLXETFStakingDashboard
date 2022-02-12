@@ -8,8 +8,8 @@ export default function Home() {
       <Head>
         <meta charset="UTF-8" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' />
-        <link rel='stylesheet' href='https://unicons.iconscout.com/release/v3.0.6/css/line.css'><link rel="stylesheet" href="./style.css" />
+        <script type="stylesheet" src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"></script>
+        <script type="stylesheet" src="https://unicons.iconscout.com/release/v3.0.6/css/line.css"></script>
       </Head>
 
       <main>
