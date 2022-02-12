@@ -23,7 +23,7 @@ export default function Home() {
           <aside className="sidebar position-fixed top-0 left-0 overflow-auto h-100 float-left" id="show-side-navigation1">
             <i className="uil-bars close-aside d-md-none d-lg-none" data-close="show-side-navigation1" />
             <div className="sidebar-header d-flex justify-content-center align-items-center px-3 py-4">
-              <img className="rounded-pill img-fluid" width={65} src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907008/medium/1501685726/enhance" alt="" />
+              <img className="rounded-pill img-fluid" width={65} src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907008/medium/1501685726/enhance" alt />
               <div className="ms-2">
                 <h5 className="fs-6 mb-0">
                   <a className="text-decoration-none" href="#">PRLX HODLer</a>
@@ -32,10 +32,7 @@ export default function Home() {
               </div>
             </div>
             <center>
-              <button className="connectWallet" onclick="startApp" style={{backgroundColor: '#ffc107', color: '#fff', outline: '7px solid #313348', textShadow: '-1px -1px 0 #000,
-              1px -1px 0 #000,
-              -1px 1px 0 #000,
-              1px 1px 0 #000'}}>&nbsp;
+              <button className="connectWallet" onclick="startApp" style={{"background-color":"#ffc107","color":"#fff","outline":"7px solid #313348","-webkit-text-shadow":"-1px -1px 0 #000,            1px -1px 0 #000,            -1px 1px 0 #000,            1px 1px 0 #000","text-shadow":"-1px -1px 0 #000,            1px -1px 0 #000,            -1px 1px 0 #000,            1px 1px 0 #000"}}>&nbsp;
                 Connect wallet &nbsp;</button>
             </center>
             <div className="search position-relative text-center px-4 py-3 mt-2">
@@ -336,7 +333,7 @@ export default function Home() {
               <section className="charts mt-4">
                 <div className="chart-container p-3">
                   <h3 className="fs-6 mb-3">PRLX DeFi Price Chart</h3>
-                  <div style={{height: '300px'}}>
+                  <div style={{"height":"300px"}}>
                     <canvas id="chart3" width="100%" />
                   </div>
                 </div>
