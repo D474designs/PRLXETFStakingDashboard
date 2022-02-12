@@ -1,6 +1,8 @@
-# Next + Netlify Starter
+# PRLX ETF Staking Contract Dashboard
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/46648482-644c-4c80-bafb-872057e51b6b/deploy-status)](https://app.netlify.com/sites/next-dev-starter/deploys)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ce654043-3f4d-4c29-8412-01b29760fe5a/deploy-status)](https://app.netlify.com/sites/keen-panini-593524/deploys)
 
 This is a [Next.js](https://nextjs.org/) v12 project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and set up to be instantly deployed to [Netlify](https://url.netlify.com/SyTBPVamO)!
 
@@ -10,7 +12,7 @@ This project is a very minimal starter that includes 2 sample components, a glob
 
 (If you click this button, it will create a new repo for you that looks exactly like this one, and sets that repo up immediately for deployment on Netlify)
 
-## Getting Started
+## Running the PRLX Dashboard
 
 First, run the development server:
 
@@ -24,7 +26,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-### Installation options
+### Installation Options
 
 **Option one:** One-click deploy
 
