@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" >
 
+import Head from 'next/head'
+import Header from '@components/Header'
+import Footer from '@components/Footer'
+
 <head>
   <meta charset="UTF-8">
   <title>PRLX ETF - Dashboard</title>
@@ -9,10 +13,6 @@
 </head>
 
 <body>
-
-import Head from 'next/head'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
 
 export default function Home() {
   return (
@@ -23,9 +23,9 @@ export default function Home() {
       </Head>
 
       <main>
-        <Header title="Welcome to my app!" />
+        <Header title="UNDER CONSTRUCTION" />
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+          Parallax Decentralized Finance
         </p>
       </main>
 
