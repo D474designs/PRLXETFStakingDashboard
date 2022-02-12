@@ -18,8 +18,6 @@ export default function Home() {
         </p>
       </main>
 
-      <DashboardConcept />
-
       <Footer />
     </div>
   )
