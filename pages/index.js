@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" >
 
-import Head from 'next/head'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+// import Head from 'next/head'
+// import Header from '@components/Header'
+// import Footer from '@components/Footer'
 
 <head>
   <meta charset="UTF-8">
