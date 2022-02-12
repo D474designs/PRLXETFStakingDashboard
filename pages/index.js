@@ -17,7 +17,7 @@ export default function Home() {
         <p className="description">
           Parallax Decentralized Finance
         </p>
-        <!-- partial:index.partial.html -->
+
         <aside class="sidebar position-fixed top-0 left-0 overflow-auto h-100 float-left" id="show-side-navigation1">
           <i class="uil-bars close-aside d-md-none d-lg-none" data-close="show-side-navigation1"></i>
           <div class="sidebar-header d-flex justify-content-center align-items-center px-3 py-4">
@@ -249,7 +249,8 @@ export default function Home() {
               <div class="row">
                 <div class="col-md-6">
                   <div class="box">
-                    <!-- <h4>Admins:</h4> -->
+
+                    <h4>Admins:</h4>
                     <div class="admin d-flex align-items-center rounded-2 p-3 mb-4">
                       <div class="img">
                         <img class="img-fluid rounded-pill"
@@ -290,7 +291,8 @@ export default function Home() {
                 </div>
                 <div class="col-md-6">
                   <div class="box">
-                    <!-- <h4>Moderators:</h4> -->
+
+                    <h4>Moderators:</h4>
                     <div class="admin d-flex align-items-center rounded-2 p-3 mb-4">
                       <div class="img">
                         <img class="img-fluid rounded-pill"
@@ -375,7 +377,7 @@ export default function Home() {
             </section>
           </div>
         </section>
-        <!-- partial -->
+        
           <script type="module" src="metaMask.js"></script>
           <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.js'></script>
           <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.jshttps://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js'></script><script  src="./script.js"></script>
