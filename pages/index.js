@@ -32,7 +32,10 @@ export default function Home() {
               </div>
             </div>
             <center>
-              <button className="connectWallet" onclick="startApp" style={{"background-color":"#ffc107","color":"#fff","outline":"7px solid #313348","-webkit-text-shadow":"-1px -1px 0 #000,            1px -1px 0 #000,            -1px 1px 0 #000,            1px 1px 0 #000","text-shadow":"-1px -1px 0 #000,            1px -1px 0 #000,            -1px 1px 0 #000,            1px 1px 0 #000"}}>&nbsp;
+              <button className="connectWallet" onclick="startApp" style={{backgroundColor: '#ffc107', color: '#fff', outline: '7px solid #313348', textShadow: '-1px -1px 0 #000,
+              1px -1px 0 #000,
+              -1px 1px 0 #000,
+              1px 1px 0 #000'}}>&nbsp;
                 Connect wallet &nbsp;</button>
             </center>
             <div className="search position-relative text-center px-4 py-3 mt-2">
@@ -333,7 +336,7 @@ export default function Home() {
               <section className="charts mt-4">
                 <div className="chart-container p-3">
                   <h3 className="fs-6 mb-3">PRLX DeFi Price Chart</h3>
-                  <div style={{"height":"300px"}}>
+                  <div style={{height: 300}}>
                     <canvas id="chart3" width="100%" />
                   </div>
                 </div>
@@ -342,6 +345,7 @@ export default function Home() {
           </section>
           {/* partial */}
         </div>
+
 
         </main>
 
