@@ -32,10 +32,7 @@ export default function Home() {
               </div>
             </div>
             <center>
-              <button className="connectWallet" onclick="startApp" style={{backgroundColor: '#ffc107', color: '#fff', outline: '7px solid #313348', textShadow: '-1px -1px 0 #000,
-              1px -1px 0 #000,
-              -1px 1px 0 #000,
-              1px 1px 0 #000'}}>&nbsp;
+              <button className="connectWallet" onclick="startApp" style={{backgroundColor: '#ffc107', color: '#fff', outline: '7px solid #313348'}}>&nbsp;
                 Connect wallet &nbsp;</button>
             </center>
             <div className="search position-relative text-center px-4 py-3 mt-2">
