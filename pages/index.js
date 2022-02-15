@@ -46,7 +46,7 @@ export default function Home() {
               <h5 className="fs-6 mb-0">
                 <a className="text-decoration-none" href="#">PRLX HODLer</a>
               </h5>
-              <p className="mt-1 mb-0">Lorem ipsum dolor sit amet consectetur.</p>
+              <p className="mt-1 mb-0">Development of platforms and protocols</p>
             </div>
           </div>
           <center>
@@ -146,7 +146,7 @@ export default function Home() {
             </li>
           </ul>
         </aside>
-        <section id="wrapper">
+        <section> //id="wrapper">
           <nav className="navbar navbar-expand-md">
             <div className="container-fluid mx-2">
               <div className="navbar-header">
@@ -359,7 +359,7 @@ export default function Home() {
           </div>
         </section>
         {/* partial */}
-        
+
       </div>
 
       {/*
