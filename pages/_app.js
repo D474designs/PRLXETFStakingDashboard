@@ -1,6 +1,5 @@
 import '@styles/globals.css'
-import '@styles/style.css';
-import '@public/dashboardConcept/script.js'
+import '@styles/style.css'
 
 function Application({ Component, pageProps }) {
   return <Component {...pageProps} />
