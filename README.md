@@ -1,4 +1,4 @@
-![GitHub Light](#gh-dark-mode-only)
+![D474media](https://i.imgur.com/TWBpYZM.png#gh-dark-mode-only)
 
 # PRLX ETF
 # Staking Contract
