@@ -146,7 +146,7 @@ export default function Home() {
             </li>
           </ul>
         </aside>
-        <section> //id="wrapper">
+        <section id="wrapper">
           <nav className="navbar navbar-expand-md">
             <div className="container-fluid mx-2">
               <div className="navbar-header">
