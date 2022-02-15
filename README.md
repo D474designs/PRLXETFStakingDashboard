@@ -4,7 +4,7 @@
 # Staking Contract
 # Dashboard
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ce654043-3f4d-4c29-8412-01b29760fe5a/deploy-status)Live Site Preview](https://prlx-etf-staking.netlify.app/)
+[![Netlify x Parallax DeFi](https://i.imgur.com/GNzT3is.png)Live Site Preview](https://prlx-etf-staking.netlify.app/)
 
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/46648482-644c-4c80-bafb-872057e51b6b/deploy-status)](https://app.netlify.com/sites/next-dev-starter/deploys)
