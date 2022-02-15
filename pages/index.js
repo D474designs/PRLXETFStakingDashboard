@@ -27,12 +27,14 @@ export default function Home() {
         <link rel="stylesheet" href="/dashboardConcept/style.css" />
       </Head>
 
-      <main>
-        <Header title="UNDER CONSTRUCTION" />
-        <p className="description">
-          Parallax Decentralized Finance
-        </p>
-      </main>
+      {/*
+        <main>
+          <Header title="UNDER CONSTRUCTION" />
+          <p className="description">
+            Parallax Decentralized Finance
+          </p>
+        </main>
+      */}
 
       <div>
         {/* partial:index.partial.html */}
@@ -357,9 +359,12 @@ export default function Home() {
           </div>
         </section>
         {/* partial */}
+        
       </div>
 
-      <Footer />
+      {/*
+        <Footer />
+      */}
     </div>
   )
 }
