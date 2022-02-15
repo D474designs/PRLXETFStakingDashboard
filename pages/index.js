@@ -1,10 +1,14 @@
 import Head from 'next/head'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
+import Script from 'next/script'
 
 export default function Home() {
   return (
     <div className="container">
+      <Script
+        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.js"
+      />
       <Head>
         <meta charSet="UTF-8" />
         <title>PRLX ETF - Dashboard</title>
