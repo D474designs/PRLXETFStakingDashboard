@@ -1,4 +1,4 @@
-Dark Theme	![GitHub Light](https://github.com/github-light.png#gh-dark-mode-only)
+![GitHub Light](#gh-dark-mode-only)
 
 # PRLX ETF
 # Staking Contract
