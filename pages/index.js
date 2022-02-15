@@ -13,7 +13,7 @@ export default function Home() {
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
       />
       <Script
-        src="./script.js"
+        src="../public/dashboardConcept/script.js"
       />
       <Head>
         <meta charSet="UTF-8" />
