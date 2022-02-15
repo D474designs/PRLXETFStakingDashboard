@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Header from '@components/Header'
-import Script from 'next/script'
 import Footer from '@components/Footer'
 
 export default function Home() {
@@ -344,9 +343,6 @@ export default function Home() {
           </div>
         </section>
         {/* partial */}
-        <Script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.js" strategy="lazyOnload" />
-        <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" strategy="lazyOnload" />
-        <Script src="./script.js" strategy="lazyOnload" />
       </div>
 
       <Footer />
