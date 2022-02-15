@@ -11,7 +11,7 @@
 ## Dashboard Concept & Test Interface
 ### in partnership with [D474designs](https://D474designs.github.io/) and [D474media](https://D474media.github.io/)
 
-[]![Data Developments](https://i.imgur.com/vSA2Xl9.png)](https://D474developments.github.io/)
+[![Data Developments](https://i.imgur.com/vSA2Xl9.png)](https://D474developments.github.io/)
 All Rights Reserved 2022 Copyright
 
 This is a [Next.js](https://nextjs.org/) v12 project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and set up to be instantly deployed to [Netlify](https://url.netlify.com/SyTBPVamO)!
