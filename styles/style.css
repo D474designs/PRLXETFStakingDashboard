@@ -34,16 +34,6 @@ body {
 	font-size: .925rem;
 }
 
-p4 {
-	padding-right: 0px !important;
-	padding-left: 0px !important;
-}
-
-container {
-	padding-right: 0px !important;
-	padding-left: 0px !important;
-}
-
 #wrapper {
 	margin-left: var(--sidebar-width);
 	transition: all .3s ease-in-out;

@@ -5,7 +5,7 @@ import Script from 'next/script'
 
 export default function Home() {
   return (
-    <div className="container">
+    <div>
       <Script
         src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.js"
         strategy="beforeInteractive"
