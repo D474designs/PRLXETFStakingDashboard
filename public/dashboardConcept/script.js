@@ -5,7 +5,7 @@
 'use strict'
 
 // D474designs
-// https://D474developments.github.io
+// https://D474developments.github
 // https://docs.metamask.io/guide/
 
 const ethereumButton = document.querySelector('.connectWallet');
@@ -21,8 +21,6 @@ ethereumButton.addEventListener('click', () => {
 ethereum.on('accountsChanged', function (accounts) {
   // Time to reload your interface with accounts[0]!
 });
-
-let accounts = [];
 
 // txHash is a hex string
 // As with any RPC call, it may throw an error
@@ -61,7 +59,6 @@ sendEthButton.addEventListener('click', () => {
     .then((txHash) => console.log(txHash))
     .catch((error) => console.error);
 });
-
 
 
 
