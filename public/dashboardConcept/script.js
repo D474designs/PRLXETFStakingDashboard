@@ -4,6 +4,23 @@
 
 'use strict'
 
+const ethereumButton = document.querySelector('.connectWallet');
+const showAccount = document.querySelector('.showAccount');
+
+ethereumButton.addEventListener('click', () => {
+  getAccount();
+});
+
+async function getAccount() {
+  const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+  const account = accounts[0];
+  showAccount.innerHTML = account;
+}
+
+
+
+
+
 function $(selector) {
   return document.querySelector(selector)
 }
