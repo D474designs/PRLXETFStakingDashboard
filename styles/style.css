@@ -45,15 +45,15 @@ body {
 	background-color: #313348;
 }
 
-.accountInfoTitle {
+.accounts {
+	display: none;
+	color: #fff
 	font-size: 15px;
 	font-weight: bolder;
 }
 
-.accounts {
-	display: none;
+.showAccount {
 	font-size: 10px;
-	color: #fff
 }
 
 /** --------------------------------
