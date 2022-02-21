@@ -18,6 +18,10 @@ export default function Home() {
         src="/dashboardConcept/script.js"
         strategy="beforeInteractive"
       />
+      <Script
+        src="/dashboardConcept/metaMask.js"
+        strategy="beforeInteractive"
+      />
       <Head>
         <meta charSet="UTF-8" />
         <title>PRLX ETF - Dashboard</title>
