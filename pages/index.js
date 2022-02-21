@@ -15,6 +15,14 @@ export default function Home() {
         strategy="beforeInteractive"
       />
       <Script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+        strategy="beforeInteractive"
+      />
+      <Script
+        src="https://unicons.iconscout.com/release/v3.0.6/css/line.css""
+        strategy="beforeInteractive"
+      />
+      <Script
         src="/dashboardConcept/script.js"
         strategy="beforeInteractive"
       />
@@ -22,17 +30,19 @@ export default function Home() {
         <meta charSet="UTF-8" />
         <title>PRLX ETF - Dashboard</title>
         <link rel="icon" href="/favicon.ico" />
-        {/*<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" />*/}
+        {/*
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" />
+        */}
       </Head>
 
       {/*
-        <main>
-          <Header title="UNDER CONSTRUCTION" />
-          <p className="description">
-            Parallax Decentralized Finance
-          </p>
-        </main>
+      <main>
+        <Header title="UNDER CONSTRUCTION" />
+        <p className="description">
+          Parallax Decentralized Finance
+        </p>
+      </main>
       */}
 
       <div>
