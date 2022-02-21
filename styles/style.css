@@ -45,6 +45,11 @@ body {
 	background-color: #313348;
 }
 
+.accountInfoTitle {
+	font-size: 15px;
+	font-weight: bolder;
+}
+
 .accounts {
 	display: none;
 	font-size: 10px;
