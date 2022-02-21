@@ -52,7 +52,8 @@ export default function Home() {
           <center>
             {/*<a href="/dAppConcept/src/index.html">*/}<button id="connectButton" className="connectWallet" style={{"background-color":"#ffc107","color":"#fff","outline":"7px solid #313348","-webkit-text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000","text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000"}}>&nbsp;
               Connect wallet &nbsp;</button>{/*</a>*/}
-              <p className="mt-1 mb-0">Account: <span class="showAccount"></span></p>
+              <br />
+              <p className="accounts">Account: <span class="showAccount"></span></p>
           </center>
           <div className="search position-relative text-center px-4 py-3 mt-2">
             <input type="text" className="form-control w-100 border-0 bg-transparent" placeholder="Search here" />
