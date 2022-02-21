@@ -34,6 +34,16 @@ body {
 	font-size: .925rem;
 }
 
+p4 {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+container {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
 #wrapper {
 	margin-left: var(--sidebar-width);
 	transition: all .3s ease-in-out;
