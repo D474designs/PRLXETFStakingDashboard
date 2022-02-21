@@ -19,7 +19,7 @@ export default function Home() {
         strategy="beforeInteractive"
       />
       <Script
-        src="https://unicons.iconscout.com/release/v3.0.6/css/line.css""
+        src="https://unicons.iconscout.com/release/v3.0.6/css/line.css"
         strategy="beforeInteractive"
       />
       <Script
