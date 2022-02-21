@@ -4,12 +4,67 @@
 
 'use strict'
 
+// D474designs
+// https://D474developments.github.io
+// https://docs.metamask.io/guide/
+
 const ethereumButton = document.querySelector('.connectWallet');
 const showAccount = document.querySelector('.showAccount');
-let avatarId = document.querySelector('.accounts');
+const avatarId = document.querySelector('.accounts');
+
+const sendEthButton = document.querySelector('.sendCrypto');
 
 ethereumButton.addEventListener('click', () => {
   getAccount();
+});
+
+ethereum.on('accountsChanged', function (accounts) {
+  // Time to reload your interface with accounts[0]!
+});
+
+let accounts = [];
+
+//Sending Ethereum to an address
+sendEthButton.addEventListener('click', () => {
+  ethereum
+    .request({
+      method: 'eth_sendTransaction',
+      params: [
+        {
+          from: accounts[0],
+          nonce: '0x00', // ignored by MetaMask
+          gasPrice: '0x09184e72a000', // customizable by user during MetaMask confirmation.
+          gas: '0x2710', // customizable by user during MetaMask confirmation.
+          to: '0x85Afc81b91a1F75A654473431bd7e81E377ec03E', // Required except during contract publications.
+          from: ethereum.selectedAddress, // must match user's active address.
+          value: '0x00', // Only required to send ether to the recipient from the initiating external account.
+          data:
+            '0x7f7465737432000000000000000000000000000000000000000000000000000000600057', // Optional, but used for defining smart contract creation and interaction.
+          chainId: '0x3', // Used to prevent transaction reuse across blockchains. Auto-filled by MetaMask.
+        },
+      ],
+    })
+    .then((txHash) => console.log(txHash))
+    .catch((error) => console.error);
+});
+
+const transactionParameters = {
+  nonce: '0x00', // ignored by MetaMask
+  gasPrice: '0x09184e72a000', // customizable by user during MetaMask confirmation.
+  gas: '0x2710', // customizable by user during MetaMask confirmation.
+  to: '0x0000000000000000000000000000000000000000', // Required except during contract publications.
+  from: ethereum.selectedAddress, // must match user's active address.
+  value: '0x00', // Only required to send ether to the recipient from the initiating external account.
+  data:
+    '0x7f7465737432000000000000000000000000000000000000000000000000000000600057', // Optional, but used for defining smart contract creation and interaction.
+  chainId: '0x3', // Used to prevent transaction reuse across blockchains. Auto-filled by MetaMask.
+};
+
+// txHash is a hex string
+// As with any RPC call, it may throw an error
+const txHash = await ethereum.request({
+  method: 'eth_sendTransaction',
+  params: [transactionParameters],
 });
 
 async function getAccount() {
