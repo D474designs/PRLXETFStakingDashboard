@@ -24,7 +24,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" />
-        <link rel="stylesheet" href="/dashboardConcept/style.css" />
       </Head>
 
       {/*
@@ -49,7 +48,7 @@ export default function Home() {
               <p className="mt-1 mb-0">Development of platforms and protocols</p>
             </div>
           </div>
-          
+
           <center>
             {/*<a href="/dAppConcept/src/index.html">*/}<button id="connectButton" className="connectWallet" style={{"background-color":"#ffc107","color":"#fff","outline":"7px solid #313348","-webkit-text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000","text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000"}}>&nbsp;
               Connect wallet &nbsp;</button>{/*</a>*/}
