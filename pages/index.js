@@ -54,7 +54,7 @@ export default function Home() {
             </div>
           </div>
           <center>
-            <button className="connectWallet" onclick="location.href='/dAppConcenpt/index.html';"" style={{"background-color":"#ffc107","color":"#fff","outline":"7px solid #313348","-webkit-text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000","text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000"}}>&nbsp;
+            <button className="connectWallet" onclick="location.href='/dAppConcenpt/index.html';" style={{"background-color":"#ffc107","color":"#fff","outline":"7px solid #313348","-webkit-text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000","text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000"}}>&nbsp;
               Connect wallet &nbsp;</button>
           </center>
           <div className="search position-relative text-center px-4 py-3 mt-2">
