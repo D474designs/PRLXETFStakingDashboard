@@ -39,9 +39,13 @@ body {
 	margin-left: 0;
 }
 
+.accountInfo {
+	padding-top: 7pc;
+}
+
 .accounts {
 	display: none;
-	font-size: 14px;
+	font-size: 10px;
 	color: #fff
 }
 
