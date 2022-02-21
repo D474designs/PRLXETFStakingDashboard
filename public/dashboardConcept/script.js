@@ -6,7 +6,8 @@
 
 const ethereumButton = document.querySelector('.connectWallet');
 const showAccount = document.querySelector('.showAccount');
-const accounts = document.getElementById('.accounts');
+const accounts = document.querySelector('.accounts');
+accounts.style.display = "none";
 
 ethereumButton.addEventListener('click', () => {
   getAccount();
