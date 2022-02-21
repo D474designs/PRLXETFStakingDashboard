@@ -30,11 +30,10 @@ body {
 }
 
 .container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	padding-right: 0px;
+  padding-left: 0px;
+  margin-right: none;
+  margin-left:  none;
 }
 
 #wrapper {
