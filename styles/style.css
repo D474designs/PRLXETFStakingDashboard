@@ -40,7 +40,8 @@ body {
 }
 
 .accountInfo {
-	padding-top: 7px;
+	padding-top: 15px;
+	background-color: #ffc107;
 }
 
 .accounts {
