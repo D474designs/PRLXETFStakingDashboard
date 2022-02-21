@@ -29,13 +29,6 @@ body {
 	font-size: .925rem;
 }
 
-.container {
-	padding-right: 0px;
-  padding-left: 0px;
-  margin-right: none;
-  margin-left:  none;
-}
-
 #wrapper {
 	margin-left: var(--sidebar-width);
 	transition: all .3s ease-in-out;
