@@ -18,10 +18,6 @@ ethereumButton.addEventListener('click', () => {
   getAccount();
 });
 
-ethereum.on('accountsChanged', function (accounts) {
-  // Time to reload your interface with accounts[0]!
-});
-
 // txHash is a hex string
 // As with any RPC call, it may throw an error
 const txHash = await ethereum.request({
@@ -59,6 +55,11 @@ sendEthButton.addEventListener('click', () => {
     .then((txHash) => console.log(txHash))
     .catch((error) => console.error);
 });
+
+ethereum.on('accountsChanged', function (accounts) {
+  // Time to reload your interface with accounts[0]!
+});
+
 
 
 
