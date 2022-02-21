@@ -49,6 +49,7 @@ export default function Home() {
               <p className="mt-1 mb-0">Development of platforms and protocols</p>
             </div>
           </div>
+          
           <center>
             {/*<a href="/dAppConcept/src/index.html">*/}<button id="connectButton" className="connectWallet" style={{"background-color":"#ffc107","color":"#fff","outline":"7px solid #313348","-webkit-text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000","text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000"}}>&nbsp;
               Connect wallet &nbsp;</button>{/*</a>*/}
@@ -59,6 +60,7 @@ export default function Home() {
               </p>
               </div>
           </center>
+
           <div className="search position-relative text-center px-4 py-3 mt-2">
             <input type="text" className="form-control w-100 border-0 bg-transparent" placeholder="Search here" />
             <i className="fa fa-search position-absolute d-block fs-6" />
