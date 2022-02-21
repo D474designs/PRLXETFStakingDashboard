@@ -6,8 +6,6 @@
 
 const ethereumButton = document.querySelector('.connectWallet');
 const showAccount = document.querySelector('.showAccount');
-const accounts = document.querySelector('.accounts');
-accounts.style.display = "none";
 
 ethereumButton.addEventListener('click', () => {
   getAccount();
@@ -15,9 +13,8 @@ ethereumButton.addEventListener('click', () => {
 
 async function getAccount() {
   const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-  const account = accounts[0];
+  const account = 'Account: ' + accounts[0];
   showAccount.innerHTML = account;
-  accounts.style.display = "block";
 }
 
 
