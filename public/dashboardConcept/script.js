@@ -9,28 +9,12 @@
 // https://docs.metamask.io/guide/
 
 const ethereumButton = document.querySelector('.connectWallet');
-const showAccount = document.querySelector('.showAccount');
-const avatarId = document.querySelector('.accounts');
-
 const sendEthButton = document.querySelector('.sendCrypto');
 
-ethereumButton.addEventListener('click', () => {
-  getAccount();
-});
+const showAccount = document.querySelector('.showAccount');
+let avatarId = document.querySelector('.accounts');
 
-// txHash is a hex string
-// As with any RPC call, it may throw an error
-const txHash = await ethereum.request({
-  method: 'eth_sendTransaction',
-  params: [transactionParameters],
-});
-
-async function getAccount() {
-  const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-  const account = accounts[0];
-  showAccount.innerHTML = account;
-  avatarId.style.display = 'block';
-}
+let accounts = [];
 
 //Sending Ethereum to an address
 sendEthButton.addEventListener('click', () => {
@@ -39,16 +23,12 @@ sendEthButton.addEventListener('click', () => {
       method: 'eth_sendTransaction',
       params: [
         {
-          from: accounts[0],
-          nonce: '0x00', // ignored by MetaMask
-          gasPrice: '0x09184e72a000', // customizable by user during MetaMask confirmation.
-          gas: '0x2710', // customizable by user during MetaMask confirmation.
-          to: '0x85Afc81b91a1F75A654473431bd7e81E377ec03E', // Required except during contract publications.
-          from: ethereum.selectedAddress, // must match user's active address.
-          value: '0x00', // Only required to send ether to the recipient from the initiating external account.
-          data:
-            '0x7f7465737432000000000000000000000000000000000000000000000000000000600057', // Optional, but used for defining smart contract creation and interaction.
-          chainId: '0x3', // Used to prevent transaction reuse across blockchains. Auto-filled by MetaMask.
+          from: ethereum.selectedAddress,
+          to: '0x85Afc81b91a1F75A654473431bd7e81E377ec03E',
+          value: '0x29a2241af62c0000',
+          gasPrice: '0x09184e72a000',
+          gas: '0x2710',
+          chainId: '0x3',
         },
       ],
     })
@@ -56,9 +36,20 @@ sendEthButton.addEventListener('click', () => {
     .catch((error) => console.error);
 });
 
+ethereumButton.addEventListener('click', () => {
+  getAccount();
+});
+
 ethereum.on('accountsChanged', function (accounts) {
   // Time to reload your interface with accounts[0]!
 });
+
+async function getAccount() {
+  const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+  const account = accounts[0];
+  showAccount.innerHTML = account;
+  avatarId.style.display = 'block';
+}
 
 
 
