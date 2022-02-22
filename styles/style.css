@@ -64,6 +64,11 @@ body {
 	font-size: 10px;
 }
 
+.sendCrypto {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
 /** --------------------------------
  -- Sidebar
 -------------------------------- */
