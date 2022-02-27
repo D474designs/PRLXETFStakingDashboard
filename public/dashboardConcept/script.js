@@ -502,14 +502,30 @@ const contractABI = [
 ]
 
 // Get the contract instance using your contract's abi and address:
-const contractInstance = web3.eth.contract(contractABI).at(0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2);
+// const contractInstance = web3.eth.contract(contractABI).at(contractAddress);
+try {
+  const contractInstance = await ethereum.request({
+    method: 'eth_contract',
+    params: [
+      {
+        contractABI: contractABI,
+        contractAdress: '0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2',
+        // And so on...
+      },
+    ],
+  });
+  // Handle the result
+  console.log(transactionHash);
+} catch (error) {
+  console.error(error);
+}
 
 // Call a function of the contract:
 contractInstance.add({ _apy: apy, _lockPeriodInDays: lockPeriod, _endDate: endDate, _minContrib: minContrib },
-  (err, res) => { 'ERROR: Please input all information correctly' });
+  (err, res) => { 'ERROR: Please input all information correctly!' });
 
   contractInstance.stake({ _pid: pid, _sender: sender, _amount: amount },
-    (err, res) => { 'ERROR: Please input all information correctly' });
+    (err, res) => { 'ERROR: Please input all information correctly!' });
 
 //Sending Ethereum to an address
 sendEthButton.addEventListener('click', () => {
