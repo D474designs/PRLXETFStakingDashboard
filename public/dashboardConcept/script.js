@@ -20,6 +20,8 @@ let accounts = [];
 // PRLX Staking Contract Functions
 
 // This function detects most providers injected at window.ethereum
+// import detectEthereumProvider from '@metamask/detect-provider';
+
 const provider = await detectEthereumProvider();
 
 if (provider) {
