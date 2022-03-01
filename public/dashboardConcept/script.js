@@ -505,7 +505,7 @@ const contractABI = [
 // const contractInstance = web3.eth.contract(contractABI).at(contractAddress);
 try {
   const contractInstance = ethereum.request({
-    method: 'eth_contract',
+    method: 'eth_requestAccounts',
     params: [
       {
         contractABI: contractABI,
@@ -519,6 +519,16 @@ try {
 } catch (error) {
   console.error(error);
 }
+
+/*
+async function connectToMetamask(){
+   const provider = new ethers.providers.Web3Provider(window.ethereum, "any");
+   // Prompt user for account connections
+   await provider.send("eth_requestAccounts", []);
+   const signer = provider.getSigner();
+   console.log("Account:", await signer.getAddress());
+}
+*/
 
 // Call a function of the contract:
 contractInstance.add({ _apy: apy, _lockPeriodInDays: lockPeriod, _endDate: endDate, _minContrib: minContrib },
