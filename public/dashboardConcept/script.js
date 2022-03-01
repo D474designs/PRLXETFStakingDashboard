@@ -19,6 +19,19 @@ let accounts = [];
 // D474designs
 // PRLX Staking Contract Functions
 
+// This function detects most providers injected at window.ethereum
+import detectEthereumProvider from '@metamask/detect-provider';
+
+const provider = await detectEthereumProvider();
+
+if (provider) {
+  // From now on, this should always be true:
+  // provider === window.ethereum
+  startApp(provider); // initialize your app
+} else {
+  console.log('Please install MetaMask!');
+}
+
 // Contract ABI
 const contractABI = [
 	{
@@ -501,6 +514,18 @@ const contractABI = [
 	}
 ]
 
+ethereum.on('accountsChanged', (accounts) => {
+  // Handle the new accounts, or lack thereof.
+  // "accounts" will always be an array, but it can be empty.
+});
+
+ethereum.on('chainChanged', (chainId) => {
+  // Handle the new chain.
+  // Correctly handling chain changes can be complicated.
+  // We recommend reloading the page unless you have good reason not to.
+  window.location.reload();
+});
+
 // Get the contract instance using your contract's abi and address:
 // const contractInstance = web3.eth.contract(contractABI).at(contractAddress);
 try {
@@ -514,8 +539,16 @@ try {
       },
     ],
   });
+
+	// Call a function of the contract:
+	contractInstance.add({ _apy: apy, _lockPeriodInDays: lockPeriod, _endDate: endDate, _minContrib: minContrib },
+	  (err, res) => { 'ERROR: Please input all information correctly!' });
+
+	contractInstance.stake({ _pid: pid, _sender: sender, _amount: amount },
+	  (err, res) => { 'ERROR: Please input all information correctly!' });
+		
   // Handle the result
-  console.log(transactionHash);
+  console.log(contractAddress);
 } catch (error) {
   console.error(error);
 }
@@ -529,13 +562,6 @@ async function connectToMetamask(){
    console.log("Account:", await signer.getAddress());
 }
 */
-
-// Call a function of the contract:
-contractInstance.add({ _apy: apy, _lockPeriodInDays: lockPeriod, _endDate: endDate, _minContrib: minContrib },
-  (err, res) => { 'ERROR: Please input all information correctly!' });
-
-contractInstance.stake({ _pid: pid, _sender: sender, _amount: amount },
-  (err, res) => { 'ERROR: Please input all information correctly!' });
 
 //Sending Ethereum to an address
 sendEthButton.addEventListener('click', () => {
