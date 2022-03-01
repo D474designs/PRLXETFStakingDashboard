@@ -20,8 +20,6 @@ let accounts = [];
 // PRLX Staking Contract Functions
 
 // This function detects most providers injected at window.ethereum
-import detectEthereumProvider from '@metamask/detect-provider';
-
 const provider = await detectEthereumProvider();
 
 if (provider) {
@@ -546,7 +544,7 @@ try {
 
 	contractInstance.stake({ _pid: pid, _sender: sender, _amount: amount },
 	  (err, res) => { 'ERROR: Please input all information correctly!' });
-		
+
   // Handle the result
   console.log(contractAddress);
 } catch (error) {
