@@ -28,7 +28,7 @@ const provider = detectEthereumProvider();
 if (provider) {
   // From now on, this should always be true:
   // provider === window.ethereum
-  startApp(provider); // initialize your app
+  connectWallet(provider); // initialize your app
 } else {
   console.log('Please install MetaMask!');
 }
