@@ -506,14 +506,16 @@ const contractABI = [
 	}
 ]
 
+/*
 // This function detects most providers injected at window.ethereum
 if (provider) {
   // From now on, this should always be true:
   // provider === window.ethereum
-  connectWallet(provider); // initialize your app
+  startApp(provider); // initialize your app
 } else {
   console.log('Please install MetaMask!');
 }
+*/
 
 ethereum.on('accountsChanged', (accounts) => {
   // Handle the new accounts, or lack thereof.
