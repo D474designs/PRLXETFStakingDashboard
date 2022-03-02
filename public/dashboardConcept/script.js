@@ -19,19 +19,10 @@ let accounts = [];
 // D474designs
 // PRLX Staking Contract Functions
 
-// This function detects most providers injected at window.ethereum
-
 // import detectEthereumProvider from '@metamask/detect-provider';
 
 const provider = detectEthereumProvider();
 
-if (provider) {
-  // From now on, this should always be true:
-  // provider === window.ethereum
-  connectWallet(provider); // initialize your app
-} else {
-  console.log('Please install MetaMask!');
-}
 
 // Contract ABI
 const contractABI = [
@@ -515,9 +506,20 @@ const contractABI = [
 	}
 ]
 
+// This function detects most providers injected at window.ethereum
+if (provider) {
+  // From now on, this should always be true:
+  // provider === window.ethereum
+  connectWallet(provider); // initialize your app
+} else {
+  console.log('Please install MetaMask!');
+}
+
 ethereum.on('accountsChanged', (accounts) => {
   // Handle the new accounts, or lack thereof.
   // "accounts" will always be an array, but it can be empty.
+  // We recommend reloading the page unless you have good reason not to.
+  window.location.reload();
 });
 
 ethereum.on('chainChanged', (chainId) => {
