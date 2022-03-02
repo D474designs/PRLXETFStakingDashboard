@@ -15,6 +15,10 @@ export default function Home() {
         strategy="beforeInteractive"
       />
       <Script
+        src="https://unpkg.com/@metamask/detect-provider/dist/detect-provider.min.js"
+        strategy="beforeInteractive"
+      />
+      <Script
         src="/dashboardConcept/script.js"
         strategy="beforeInteractive"
       />
