@@ -533,6 +533,7 @@ ethereum.on('chainChanged', (chainId) => {
 
 // Get the contract instance using your contract's abi and address:
 // const contractInstance = web3.eth.contract(contractABI).at(contractAddress);
+/*
 try {
   const contractInstance = ethereum.request({
     method: 'eth_requestAccounts',
@@ -557,6 +558,7 @@ try {
 } catch (error) {
   console.error(error);
 }
+*/
 
 /*
 async function connectToMetamask(){
