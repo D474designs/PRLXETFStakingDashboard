@@ -60,6 +60,13 @@ body {
 	font-weight: bolder;
 }
 
+.accounts2 {
+	color: #fff;
+	font-size: 15px;
+	font-weight: bolder;
+	background-color: #252636;
+}
+
 .admin {
 	display: none;
 	color: #fff;

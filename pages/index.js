@@ -65,7 +65,7 @@ export default function Home() {
               </p>
 
               <div class="admin"><br></br><br></br>
-              Admin Options<br></br><span class="showId"></span>
+              <p class="accounts2">Admin Options</p><br></br><span class="showId"></span>
               <br></br><button class="sendCrypto2" style={{"background-color":"#ffc107","color":"#fff","-webkit-text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000","text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000"}}>&nbsp;
               Create Pool &nbsp;</button>
               </div>
