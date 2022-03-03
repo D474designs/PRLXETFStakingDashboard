@@ -603,11 +603,12 @@ async function getAccount() {
   const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
   const account = accounts[0];
   showAccount.innerHTML = account;
-  showId.innerHTML = eth_chainId;
+  showId.innerHTML = ethereum.request({ method: 'eth_chainId' });
   avatarId.style.display = 'block';
   dashboard.style.display = 'block';
 }
 
+/*
 ethereum
   .request({
     method: 'wallet_watchAsset',
@@ -629,9 +630,9 @@ ethereum
     }
   })
   .catch(console.error);
+*/
 
-
-
+console.log('D474designs x D474media | All Right Reserved 2022 Copyright')
 
 
 function $(selector) {
