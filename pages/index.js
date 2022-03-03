@@ -39,7 +39,7 @@ export default function Home() {
         </main>
       */}
 
-      <div class="container" style={{"padding":"0px","margin":"0px","position":"relative"}}>
+      <div class="container" style={{"padding":"0px","margin":"0px"}}>
         {/* partial:index.partial.html */}
         <aside className="sidebar position-fixed top-0 left-0 overflow-auto h-100 float-left" id="show-side-navigation1">
           <i className="uil-bars close-aside d-md-none d-lg-none" data-close="show-side-navigation1" />
