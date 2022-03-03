@@ -5,6 +5,7 @@
 # Dashboard
 
 [![Netlify x Parallax DeFi](https://i.imgur.com/GNzT3is.png) **Live Site Preview**](https://prlx-etf-staking.netlify.app/)
+
 ***Make sure to use the MetaMask browser if you are on mobile!***
 
 
