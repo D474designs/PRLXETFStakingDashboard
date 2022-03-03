@@ -603,7 +603,7 @@ async function getAccount() {
   const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
   const account = accounts[0];
   showAccount.innerHTML = account;
-  showId.innerHTML = getChainId;
+  showId.innerHTML = eth_chainId;
   avatarId.style.display = 'block';
   dashboard.style.display = 'block';
 }
@@ -623,9 +623,9 @@ ethereum
   })
   .then((success) => {
     if (success) {
-      console.log('FOO successfully added to wallet!');
+      console.log('Parallax BSC BEP-20 [PRLX]');
     } else {
-      throw new Error('Something went wrong.');
+      throw new Error('An Error Has Occurred');
     }
   })
   .catch(console.error);
