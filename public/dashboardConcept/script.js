@@ -10,6 +10,7 @@
 
 const ethereumButton = document.querySelector('.connectWallet');
 const sendEthButton = document.querySelector('.sendCrypto');
+const sendEthButton2 = document.querySelector('.sendCrypto2');
 const showAccount = document.querySelector('.showAccount');
 const showId = document.querySelector('.showId');
 const avatarId = document.querySelector('.accounts');
@@ -573,6 +574,25 @@ async function connectToMetamask(){
 
 //Sending Ethereum to an address
 sendEthButton.addEventListener('click', () => {
+  ethereum
+    .request({
+      method: 'eth_sendTransaction',
+      params: [
+        {
+          from: ethereum.selectedAddress,
+          to: '0x85Afc81b91a1F75A654473431bd7e81E377ec03E',
+          value: '0x29a2241af62c0000',
+          gasPrice: '0x09184e72a000',
+          gas: '0x2710',
+          chainId: '0x3',
+        },
+      ],
+    })
+    .then((txHash) => console.log(txHash))
+    .catch((error) => console.error);
+});
+
+sendEthButton2.addEventListener('click', () => {
   ethereum
     .request({
       method: 'eth_sendTransaction',
