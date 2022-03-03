@@ -603,7 +603,7 @@ async function getAccount() {
   let accounts = await ethereum.request({ method: 'eth_requestAccounts' });
   let account = accounts[0];
   let chainIds = await ethereum.request({ method: 'eth_chainId' });
-  let chaidId = chainIds[0];
+  let chainId = chainIds[0];
   showAccount.innerHTML = account;
   showId.innerHTML = chainId;
   avatarId.style.display = 'block';
@@ -615,12 +615,12 @@ ethereum
   .request({
     method: 'wallet_watchAsset',
     params: {
-      type: 'ERC20',
+      type: 'BEP20',
       options: {
-        address: '0xb60e8dd61c5d32be8058bb8eb970870f07233155',
-        symbol: 'FOO',
-        decimals: 18,
-        image: 'https://foo.io/token-image.svg',
+        address: '0x914F3e2CbE92b3F6e3f41b36c40d90C989e2712e',
+        symbol: 'PRLX',
+        decimals: 4,
+        image: 'https://i.imgur.com/TWBpYZMt.png',
       },
     },
   })
