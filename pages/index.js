@@ -59,11 +59,11 @@ export default function Home() {
 
               <div className="accountInfo">
               <p class="accounts">
-              Account: <span class="showAccount"></span>
-              <button class="sendCrypto" style={{"background-color":"#ffc107","color":"#fff","-webkit-text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000","text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000"}}>&nbsp;
+              Account: <br></br><span class="showAccount"></span>
+              <br></br><button class="sendCrypto" style={{"background-color":"#ffc107","color":"#fff","-webkit-text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000","text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000"}}>&nbsp;
               Send Crypto &nbsp;</button>
               </p>
-              
+
               <div class="admin">
               Admin Options<br></br><span class="showId"></span>
               <br></br><button class="sendCrypto2" style={{"background-color":"#ffc107","color":"#fff","-webkit-text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000","text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000"}}>&nbsp;
