@@ -70,10 +70,10 @@ export default function Home() {
               Create Pool &nbsp;</button>
               </p>
 
-              <p class="admin2">
+              <span class="admin2">
               <br></br><button class="sendCrypto3" style={{"background-color":"#ffc107","color":"#fff","-webkit-text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000","text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000"}}>&nbsp;
-              Create Pool &nbsp;</button>
-              </p>
+              Edit Pool &nbsp;</button>
+              </span>
               </div>
           </center>
 
