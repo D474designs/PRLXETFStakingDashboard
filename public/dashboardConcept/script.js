@@ -10,9 +10,10 @@
 
 const ethereumButton = document.querySelector('.connectWallet');
 const sendEthButton = document.querySelector('.sendCrypto');
+const sendEthButton = document.querySelector('.sendCrypto2');
 
 const showAccount = document.querySelector('.showAccount');
-let avatarId = document.querySelector('.accounts');
+const avatarId = document.querySelector('.accounts');
 
 let accounts = [];
 

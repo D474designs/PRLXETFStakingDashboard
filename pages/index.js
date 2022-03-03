@@ -62,16 +62,11 @@ export default function Home() {
               Account: <span class="showAccount"></span>
               <button class="sendCrypto" style={{"background-color":"#ffc107","color":"#fff","-webkit-text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000","text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000"}}>&nbsp;
               Send Crypto &nbsp;</button>
-              </p>
-              </div>
-
-              <div className="accountInfo">
-              <p class="accounts">
               Admin Options
-              <button class="sendCrypto" style={{"background-color":"#ffc107","color":"#fff","-webkit-text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000","text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000"}}>&nbsp;
+              <button class="sendCrypto2" style={{"background-color":"#ffc107","color":"#fff","-webkit-text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000","text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000"}}>&nbsp;
               Create Pool &nbsp;</button>
-              </p>
               </div>
+              </p>
           </center>
 
           <div className="search position-relative text-center px-4 py-3 mt-2">
