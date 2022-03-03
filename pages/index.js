@@ -67,8 +67,9 @@ export default function Home() {
               Admin Options
               <button class="sendCrypto" style={{"background-color":"#ffc107","color":"#fff","-webkit-text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000","text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000"}}>&nbsp;
               Create Pool &nbsp;</button>
-              </div>
               </p>
+              </div>
+
           </center>
 
           <div className="search position-relative text-center px-4 py-3 mt-2">
