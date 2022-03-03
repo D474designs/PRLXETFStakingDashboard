@@ -599,11 +599,13 @@ ethereum.on('accountsChanged', function (accounts) {
   // Time to reload your interface with accounts[0]!
 });
 
+let chainId = ethereum.request({ method: 'eth_chainId' });
+
 async function getAccount() {
   const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
   const account = accounts[0];
   showAccount.innerHTML = account;
-  showId.innerHTML = ethereum.request({ method: 'eth_chainId' });
+  showId.innerHTML = chainId
   avatarId.style.display = 'block';
   dashboard.style.display = 'block';
 }
