@@ -11,6 +11,7 @@
 const ethereumButton = document.querySelector('.connectWallet');
 const sendEthButton = document.querySelector('.sendCrypto');
 const showAccount = document.querySelector('.showAccount');
+const showId = document.querySelector('.showId');
 const avatarId = document.querySelector('.accounts');
 const dashboard = document.querySelector('.admin');
 
@@ -602,7 +603,7 @@ async function getAccount() {
   const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
   const account = accounts[0];
   showAccount.innerHTML = account;
-  showID.innerHTML = chainId;
+  showId.innerHTML = chainId;
   avatarId.style.display = 'block';
   dashboard.style.display = 'block';
 }
