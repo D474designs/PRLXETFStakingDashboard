@@ -74,7 +74,7 @@ export default function Home() {
               <br></br><button class="sendCrypto3" style={{"background-color":"#ffc107","color":"#fff","-webkit-text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000","text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000"}}>&nbsp;
               Edit Pool &nbsp;</button>
               </div>
-              <nobr>
+              </nobr>
               </div>
           </center>
 
