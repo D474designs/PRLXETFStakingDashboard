@@ -647,9 +647,9 @@ async function getAccount() {
   let chainId = chainIds;
   showAccount.innerHTML = account;
   showId.innerHTML = chainId;
-  avatarId.style.display = 'block';
-  dashboard.style.display = 'block';
-  dashboard2.style.display = 'block';
+  avatarId.style.display = 'unset';
+  dashboard.style.display = 'unset';
+  dashboard2.style.display = 'unset';
 }
 
 /*
