@@ -10,10 +10,9 @@
 
 const ethereumButton = document.querySelector('.connectWallet');
 const sendEthButton = document.querySelector('.sendCrypto');
-const sendEthButton = document.querySelector('.sendCrypto2');
-
 const showAccount = document.querySelector('.showAccount');
 const avatarId = document.querySelector('.accounts');
+const dashboard = document.querySelector('.admin');
 
 let accounts = [];
 
@@ -604,6 +603,7 @@ async function getAccount() {
   const account = accounts[0];
   showAccount.innerHTML = account;
   avatarId.style.display = 'block';
+  dashboard.style.display = 'block';
 }
 
 

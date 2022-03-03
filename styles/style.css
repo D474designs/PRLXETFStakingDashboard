@@ -60,6 +60,13 @@ body {
 	font-weight: bolder;
 }
 
+.admin {
+	display: none;
+	color: #fff;
+	font-size: 15px;
+	font-weight: bolder;
+}
+
 .showAccount {
 	font-size: 8px;
 }
