@@ -16,6 +16,7 @@ const showAccount = document.querySelector('.showAccount');
 const showId = document.querySelector('.showId');
 const avatarId = document.querySelector('.accounts');
 const dashboard = document.querySelector('.admin');
+const dashboard2 = document.querySelector('.admin2');
 
 let accounts = [];
 
@@ -648,6 +649,7 @@ async function getAccount() {
   showId.innerHTML = chainId;
   avatarId.style.display = 'block';
   dashboard.style.display = 'block';
+  dashboard2.style.display = 'block';
 }
 
 /*
