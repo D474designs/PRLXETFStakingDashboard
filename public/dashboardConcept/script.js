@@ -603,7 +603,7 @@ async function getAccount() {
   let accounts = await ethereum.request({ method: 'eth_requestAccounts' });
   let account = accounts[0];
   let chainIds = await ethereum.request({ method: 'eth_chainId' });
-  let chainId = chainIds[0];
+  let chainId = chainIds;
   showAccount.innerHTML = account;
   showId.innerHTML = chainId;
   avatarId.style.display = 'block';
