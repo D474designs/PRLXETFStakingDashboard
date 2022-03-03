@@ -603,10 +603,32 @@ async function getAccount() {
   const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
   const account = accounts[0];
   showAccount.innerHTML = account;
-  showId.innerHTML = chainId;
+  showId.innerHTML = networkVersion;
   avatarId.style.display = 'block';
   dashboard.style.display = 'block';
 }
+
+ethereum
+  .request({
+    method: 'wallet_watchAsset',
+    params: {
+      type: 'ERC20',
+      options: {
+        address: '0xb60e8dd61c5d32be8058bb8eb970870f07233155',
+        symbol: 'FOO',
+        decimals: 18,
+        image: 'https://foo.io/token-image.svg',
+      },
+    },
+  })
+  .then((success) => {
+    if (success) {
+      console.log('FOO successfully added to wallet!');
+    } else {
+      throw new Error('Something went wrong.');
+    }
+  })
+  .catch(console.error);
 
 
 
