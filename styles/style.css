@@ -51,6 +51,7 @@ body {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	background-color: #313348;
+	white-space: nowrap;
 }
 
 .accounts {
