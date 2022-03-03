@@ -64,16 +64,16 @@ export default function Home() {
               Send Crypto &nbsp;</button>
               </p>
 
-              <p class="admin">
+              <div class="admin">
               Admin Options<br></br><span class="showId"></span>
               <br></br><button class="sendCrypto2" style={{"background-color":"#ffc107","color":"#fff","-webkit-text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000","text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000"}}>&nbsp;
               Create Pool &nbsp;</button>
-              </p>
+              </div>
 
-              <span class="admin2">
+              <div class="admin2">
               <br></br><button class="sendCrypto3" style={{"background-color":"#ffc107","color":"#fff","-webkit-text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000","text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000"}}>&nbsp;
               Edit Pool &nbsp;</button>
-              </span>
+              </div>
               </div>
           </center>
 
