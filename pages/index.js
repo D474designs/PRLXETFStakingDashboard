@@ -1,7 +1,7 @@
-import Head from 'next/head'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
-import Script from 'next/script'
+import Head from "next/head";
+import Header from "@components/Header";
+import Footer from "@components/Footer";
+import Script from "next/script";
 
 export default function Home() {
   return (
@@ -22,16 +22,19 @@ export default function Home() {
         src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.5.4/ethers.umd.min.js"
         strategy="beforeInteractive"
       />
-      <Script
-        src="/dashboardConcept/script.js"
-        strategy="beforeInteractive"
-      />
+      <Script src="/dashboardConcept/script.js" strategy="beforeInteractive" />
       <Head>
         <meta charSet="UTF-8" />
         <title>PRLX ETF - Dashboard</title>
         <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css" />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://unicons.iconscout.com/release/v3.0.6/css/line.css"
+        />
       </Head>
 
       {/*
@@ -43,134 +46,298 @@ export default function Home() {
         </main>
       */}
 
-      <div class="container" style={{"padding":"0px","margin":"0px"}}>
+      <div class="container" style={{ padding: "0px", margin: "0px" }}>
         {/* partial:index.partial.html */}
-        <aside className="sidebar position-fixed top-0 left-0 overflow-auto h-100 float-left" id="show-side-navigation1">
-          <i className="uil-bars close-aside d-md-none d-lg-none" data-close="show-side-navigation1" />
+        <aside
+          className="sidebar position-fixed top-0 left-0 overflow-auto h-100 float-left"
+          id="show-side-navigation1"
+        >
+          <i
+            className="uil-bars close-aside d-md-none d-lg-none"
+            data-close="show-side-navigation1"
+          />
           <div className="sidebar-header d-flex justify-content-center align-items-center px-3 py-4">
-            <img className="rounded-pill img-fluid" width={65} src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907008/medium/1501685726/enhance" alt />
+            <img
+              className="rounded-pill img-fluid"
+              width={65}
+              src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907008/medium/1501685726/enhance"
+              alt
+            />
             <div className="ms-2">
               <h5 className="fs-6 mb-0">
-                <a className="text-decoration-none" href="#">PRLX HODLer</a>
+                <a className="text-decoration-none" href="#">
+                  PRLX HODLer
+                </a>
               </h5>
-              <p className="mt-1 mb-0">Development of platforms and protocols</p>
+              <p className="mt-1 mb-0">
+                Development of platforms and protocols
+              </p>
             </div>
           </div>
 
           <center>
-            {/*<a href="/dAppConcept/src/index.html">*/}<button id="connectButton" className="connectWallet" style={{"background-color":"#ffc107","color":"#fff","outline":"7px solid #313348","-webkit-text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000","text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000"}}>&nbsp;
-              Connect wallet &nbsp;</button>{/*</a>*/}
+            {/*<a href="/dAppConcept/src/index.html">*/}
+            <button
+              id="connectButton"
+              className="connectWallet"
+              style={{
+                "background-color": "#ffc107",
+                color: "#fff",
+                outline: "7px solid #313348",
+                "-webkit-text-shadow":
+                  "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                "text-shadow":
+                  "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+              }}
+            >
+              &nbsp; Connect wallet &nbsp;
+            </button>
+            {/*</a>*/}
 
-              <div className="accountInfo">
+            <div className="accountInfo">
               <p class="accounts">
-              Account: <br></br><span class="showAccount"></span>
-              <br></br><button class="sendCrypto" style={{"background-color":"#ffc107","color":"#fff","-webkit-text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000","text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000"}}>&nbsp;
-              Send Crypto &nbsp;</button>
+                Account: <br></br>
+                <span class="showAccount"></span>
+                <br></br>
+                <button
+                  class="sendCrypto"
+                  style={{
+                    "background-color": "#ffc107",
+                    color: "#fff",
+                    "-webkit-text-shadow":
+                      "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                    "text-shadow":
+                      "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                  }}
+                >
+                  &nbsp; Send Crypto &nbsp;
+                </button>
               </p>
 
-              <div class="admin"><br></br><br></br>
-              <div class="accounts2">Admin Options</div><span class="showId"></span>
-              <br></br><button class="sendCrypto2" style={{"background-color":"#ffc107","color":"#fff","-webkit-text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000","text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000"}}>&nbsp;
-              Create Pool &nbsp;</button>
+              <div class="admin">
+                <br></br>
+                <br></br>
+                <div class="accounts2">Admin Options</div>
+                <span class="showId"></span>
+                <br></br>
+                <button
+                  class="sendCrypto2"
+                  style={{
+                    "background-color": "#ffc107",
+                    color: "#fff",
+                    "-webkit-text-shadow":
+                      "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                    "text-shadow":
+                      "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                  }}
+                >
+                  &nbsp; Create Pool &nbsp;
+                </button>
               </div>
 
               <div class="admin2">
-              <br></br><button class="sendCrypto3" style={{"background-color":"#ffc107","color":"#fff","-webkit-text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000","text-shadow":"-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000"}}>&nbsp;
-              Edit Pool &nbsp;</button>
+                <br></br>
+                <button
+                  class="sendCrypto3"
+                  style={{
+                    "background-color": "#ffc107",
+                    color: "#fff",
+                    "-webkit-text-shadow":
+                      "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                    "text-shadow":
+                      "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                  }}
+                >
+                  &nbsp; Edit Pool &nbsp;
+                </button>
               </div>
-              </div>
+            </div>
           </center>
 
           <div className="search position-relative text-center px-4 py-3 mt-2">
-            <input type="text" className="form-control w-100 border-0 bg-transparent" placeholder="Search here" />
+            <input
+              type="text"
+              className="form-control w-100 border-0 bg-transparent"
+              placeholder="Search here"
+            />
             <i className="fa fa-search position-absolute d-block fs-6" />
           </div>
           <ul className="categories list-unstyled">
             <li className="has-dropdown">
-              <i className="uil-estate fa-fw" /><a href="#"> Dashboard</a>
+              <i className="uil-estate fa-fw" />
+              <a href="#"> Dashboard</a>
               <ul className="sidebar-dropdown list-unstyled">
-                <li><a href="#">Lorem ipsum</a></li>
-                <li><a href="#">ipsum dolor</a></li>
-                <li><a href="#">dolor ipsum</a></li>
-                <li><a href="#">amet consectetur</a></li>
-                <li><a href="#">ipsum dolor sit</a></li>
+                <li>
+                  <a href="#">Lorem ipsum</a>
+                </li>
+                <li>
+                  <a href="#">ipsum dolor</a>
+                </li>
+                <li>
+                  <a href="#">dolor ipsum</a>
+                </li>
+                <li>
+                  <a href="#">amet consectetur</a>
+                </li>
+                <li>
+                  <a href="#">ipsum dolor sit</a>
+                </li>
               </ul>
             </li>
             <li className>
-              <i className="uil-folder" /><a href="#"> File Manager</a>
+              <i className="uil-folder" />
+              <a href="#"> File Manager</a>
             </li>
             <li className="has-dropdown">
-              <i className="uil-calendar-alt" /><a href="#"> Calender</a>
+              <i className="uil-calendar-alt" />
+              <a href="#"> Calender</a>
               <ul className="sidebar-dropdown list-unstyled">
-                <li><a href="#">Lorem ipsum</a></li>
-                <li><a href="#">ipsum dolor</a></li>
-                <li><a href="#">dolor ipsum</a></li>
-                <li><a href="#">amet consectetur</a></li>
-                <li><a href="#">ipsum dolor sit</a></li>
+                <li>
+                  <a href="#">Lorem ipsum</a>
+                </li>
+                <li>
+                  <a href="#">ipsum dolor</a>
+                </li>
+                <li>
+                  <a href="#">dolor ipsum</a>
+                </li>
+                <li>
+                  <a href="#">amet consectetur</a>
+                </li>
+                <li>
+                  <a href="#">ipsum dolor sit</a>
+                </li>
               </ul>
             </li>
             <li className="has-dropdown">
-              <i className="uil-envelope-download fa-fw" /><a href="#"> Mailbox</a>
+              <i className="uil-envelope-download fa-fw" />
+              <a href="#"> Mailbox</a>
               <ul className="sidebar-dropdown list-unstyled">
-                <li><a href="#">Lorem ipsum</a></li>
-                <li><a href="#">ipsum dolor</a></li>
-                <li><a href="#">dolor ipsum</a></li>
-                <li><a href="#">amet consectetur</a></li>
-                <li><a href="#">ipsum dolor sit</a></li>
+                <li>
+                  <a href="#">Lorem ipsum</a>
+                </li>
+                <li>
+                  <a href="#">ipsum dolor</a>
+                </li>
+                <li>
+                  <a href="#">dolor ipsum</a>
+                </li>
+                <li>
+                  <a href="#">amet consectetur</a>
+                </li>
+                <li>
+                  <a href="#">ipsum dolor sit</a>
+                </li>
               </ul>
             </li>
             <li className="has-dropdown">
-              <i className="uil-shopping-cart-alt" /><a href="#"> eCommerce</a>
+              <i className="uil-shopping-cart-alt" />
+              <a href="#"> eCommerce</a>
               <ul className="sidebar-dropdown list-unstyled">
-                <li><a href="#">Lorem ipsum</a></li>
-                <li><a href="#">ipsum dolor</a></li>
-                <li><a href="#">dolor ipsum</a></li>
-                <li><a href="#">amet consectetur</a></li>
-                <li><a href="#">ipsum dolor sit</a></li>
+                <li>
+                  <a href="#">Lorem ipsum</a>
+                </li>
+                <li>
+                  <a href="#">ipsum dolor</a>
+                </li>
+                <li>
+                  <a href="#">dolor ipsum</a>
+                </li>
+                <li>
+                  <a href="#">amet consectetur</a>
+                </li>
+                <li>
+                  <a href="#">ipsum dolor sit</a>
+                </li>
               </ul>
             </li>
             <li className="has-dropdown">
-              <i className="uil-bag" /><a href="#"> Projects</a>
+              <i className="uil-bag" />
+              <a href="#"> Projects</a>
               <ul className="sidebar-dropdown list-unstyled">
-                <li><a href="#">Lorem ipsum</a></li>
-                <li><a href="#">ipsum dolor</a></li>
-                <li><a href="#">dolor ipsum</a></li>
-                <li><a href="#">amet consectetur</a></li>
-                <li><a href="#">ipsum dolor sit</a></li>
+                <li>
+                  <a href="#">Lorem ipsum</a>
+                </li>
+                <li>
+                  <a href="#">ipsum dolor</a>
+                </li>
+                <li>
+                  <a href="#">dolor ipsum</a>
+                </li>
+                <li>
+                  <a href="#">amet consectetur</a>
+                </li>
+                <li>
+                  <a href="#">ipsum dolor sit</a>
+                </li>
               </ul>
             </li>
             <li className>
-              <i className="uil-setting" /><a href="#"> Settings</a>
+              <i className="uil-setting" />
+              <a href="#"> Settings</a>
               <ul className="sidebar-dropdown list-unstyled">
-                <li><a href="#">Lorem ipsum</a></li>
-                <li><a href="#">ipsum dolor</a></li>
-                <li><a href="#">dolor ipsum</a></li>
-                <li><a href="#">amet consectetur</a></li>
-                <li><a href="#">ipsum dolor sit</a></li>
+                <li>
+                  <a href="#">Lorem ipsum</a>
+                </li>
+                <li>
+                  <a href="#">ipsum dolor</a>
+                </li>
+                <li>
+                  <a href="#">dolor ipsum</a>
+                </li>
+                <li>
+                  <a href="#">amet consectetur</a>
+                </li>
+                <li>
+                  <a href="#">ipsum dolor sit</a>
+                </li>
               </ul>
             </li>
             <li className="has-dropdown">
-              <i className="uil-chart-pie-alt" /><a href="#"> Components</a>
+              <i className="uil-chart-pie-alt" />
+              <a href="#"> Components</a>
               <ul className="sidebar-dropdown list-unstyled">
-                <li><a href="#">Lorem ipsum</a></li>
-                <li><a href="#">ipsum dolor</a></li>
-                <li><a href="#">dolor ipsum</a></li>
-                <li><a href="#">amet consectetur</a></li>
-                <li><a href="#">ipsum dolor sit</a></li>
+                <li>
+                  <a href="#">Lorem ipsum</a>
+                </li>
+                <li>
+                  <a href="#">ipsum dolor</a>
+                </li>
+                <li>
+                  <a href="#">dolor ipsum</a>
+                </li>
+                <li>
+                  <a href="#">amet consectetur</a>
+                </li>
+                <li>
+                  <a href="#">ipsum dolor sit</a>
+                </li>
               </ul>
             </li>
             <li className="has-dropdown">
-              <i className="uil-panel-add" /><a href="#"> Charts</a>
+              <i className="uil-panel-add" />
+              <a href="#"> Charts</a>
               <ul className="sidebar-dropdown list-unstyled">
-                <li><a href="#">Lorem ipsum</a></li>
-                <li><a href="#">ipsum dolor</a></li>
-                <li><a href="#">dolor ipsum</a></li>
-                <li><a href="#">amet consectetur</a></li>
-                <li><a href="#">ipsum dolor sit</a></li>
+                <li>
+                  <a href="#">Lorem ipsum</a>
+                </li>
+                <li>
+                  <a href="#">ipsum dolor</a>
+                </li>
+                <li>
+                  <a href="#">dolor ipsum</a>
+                </li>
+                <li>
+                  <a href="#">amet consectetur</a>
+                </li>
+                <li>
+                  <a href="#">ipsum dolor sit</a>
+                </li>
               </ul>
             </li>
             <li className>
-              <i className="uil-map-marker" /><a href="#"> Maps</a>
+              <i className="uil-map-marker" />
+              <a href="#"> Maps</a>
             </li>
           </ul>
         </aside>
@@ -178,38 +345,81 @@ export default function Home() {
           <nav className="navbar navbar-expand-md">
             <div className="container-fluid mx-2">
               <div className="navbar-header">
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggle-navbar" aria-controls="toggle-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <button
+                  className="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#toggle-navbar"
+                  aria-controls="toggle-navbar"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
                   <i className="uil-bars text-white" />
                 </button>
-                <a className="navbar-brand" href="#">Parallax<span className="main-color">DeFi</span></a>
+                <a className="navbar-brand" href="#">
+                  Parallax<span className="main-color">DeFi</span>
+                </a>
               </div>
               <div className="collapse navbar-collapse" id="toggle-navbar">
                 <ul className="navbar-nav ms-auto">
                   <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a
+                      className="nav-link dropdown-toggle"
+                      href="#"
+                      id="navbarDropdown"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
                       Settings
                     </a>
-                    <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <ul
+                      className="dropdown-menu"
+                      aria-labelledby="navbarDropdown"
+                    >
                       <li>
-                        <a className="dropdown-item" href="#">My account</a>
+                        <a className="dropdown-item" href="#">
+                          My account
+                        </a>
                       </li>
-                      <li><a className="dropdown-item" href="#">My inbox</a>
+                      <li>
+                        <a className="dropdown-item" href="#">
+                          My inbox
+                        </a>
                       </li>
-                      <li><a className="dropdown-item" href="#">Help</a>
+                      <li>
+                        <a className="dropdown-item" href="#">
+                          Help
+                        </a>
                       </li>
-                      <li><hr className="dropdown-divider" /></li>
-                      <li><a className="dropdown-item" href="#">Log out</a></li>
+                      <li>
+                        <hr className="dropdown-divider" />
+                      </li>
+                      <li>
+                        <a className="dropdown-item" href="#">
+                          Log out
+                        </a>
+                      </li>
                     </ul>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="#"><i className="uil-comments-alt" /><span>23</span></a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="#"><i className="uil-bell" /><span>98</span></a>
+                    <a className="nav-link" href="#">
+                      <i className="uil-comments-alt" />
+                      <span>23</span>
+                    </a>
                   </li>
                   <li className="nav-item">
                     <a className="nav-link" href="#">
-                      <i data-show="show-side-navigation1" className="uil-bars show-side-btn" />
+                      <i className="uil-bell" />
+                      <span>98</span>
+                    </a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="#">
+                      <i
+                        data-show="show-side-navigation1"
+                        className="uil-bars show-side-btn"
+                      />
                     </a>
                   </li>
                 </ul>
@@ -220,7 +430,9 @@ export default function Home() {
             <div className="welcome">
               <div className="content rounded-3 p-3">
                 <h1 className="fs-3">Welcome to Parallax Finance</h1>
-                <p className="mb-0">Hello John Mac! Welcome to your dashboard!</p>
+                <p className="mb-0">
+                  Hello John Mac! Welcome to your dashboard!
+                </p>
               </div>
             </div>
             <section className="statistics mt-4">
@@ -230,9 +442,12 @@ export default function Home() {
                     <i className="uil-envelope-shield fs-2 text-center bg-primary rounded-circle" />
                     <div className="ms-3">
                       <div className="d-flex align-items-center">
-                        <h3 className="mb-0">1,245</h3> <span className="d-block ms-2">Emails</span>
+                        <h3 className="mb-0">1,245</h3>{" "}
+                        <span className="d-block ms-2">Emails</span>
                       </div>
-                      <p className="fs-normal mb-0">Lorem ipsum dolor sit amet</p>
+                      <p className="fs-normal mb-0">
+                        Lorem ipsum dolor sit amet
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -241,9 +456,12 @@ export default function Home() {
                     <i className="uil-file fs-2 text-center bg-danger rounded-circle" />
                     <div className="ms-3">
                       <div className="d-flex align-items-center">
-                        <h3 className="mb-0">34</h3> <span className="d-block ms-2">Projects</span>
+                        <h3 className="mb-0">34</h3>{" "}
+                        <span className="d-block ms-2">Projects</span>
                       </div>
-                      <p className="fs-normal mb-0">Lorem ipsum dolor sit amet</p>
+                      <p className="fs-normal mb-0">
+                        Lorem ipsum dolor sit amet
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -252,9 +470,12 @@ export default function Home() {
                     <i className="uil-users-alt fs-2 text-center bg-success rounded-circle" />
                     <div className="ms-3">
                       <div className="d-flex align-items-center">
-                        <h3 className="mb-0">5,245</h3> <span className="d-block ms-2">Users</span>
+                        <h3 className="mb-0">5,245</h3>{" "}
+                        <span className="d-block ms-2">Users</span>
                       </div>
-                      <p className="fs-normal mb-0">Lorem ipsum dolor sit amet</p>
+                      <p className="fs-normal mb-0">
+                        Lorem ipsum dolor sit amet
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -283,29 +504,53 @@ export default function Home() {
                     {/* <h4>Admins:</h4> */}
                     <div className="admin d-flex align-items-center rounded-2 p-3 mb-4">
                       <div className="img">
-                        <img className="img-fluid rounded-pill" width={75} height={75} src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148906966/small/1501685402/enhance" alt="admin" />
+                        <img
+                          className="img-fluid rounded-pill"
+                          width={75}
+                          height={75}
+                          src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148906966/small/1501685402/enhance"
+                          alt="admin"
+                        />
                       </div>
                       <div className="ms-3">
                         <h3 className="fs-5 mb-1">Hampus Obama</h3>
-                        <p className="mb-0">Lorem ipsum dolor sit amet consectetur elit.</p>
+                        <p className="mb-0">
+                          Lorem ipsum dolor sit amet consectetur elit.
+                        </p>
                       </div>
                     </div>
                     <div className="admin d-flex align-items-center rounded-2 p-3 mb-4">
                       <div className="img">
-                        <img className="img-fluid rounded-pill" width={75} height={75} src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907137/small/1501685404/enhance" alt="admin" />
+                        <img
+                          className="img-fluid rounded-pill"
+                          width={75}
+                          height={75}
+                          src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907137/small/1501685404/enhance"
+                          alt="admin"
+                        />
                       </div>
                       <div className="ms-3">
                         <h3 className="fs-5 mb-1">Ukko Heinonen</h3>
-                        <p className="mb-0">Lorem ipsum dolor sit amet consectetur elit.</p>
+                        <p className="mb-0">
+                          Lorem ipsum dolor sit amet consectetur elit.
+                        </p>
                       </div>
                     </div>
                     <div className="admin d-flex align-items-center rounded-2 p-3">
                       <div className="img">
-                        <img className="img-fluid rounded-pill" width={75} height={75} src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907019/small/1501685403/enhance" alt="admin" />
+                        <img
+                          className="img-fluid rounded-pill"
+                          width={75}
+                          height={75}
+                          src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907019/small/1501685403/enhance"
+                          alt="admin"
+                        />
                       </div>
                       <div className="ms-3">
                         <h3 className="fs-5 mb-1">Warwick Bátori</h3>
-                        <p className="mb-0">Lorem ipsum dolor sit amet consectetur elit.</p>
+                        <p className="mb-0">
+                          Lorem ipsum dolor sit amet consectetur elit.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -315,29 +560,53 @@ export default function Home() {
                     {/* <h4>Moderators:</h4> */}
                     <div className="admin d-flex align-items-center rounded-2 p-3 mb-4">
                       <div className="img">
-                        <img className="img-fluid rounded-pill" width={75} height={75} src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907114/small/1501685404/enhance" alt="admin" />
+                        <img
+                          className="img-fluid rounded-pill"
+                          width={75}
+                          height={75}
+                          src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907114/small/1501685404/enhance"
+                          alt="admin"
+                        />
                       </div>
                       <div className="ms-3">
                         <h3 className="fs-5 mb-1">Bakir Assendorp</h3>
-                        <p className="mb-0">Lorem ipsum dolor sit amet consectetur elit.</p>
+                        <p className="mb-0">
+                          Lorem ipsum dolor sit amet consectetur elit.
+                        </p>
                       </div>
                     </div>
                     <div className="admin d-flex align-items-center rounded-2 p-3 mb-4">
                       <div className="img">
-                        <img className="img-fluid rounded-pill" width={75} height={75} src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907086/small/1501685404/enhance" alt="admin" />
+                        <img
+                          className="img-fluid rounded-pill"
+                          width={75}
+                          height={75}
+                          src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907086/small/1501685404/enhance"
+                          alt="admin"
+                        />
                       </div>
                       <div className="ms-3">
                         <h3 className="fs-5 mb-1">Ivaylo Panosyan</h3>
-                        <p className="mb-0">Lorem ipsum dolor sit amet consectetur elit.</p>
+                        <p className="mb-0">
+                          Lorem ipsum dolor sit amet consectetur elit.
+                        </p>
                       </div>
                     </div>
                     <div className="admin d-flex align-items-center rounded-2 p-3">
                       <div className="img">
-                        <img className="img-fluid rounded-pill" width={75} height={75} src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907008/medium/1501685726/enhance" alt="admin" />
+                        <img
+                          className="img-fluid rounded-pill"
+                          width={75}
+                          height={75}
+                          src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907008/medium/1501685726/enhance"
+                          alt="admin"
+                        />
                       </div>
                       <div className="ms-3">
                         <h3 className="fs-5 mb-1">Joge Lucky</h3>
-                        <p className="mb-0">Lorem ipsum dolor sit amet consectetur elit.</p>
+                        <p className="mb-0">
+                          Lorem ipsum dolor sit amet consectetur elit.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -379,7 +648,7 @@ export default function Home() {
             <section className="charts mt-4">
               <div className="chart-container p-3">
                 <h3 className="fs-6 mb-3">PRLX DeFi Price Chart</h3>
-                <div style={{"height":"300px"}}>
+                <div style={{ height: "300px" }}>
                   <canvas id="chart3" width="100%" />
                 </div>
               </div>
@@ -389,7 +658,12 @@ export default function Home() {
         {/* partial */}
         <center>
           <div>
-            <a href="https://D474designs.github.io" style={{"text-decoration":"none","color":"blue"}}><p>Created by D474designs 2021 All Rights Reserved</p></a>
+            <a
+              href="https://D474designs.github.io"
+              style={{ "text-decoration": "none", color: "blue" }}
+            >
+              <p>Created by D474designs 2021 All Rights Reserved</p>
+            </a>
           </div>
         </center>
       </div>
@@ -398,5 +672,5 @@ export default function Home() {
         <Footer />
       */}
     </div>
-  )
+  );
 }

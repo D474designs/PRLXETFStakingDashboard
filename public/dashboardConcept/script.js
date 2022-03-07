@@ -2,533 +2,519 @@
 // Map: https://codepen.io/themustafaomar/pen/ZEGJeZq
 // Navbar: https://codepen.io/themustafaomar/pen/VKbQyZ
 
-'use strict'
+"use strict";
 
 // D474designs
 // https://D474developments.github
 // https://docs.metamask.io/guide/
 
-
-
 // D474designs
 // PRLX Staking Contract Functions
 
-
-
 // const ethers = require('ethers');
-
-
 
 // import detectEthereumProvider from '@metamask/detect-provider';
 // const provider = detectEthereumProvider();
 
-
-
 // The Contract interface
 const abi = [
-	{
-		"inputs": [
-			{
-				"internalType": "uint16",
-				"name": "_apy",
-				"type": "uint16"
-			},
-			{
-				"internalType": "uint16",
-				"name": "_lockPeriodInDays",
-				"type": "uint16"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_endDate",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_minContrib",
-				"type": "uint256"
-			}
-		],
-		"name": "add",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint8",
-				"name": "_pid",
-				"type": "uint8"
-			}
-		],
-		"name": "claim",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "claimAll",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "renounceOwnership",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "wallet",
-				"type": "address"
-			}
-		],
-		"name": "setBNBwallet",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "_token",
-				"type": "address"
-			}
-		],
-		"stateMutability": "nonpayable",
-		"type": "constructor"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "addr",
-				"type": "address"
-			},
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "amount",
-				"type": "uint256"
-			}
-		],
-		"name": "Claim",
-		"type": "event"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "previousOwner",
-				"type": "address"
-			},
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "newOwner",
-				"type": "address"
-			}
-		],
-		"name": "OwnershipTransferred",
-		"type": "event"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_pid",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint16",
-				"name": "_apy",
-				"type": "uint16"
-			},
-			{
-				"internalType": "uint16",
-				"name": "_lockPeriodInDays",
-				"type": "uint16"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_endDate",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_minContrib",
-				"type": "uint256"
-			}
-		],
-		"name": "set",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint8",
-				"name": "_pid",
-				"type": "uint8"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_amount",
-				"type": "uint256"
-			}
-		],
-		"name": "stake",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "payable",
-		"type": "function"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "addr",
-				"type": "address"
-			},
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "amount",
-				"type": "uint256"
-			}
-		],
-		"name": "Stake",
-		"type": "event"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "newOwner",
-				"type": "address"
-			}
-		],
-		"name": "transferOwnership",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint8",
-				"name": "_pid",
-				"type": "uint8"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_amount",
-				"type": "uint256"
-			}
-		],
-		"name": "unStake",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "payable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "_depositFee",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "_withdrawFee",
-				"type": "uint256"
-			}
-		],
-		"name": "updateFeeValues",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"stateMutability": "payable",
-		"type": "receive"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint8",
-				"name": "_pid",
-				"type": "uint8"
-			},
-			{
-				"internalType": "address",
-				"name": "_addr",
-				"type": "address"
-			}
-		],
-		"name": "_payout",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "value",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "_wallet",
-		"outputs": [
-			{
-				"internalType": "address payable",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint8",
-				"name": "_pid",
-				"type": "uint8"
-			},
-			{
-				"internalType": "address",
-				"name": "_addr",
-				"type": "address"
-			}
-		],
-		"name": "canClaim",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "depositFee",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "owner",
-		"outputs": [
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"name": "poolInfo",
-		"outputs": [
-			{
-				"internalType": "uint16",
-				"name": "apy",
-				"type": "uint16"
-			},
-			{
-				"internalType": "uint16",
-				"name": "lockPeriodInDays",
-				"type": "uint16"
-			},
-			{
-				"internalType": "uint256",
-				"name": "totalDeposit",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "startDate",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "endDate",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "minContrib",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "poolLength",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "token",
-		"outputs": [
-			{
-				"internalType": "contract IERC20",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			},
-			{
-				"internalType": "address",
-				"name": "",
-				"type": "address"
-			}
-		],
-		"name": "users",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "total_invested",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "total_withdrawn",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "lastPayout",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "depositTime",
-				"type": "uint256"
-			},
-			{
-				"internalType": "uint256",
-				"name": "totalClaimed",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [],
-		"name": "withdrawFee",
-		"outputs": [
-			{
-				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	}
-]
+  {
+    inputs: [
+      {
+        internalType: "uint16",
+        name: "_apy",
+        type: "uint16",
+      },
+      {
+        internalType: "uint16",
+        name: "_lockPeriodInDays",
+        type: "uint16",
+      },
+      {
+        internalType: "uint256",
+        name: "_endDate",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "_minContrib",
+        type: "uint256",
+      },
+    ],
+    name: "add",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint8",
+        name: "_pid",
+        type: "uint8",
+      },
+    ],
+    name: "claim",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "claimAll",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "renounceOwnership",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "wallet",
+        type: "address",
+      },
+    ],
+    name: "setBNBwallet",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "_token",
+        type: "address",
+      },
+    ],
+    stateMutability: "nonpayable",
+    type: "constructor",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: "address",
+        name: "addr",
+        type: "address",
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "amount",
+        type: "uint256",
+      },
+    ],
+    name: "Claim",
+    type: "event",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: "address",
+        name: "previousOwner",
+        type: "address",
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "newOwner",
+        type: "address",
+      },
+    ],
+    name: "OwnershipTransferred",
+    type: "event",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "_pid",
+        type: "uint256",
+      },
+      {
+        internalType: "uint16",
+        name: "_apy",
+        type: "uint16",
+      },
+      {
+        internalType: "uint16",
+        name: "_lockPeriodInDays",
+        type: "uint16",
+      },
+      {
+        internalType: "uint256",
+        name: "_endDate",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "_minContrib",
+        type: "uint256",
+      },
+    ],
+    name: "set",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint8",
+        name: "_pid",
+        type: "uint8",
+      },
+      {
+        internalType: "uint256",
+        name: "_amount",
+        type: "uint256",
+      },
+    ],
+    name: "stake",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
+    stateMutability: "payable",
+    type: "function",
+  },
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: "address",
+        name: "addr",
+        type: "address",
+      },
+      {
+        indexed: false,
+        internalType: "uint256",
+        name: "amount",
+        type: "uint256",
+      },
+    ],
+    name: "Stake",
+    type: "event",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "newOwner",
+        type: "address",
+      },
+    ],
+    name: "transferOwnership",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint8",
+        name: "_pid",
+        type: "uint8",
+      },
+      {
+        internalType: "uint256",
+        name: "_amount",
+        type: "uint256",
+      },
+    ],
+    name: "unStake",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
+    stateMutability: "payable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "_depositFee",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "_withdrawFee",
+        type: "uint256",
+      },
+    ],
+    name: "updateFeeValues",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    stateMutability: "payable",
+    type: "receive",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint8",
+        name: "_pid",
+        type: "uint8",
+      },
+      {
+        internalType: "address",
+        name: "_addr",
+        type: "address",
+      },
+    ],
+    name: "_payout",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "value",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "_wallet",
+    outputs: [
+      {
+        internalType: "address payable",
+        name: "",
+        type: "address",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint8",
+        name: "_pid",
+        type: "uint8",
+      },
+      {
+        internalType: "address",
+        name: "_addr",
+        type: "address",
+      },
+    ],
+    name: "canClaim",
+    outputs: [
+      {
+        internalType: "bool",
+        name: "",
+        type: "bool",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "depositFee",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "owner",
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    name: "poolInfo",
+    outputs: [
+      {
+        internalType: "uint16",
+        name: "apy",
+        type: "uint16",
+      },
+      {
+        internalType: "uint16",
+        name: "lockPeriodInDays",
+        type: "uint16",
+      },
+      {
+        internalType: "uint256",
+        name: "totalDeposit",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "startDate",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "endDate",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "minContrib",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "poolLength",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "token",
+    outputs: [
+      {
+        internalType: "contract IERC20",
+        name: "",
+        type: "address",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
+    name: "users",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "total_invested",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "total_withdrawn",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "lastPayout",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "depositTime",
+        type: "uint256",
+      },
+      {
+        internalType: "uint256",
+        name: "totalClaimed",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "withdrawFee",
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+];
 
-
-
-const ethereumButton = document.querySelector('.connectWallet');
-const sendEthButton = document.querySelector('.sendCrypto');
-const sendEthButton2 = document.querySelector('.sendCrypto2');
-const sendEthButton3 = document.querySelector('.sendCrypto3');
-const showAccount = document.querySelector('.showAccount');
-const showId = document.querySelector('.showId');
-const avatarId = document.querySelector('.accounts');
-const dashboard = document.querySelector('.admin');
-const dashboard2 = document.querySelector('.admin2');
+const ethereumButton = document.querySelector(".connectWallet");
+const sendEthButton = document.querySelector(".sendCrypto");
+const sendEthButton2 = document.querySelector(".sendCrypto2");
+const sendEthButton3 = document.querySelector(".sendCrypto3");
+const showAccount = document.querySelector(".showAccount");
+const showId = document.querySelector(".showId");
+const avatarId = document.querySelector(".accounts");
+const dashboard = document.querySelector(".admin");
+const dashboard2 = document.querySelector(".admin2");
 
 let accounts = [];
-
-
 
 // Connect to the network
 
 // A Web3Provider wraps a standard Web3 provider, which is
 // what MetaMask injects as window.ethereum into each page
-const provider = new ethers.providers.Web3Provider(window.ethereum)
-
-
+const provider = new ethers.providers.Web3Provider(window.ethereum);
 
 /*
 async function getAccount() {
@@ -545,36 +531,36 @@ async function getAccount() {
 */
 
 async function getAccount() {
-	// MetaMask requires requesting permission to connect users accounts
-	provider.send("eth_requestAccounts", []);
-	const signer = provider.getSigner();
+  // MetaMask requires requesting permission to connect users accounts
+  provider.send("eth_requestAccounts", []);
+  const signer = provider.getSigner();
 
-	let account = await signer.getAddress();
-	showAccount.innerHTML = account;
+  let account = await signer.getAddress();
+  showAccount.innerHTML = account;
 
-	// Look up the current block number
-	await provider.getBlockNumber()
-	// 14322885
+  // Look up the current block number
+  await provider.getBlockNumber();
+  // 14322885
 
-	// Get the balance of an account (by address or ENS name, if supported by network)
-	balance = await provider.getBalance("ethers.eth")
-	// { BigNumber: "82826475815887608" }
+  // Get the balance of an account (by address or ENS name, if supported by network)
+  balance = await provider.getBalance("ethers.eth");
+  // { BigNumber: "82826475815887608" }
 
-	// Often you need to format the output to something more user-friendly,
-	// such as in ether (instead of wei)
-	ethers.utils.formatEther(balance)
-	// '0.082826475815887608'
+  // Often you need to format the output to something more user-friendly,
+  // such as in ether (instead of wei)
+  ethers.utils.formatEther(balance);
+  // '0.082826475815887608'
 
-	// If a user enters a string in an input field, you may need
-	// to convert it from ether (as a string) to wei (as a BigNumber)
-	ethers.utils.parseEther("1.0")
-	// { BigNumber: "1000000000000000000" }
-};
+  // If a user enters a string in an input field, you may need
+  // to convert it from ether (as a string) to wei (as a BigNumber)
+  ethers.utils.parseEther("1.0");
+  // { BigNumber: "1000000000000000000" }
+}
 
 // The MetaMask plugin also allows signing transactions to
 // send ether and pay to change state within the blockchain.
 // For this, you need the account signer...
-const signer = provider.getSigner()
+const signer = provider.getSigner();
 
 // The address from the above deployment example
 let contractAddress = "0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2";
@@ -583,25 +569,19 @@ let contractAddress = "0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2";
 // have read-only access to the Contract
 let contract = new ethers.Contract(contractAddress, abi, provider);
 
-
-
 // Get the current value
 let currentValue = contract.users.total_invested;
 
 console.log(currentValue);
 // "Hello World"
 
-
-
-ethereumButton.addEventListener('click', () => {
+ethereumButton.addEventListener("click", () => {
   getAccount();
 });
 
-ethereum.on('accountsChanged', function (accounts) {
+ethereum.on("accountsChanged", function (accounts) {
   // Time to reload your interface with accounts[0]!
 });
-
-
 
 /*
 async function getAccount() {
@@ -616,8 +596,6 @@ async function getAccount() {
   dashboard2.style.display = 'unset';
 }
 */
-
-
 
 /*
 // This function detects most providers injected at window.ethereum
@@ -789,261 +767,299 @@ ethereum
   .catch(console.error);
 */
 
-console.log('D474designs x D474media | All Right Reserved 2022 Copyright')
-
+console.log("D474designs x D474media | All Right Reserved 2022 Copyright");
 
 function $(selector) {
-  return document.querySelector(selector)
+  return document.querySelector(selector);
 }
 
 function find(el, selector) {
-  let finded
-  return (finded = el.querySelector(selector)) ? finded : null
+  let finded;
+  return (finded = el.querySelector(selector)) ? finded : null;
 }
 
 function siblings(el) {
-  const siblings = []
+  const siblings = [];
   for (let sibling of el.parentNode.children) {
     if (sibling !== el) {
-      siblings.push(sibling)
+      siblings.push(sibling);
     }
   }
-  return siblings
+  return siblings;
 }
 
-const showAsideBtn = $('.show-side-btn')
-const sidebar = $('.sidebar')
-const wrapper = $('#wrapper')
+const showAsideBtn = $(".show-side-btn");
+const sidebar = $(".sidebar");
+const wrapper = $("#wrapper");
 
-showAsideBtn.addEventListener('click', function () {
-  $(`#${this.dataset.show}`).classList.toggle('show-sidebar')
-  wrapper.classList.toggle('fullwidth')
-})
+showAsideBtn.addEventListener("click", function () {
+  $(`#${this.dataset.show}`).classList.toggle("show-sidebar");
+  wrapper.classList.toggle("fullwidth");
+});
 
 if (window.innerWidth < 767) {
-  sidebar.classList.add('show-sidebar');
+  sidebar.classList.add("show-sidebar");
 }
 
-window.addEventListener('resize', function () {
+window.addEventListener("resize", function () {
   if (window.innerWidth > 767) {
-    sidebar.classList.remove('show-sidebar')
+    sidebar.classList.remove("show-sidebar");
   }
-})
+});
 
 // dropdown menu in the side nav
-var slideNavDropdown = $('.sidebar-dropdown');
+var slideNavDropdown = $(".sidebar-dropdown");
 
-$('.sidebar .categories').addEventListener('click', function (event) {
-  event.preventDefault()
+$(".sidebar .categories").addEventListener("click", function (event) {
+  event.preventDefault();
 
-  const item = event.target.closest('.has-dropdown')
+  const item = event.target.closest(".has-dropdown");
 
-  if (! item) {
-    return
+  if (!item) {
+    return;
   }
 
-  item.classList.toggle('opened')
+  item.classList.toggle("opened");
 
-  siblings(item).forEach(sibling => {
-    sibling.classList.remove('opened')
-  })
+  siblings(item).forEach((sibling) => {
+    sibling.classList.remove("opened");
+  });
 
-  if (item.classList.contains('opened')) {
-    const toOpen = find(item, '.sidebar-dropdown')
+  if (item.classList.contains("opened")) {
+    const toOpen = find(item, ".sidebar-dropdown");
 
     if (toOpen) {
-      toOpen.classList.add('active')
+      toOpen.classList.add("active");
     }
 
-    siblings(item).forEach(sibling => {
-      const toClose = find(sibling, '.sidebar-dropdown')
+    siblings(item).forEach((sibling) => {
+      const toClose = find(sibling, ".sidebar-dropdown");
 
       if (toClose) {
-        toClose.classList.remove('active')
+        toClose.classList.remove("active");
       }
-    })
+    });
   } else {
-    find(item, '.sidebar-dropdown').classList.toggle('active')
+    find(item, ".sidebar-dropdown").classList.toggle("active");
   }
-})
+});
 
-$('.sidebar .close-aside').addEventListener('click', function () {
-  $(`#${this.dataset.close}`).classList.add('show-sidebar')
-  wrapper.classList.remove('margin')
-})
-
+$(".sidebar .close-aside").addEventListener("click", function () {
+  $(`#${this.dataset.close}`).classList.add("show-sidebar");
+  wrapper.classList.remove("margin");
+});
 
 // Global defaults
 Chart.defaults.global.animation.duration = 2000; // Animation duration
 Chart.defaults.global.title.display = false; // Remove title
-Chart.defaults.global.defaultFontColor = '#71748c'; // Font color
+Chart.defaults.global.defaultFontColor = "#71748c"; // Font color
 Chart.defaults.global.defaultFontSize = 13; // Font size for every label
 
 // Tooltip global resets
-Chart.defaults.global.tooltips.backgroundColor = '#111827'
-Chart.defaults.global.tooltips.borderColor = 'blue'
+Chart.defaults.global.tooltips.backgroundColor = "#111827";
+Chart.defaults.global.tooltips.borderColor = "blue";
 
 // Gridlines global resets
-Chart.defaults.scale.gridLines.zeroLineColor = '#3b3d56'
-Chart.defaults.scale.gridLines.color = '#3b3d56'
-Chart.defaults.scale.gridLines.drawBorder = false
+Chart.defaults.scale.gridLines.zeroLineColor = "#3b3d56";
+Chart.defaults.scale.gridLines.color = "#3b3d56";
+Chart.defaults.scale.gridLines.drawBorder = false;
 
 // Legend global resets
 Chart.defaults.global.legend.labels.padding = 0;
 Chart.defaults.global.legend.display = false;
 
 // Ticks global resets
-Chart.defaults.scale.ticks.fontSize = 12
-Chart.defaults.scale.ticks.fontColor = '#71748c'
-Chart.defaults.scale.ticks.beginAtZero = false
-Chart.defaults.scale.ticks.padding = 10
+Chart.defaults.scale.ticks.fontSize = 12;
+Chart.defaults.scale.ticks.fontColor = "#71748c";
+Chart.defaults.scale.ticks.beginAtZero = false;
+Chart.defaults.scale.ticks.padding = 10;
 
 // Elements globals
-Chart.defaults.global.elements.point.radius = 0
+Chart.defaults.global.elements.point.radius = 0;
 
 // Responsivess
-Chart.defaults.global.responsive = true
-Chart.defaults.global.maintainAspectRatio = false
+Chart.defaults.global.responsive = true;
+Chart.defaults.global.maintainAspectRatio = false;
 
 // The bar chart
-var myChart = new Chart(document.getElementById('myChart'), {
-  type: 'bar',
+var myChart = new Chart(document.getElementById("myChart"), {
+  type: "bar",
   data: {
-    labels: ["January", "February", "March", "April", 'May', 'June', 'August', 'September'],
-    datasets: [{
-      label: "Lost",
-      data: [45, 25, 40, 20, 60, 20, 35, 25],
-      backgroundColor: "#0d6efd",
-      borderColor: 'transparent',
-      borderWidth: 2.5,
-      barPercentage: 0.4,
-    }, {
-      label: "Succes",
-      startAngle: 2,
-      data: [20, 40, 20, 50, 25, 40, 25, 10],
-      backgroundColor: "#dc3545",
-      borderColor: 'transparent',
-      borderWidth: 2.5,
-      barPercentage: 0.4,
-    }]
+    labels: [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "August",
+      "September",
+    ],
+    datasets: [
+      {
+        label: "Lost",
+        data: [45, 25, 40, 20, 60, 20, 35, 25],
+        backgroundColor: "#0d6efd",
+        borderColor: "transparent",
+        borderWidth: 2.5,
+        barPercentage: 0.4,
+      },
+      {
+        label: "Succes",
+        startAngle: 2,
+        data: [20, 40, 20, 50, 25, 40, 25, 10],
+        backgroundColor: "#dc3545",
+        borderColor: "transparent",
+        borderWidth: 2.5,
+        barPercentage: 0.4,
+      },
+    ],
   },
   options: {
     scales: {
-      yAxes: [{
-        gridLines: {},
-        ticks: {
-          stepSize: 15,
+      yAxes: [
+        {
+          gridLines: {},
+          ticks: {
+            stepSize: 15,
+          },
         },
-      }],
-      xAxes: [{
-        gridLines: {
-          display: false,
-        }
-      }]
-    }
-  }
-})
+      ],
+      xAxes: [
+        {
+          gridLines: {
+            display: false,
+          },
+        },
+      ],
+    },
+  },
+});
 
 // The line chart
-var chart = new Chart(document.getElementById('myChart2'), {
-  type: 'line',
+var chart = new Chart(document.getElementById("myChart2"), {
+  type: "line",
   data: {
-    labels: ["January", "February", "March", "April", 'May', 'June', 'August', 'September'],
-    datasets: [{
-      label: "My First dataset",
-      data: [4, 20, 5, 20, 5, 25, 9, 18],
-      backgroundColor: 'transparent',
-      borderColor: '#0d6efd',
-      lineTension: .4,
-      borderWidth: 1.5,
-    }, {
-      label: "Month",
-      data: [11, 25, 10, 25, 10, 30, 14, 23],
-      backgroundColor: 'transparent',
-      borderColor: '#dc3545',
-      lineTension: .4,
-      borderWidth: 1.5,
-    }, {
-      label: "Month",
-      data: [16, 30, 16, 30, 16, 36, 21, 35],
-      backgroundColor: 'transparent',
-      borderColor: '#f0ad4e',
-      lineTension: .4,
-      borderWidth: 1.5,
-    }]
+    labels: [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "August",
+      "September",
+    ],
+    datasets: [
+      {
+        label: "My First dataset",
+        data: [4, 20, 5, 20, 5, 25, 9, 18],
+        backgroundColor: "transparent",
+        borderColor: "#0d6efd",
+        lineTension: 0.4,
+        borderWidth: 1.5,
+      },
+      {
+        label: "Month",
+        data: [11, 25, 10, 25, 10, 30, 14, 23],
+        backgroundColor: "transparent",
+        borderColor: "#dc3545",
+        lineTension: 0.4,
+        borderWidth: 1.5,
+      },
+      {
+        label: "Month",
+        data: [16, 30, 16, 30, 16, 36, 21, 35],
+        backgroundColor: "transparent",
+        borderColor: "#f0ad4e",
+        lineTension: 0.4,
+        borderWidth: 1.5,
+      },
+    ],
   },
   options: {
     scales: {
-      yAxes: [{
-        gridLines: {
-          drawBorder: false
+      yAxes: [
+        {
+          gridLines: {
+            drawBorder: false,
+          },
+          ticks: {
+            stepSize: 12,
+          },
         },
-        ticks: {
-          stepSize: 12,
-        }
-      }],
-      xAxes: [{
-        gridLines: {
-          display: false,
+      ],
+      xAxes: [
+        {
+          gridLines: {
+            display: false,
+          },
         },
-      }]
-    }
-  }
-})
-
-var chart = document.getElementById('chart3');
-var myChart = new Chart(chart, {
-  type: 'line',
-  data: {
-    labels: ["One", "Two", "Three", "Four", "Five", 'Six', "Seven", "Eight"],
-    datasets: [{
-      label: "Lost",
-      lineTension: 0.2,
-      borderColor: '#d9534f',
-      borderWidth: 1.5,
-      showLine: true,
-      data: [3, 30, 16, 30, 16, 36, 21, 40, 20, 30],
-      backgroundColor: 'transparent'
-    }, {
-      label: "Lost",
-      lineTension: 0.2,
-      borderColor: '#5cb85c',
-      borderWidth: 1.5,
-      data: [6, 20, 5, 20, 5, 25, 9, 18, 20, 15],
-      backgroundColor: 'transparent'
+      ],
     },
-               {
-                 label: "Lost",
-                 lineTension: 0.2,
-                 borderColor: '#f0ad4e',
-                 borderWidth: 1.5,
-                 data: [12, 20, 15, 20, 5, 35, 10, 15, 35, 25],
-                 backgroundColor: 'transparent'
-               },
-               {
-                 label: "Lost",
-                 lineTension: 0.2,
-                 borderColor: '#337ab7',
-                 borderWidth: 1.5,
-                 data: [16, 25, 10, 25, 10, 30, 14, 23, 14, 29],
-                 backgroundColor: 'transparent'
-               }]
+  },
+});
+
+var chart = document.getElementById("chart3");
+var myChart = new Chart(chart, {
+  type: "line",
+  data: {
+    labels: ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight"],
+    datasets: [
+      {
+        label: "Lost",
+        lineTension: 0.2,
+        borderColor: "#d9534f",
+        borderWidth: 1.5,
+        showLine: true,
+        data: [3, 30, 16, 30, 16, 36, 21, 40, 20, 30],
+        backgroundColor: "transparent",
+      },
+      {
+        label: "Lost",
+        lineTension: 0.2,
+        borderColor: "#5cb85c",
+        borderWidth: 1.5,
+        data: [6, 20, 5, 20, 5, 25, 9, 18, 20, 15],
+        backgroundColor: "transparent",
+      },
+      {
+        label: "Lost",
+        lineTension: 0.2,
+        borderColor: "#f0ad4e",
+        borderWidth: 1.5,
+        data: [12, 20, 15, 20, 5, 35, 10, 15, 35, 25],
+        backgroundColor: "transparent",
+      },
+      {
+        label: "Lost",
+        lineTension: 0.2,
+        borderColor: "#337ab7",
+        borderWidth: 1.5,
+        data: [16, 25, 10, 25, 10, 30, 14, 23, 14, 29],
+        backgroundColor: "transparent",
+      },
+    ],
   },
   options: {
     scales: {
-      yAxes: [{
-        gridLines: {
-          drawBorder: false
+      yAxes: [
+        {
+          gridLines: {
+            drawBorder: false,
+          },
+          ticks: {
+            stepSize: 12,
+          },
         },
-        ticks: {
-          stepSize: 12
-        }
-      }],
-      xAxes: [{
-        gridLines: {
-          display: false,
+      ],
+      xAxes: [
+        {
+          gridLines: {
+            display: false,
+          },
         },
-      }],
-    }
-  }
-})
+      ],
+    },
+  },
+});
