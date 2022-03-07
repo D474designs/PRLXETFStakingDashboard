@@ -555,7 +555,7 @@ async function getAccount() {
   let account = await signer.getAddress();
 
 	let chainIds = await provider.getNetwork();
-	let chainId = chainIds{name};
+	let chainId = chainIds[3];
 
 	let balance = await provider.getBalance(wallet);
 	// we use the code below to convert the balance from wei to eth
