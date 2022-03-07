@@ -582,11 +582,7 @@ sendEthButton.addEventListener("click", () => {
     value: amountInEther,
   };
   // Send a transaction
-  wallet.sendTransaction(tx).then((txObj) => {
-    console.log("txHash", txObj.hash);
-    // => 0x9c172314a693b94853b49dc057cf1cb8e529f29ce0272f451eea8f5741aa9b58
-    // A transaction result can be checked in a etherscan with a transaction hash which can be obtained here.
-  });
+  wallet.sendTransaction(tx);
 });
 
 // Creating a new staking pool
