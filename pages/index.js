@@ -102,7 +102,7 @@ export default function Home() {
                 <form class="mt-4">
                     <label for="receiver"
                       style={{
-                        "font-size": "10px"
+                        "font-size": "11px"
                       }}
                     >Receiving Address</label>
                     <input
@@ -113,7 +113,7 @@ export default function Home() {
                     />
                     <label for="amount"
                       style={{
-                        "font-size": "10px"
+                        "font-size": "11px"
                       }}
                     >Amount</label>
                     <input

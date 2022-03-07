@@ -555,7 +555,7 @@ async function getAccount() {
   let account = await signer.getAddress();
 
 	let chainIds = await provider.getNetwork();
-	let chainId = chainIds.name;
+	let chainId = chainIds[2];
 
 	showAccount.innerHTML = account;
 	showId.innerHTML = chainId;
@@ -572,7 +572,7 @@ ethereumButton.addEventListener("click", () => {
 
 //Sending Ethereum to an address
 sendEthButton.addEventListener('click', () => {
-	signer.getGasPrice()
+	signer.getGasPrice();
 	receiver = document.getElementById("receiver").innerText;
 	amount = document.getElementById("amount").innerText;
 
