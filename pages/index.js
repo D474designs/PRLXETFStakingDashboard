@@ -99,43 +99,33 @@ export default function Home() {
                 Account: <br></br>
                 <span class="showAccount"></span>
                 <br></br>
-                <div class="mt-4">
-                  <h5 class="fw-bold">Transfer Usdt</h5>
-                  <div
-                    class="alert alert-info mt-2"
-                    id="transferResponse"
-                    style="display: none"
-                  >
-                    Lorem ipsum dolor sit amet.
+                <form
+                  class="mt-4"
+                  id="transferForm"
+                  onsubmit="event.preventDefault(); transferUsdc();"
+                >
+                  <div class="form-group">
+                    <label for="receiver">Receivers address</label>
+                    <input
+                      type="text"
+                      id="receiver"
+                      class="form-control"
+                      required
+                    />
                   </div>
-                  <form
-                    class="mt-4"
-                    id="transferForm"
-                    onsubmit="event.preventDefault(); transferUsdc();"
-                  >
-                    <div class="form-group">
-                      <label for="receiver">Receivers address</label>
-                      <input
-                        type="text"
-                        id="receiver"
-                        class="form-control"
-                        required
-                      />
-                    </div>
-                    <div class="form-group mt-3">
-                      <label for="amount">Amount</label>
-                      <input type="text" id="amount" class="form-control" required />
-                    </div>
-                    <div class="form-group mt-3">
-                      <button class="btn btn-success w-100" type="submit">
-                        Continue
-                      </button>
-                    </div>
-                  </form>
-                </div>
-                
+                  <div class="form-group mt-3">
+                    <label for="amount">Amount</label>
+                    <input
+                      type="text"
+                      id="amount"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                </form>
                 <button
                   class="sendCrypto"
+                  type="submit"
                   style={{
                     "background-color": "#ffc107",
                     color: "#fff",
