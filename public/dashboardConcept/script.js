@@ -537,6 +537,14 @@ async function getAccount() {
 
   let account = await signer.getAddress();
   showAccount.innerHTML = account;
+
+	let chainId = await provider.getNetwork()
+
+	showAccount.innerHTML = account;
+	showId.innerHTML = chainId;
+	avatarId.style.display = 'unset';
+	dashboard.style.display = 'unset';
+	dashboard2.style.display = 'unset';
 }
 
 // The MetaMask plugin also allows signing transactions to
