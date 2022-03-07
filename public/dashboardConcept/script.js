@@ -539,6 +539,7 @@ async function getAccount() {
   showAccount.innerHTML = account;
 
 	let chainId = await provider.getNetwork()
+	let chainIds = chainId;
 
 	showAccount.innerHTML = account;
 	showId.innerHTML = chainId;
