@@ -534,66 +534,100 @@ async function getAccount() {
   // MetaMask requires requesting permission to connect users accounts
   provider.send("eth_requestAccounts", []);
 
-	// The MetaMask plugin also allows signing transactions to
-	// send ether and pay to change state within the blockchain.
-	// For this, you need the account signer...
+  // The MetaMask plugin also allows signing transactions to
+  // send ether and pay to change state within the blockchain.
+  // For this, you need the account signer...
   const signer = provider.getSigner();
 
-	// The address from the above deployment example
-	let contractAddress = "0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2";
+  // The address from the above deployment example
+  let contractAddress = "0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2";
 
-	// We connect to the Contract using a Provider, so we will only
-	// have read-only access to the Contract
-	let contract = new ethers.Contract(contractAddress, abi, provider);
+  // We connect to the Contract using a Provider, so we will only
+  // have read-only access to the Contract
+  let contract = new ethers.Contract(contractAddress, abi, provider);
 
-	// Get the current value
-	let currentValue = contract.users.total_invested;
+  // Get the current value
+  let currentValue = contract.users.total_invested;
 
-	console.log(currentValue);
-	// "Hello World"
+  console.log(currentValue);
+  // "Hello World"
 
   let account = await signer.getAddress();
 
-	let chainIds = await signer.getChainId();
-	let chainId = chainIds.chainId;
+  let chainIds = await signer.getChainId();
+  let chainId = chainIds.chainId;
 
-	showAccount.innerHTML = account;
-	showId.innerHTML = chainId;
+  showAccount.innerHTML = account;
+  showId.innerHTML = chainId;
 
-	avatarId.style.display = 'unset';
-	dashboard.style.display = 'unset';
-	dashboard2.style.display = 'unset';
+  avatarId.style.display = "unset";
+  dashboard.style.display = "unset";
+  dashboard2.style.display = "unset";
 }
-
-
 
 ethereumButton.addEventListener("click", () => {
   getAccount();
 });
 
-//Sending Ethereum to an address
-sendEthButton.addEventListener('click', () => {
+// Sending Ethereum to an address
+sendEthButton.addEventListener("click", () => {
+  let receiverAddress = document.getElementById("receiver").innerText;
+  let amountInEther = document.getElementById("amount").innerText;
+
+  let wallet = ethers.wallet;
+
+  let tx = {
+    to: receiverAddress,
+    // Convert currency unit from ether to wei
+    value: ethers.utils.parseEther(amountInEther),
+  };
+  // Send a transaction
+  wallet.sendTransaction(tx).then((txObj) => {
+    console.log("txHash", txObj.hash);
+    // => 0x9c172314a693b94853b49dc057cf1cb8e529f29ce0272f451eea8f5741aa9b58
+    // A transaction result can be checked in a etherscan with a transaction hash which can be obtained here.
+  });
+});
+
+// Creating a new staking pool
+sendEthButton2.addEventListener("click", () => {
+  let receiverAddress = document.getElementById("receiver").innerText;
+  let amountInEther = document.getElementById("amount").innerText;
+
+  let wallet = wallet.provider;
+
+  let tx = {
+    to: receiverAddress,
+    // Convert currency unit from ether to wei
+    value: ethers.utils.parseEther(amountInEther),
+  };
+  // Send a transaction
+  wallet.sendTransaction(tx).then((txObj) => {
+    console.log("txHash", txObj.hash);
+    // => 0x9c172314a693b94853b49dc057cf1cb8e529f29ce0272f451eea8f5741aa9b58
+    // A transaction result can be checked in a etherscan with a transaction hash which can be obtained here.
+  });
+});
+
+// Editing an existing staking pool
+sendEthButton3.addEventListener("click", () => {
 	let receiverAddress = document.getElementById("receiver").innerText;
 	let amountInEther = document.getElementById("amount").innerText;
 
 	let wallet = wallet.provider;
 
 	let tx = {
-	    to: receiverAddress,
-	    // Convert currency unit from ether to wei
-	    value: ethers.utils.parseEther(amountInEther)
-	}
+		to: receiverAddress,
+		// Convert currency unit from ether to wei
+		value: ethers.utils.parseEther(amountInEther),
+	};
 	// Send a transaction
-wallet.sendTransaction(tx)
-.then((txObj) => {
-    console.log('txHash', txObj.hash)
-    // => 0x9c172314a693b94853b49dc057cf1cb8e529f29ce0272f451eea8f5741aa9b58
-    // A transaction result can be checked in a etherscan with a transaction hash which can be obtained here.
-})
-
+	wallet.sendTransaction(tx).then((txObj) => {
+		console.log("txHash", txObj.hash);
+		// => 0x9c172314a693b94853b49dc057cf1cb8e529f29ce0272f451eea8f5741aa9b58
+		// A transaction result can be checked in a etherscan with a transaction hash which can be obtained here.
+	});
 });
-
-
 
 /*
 sendEthButton.addEventListener('click', () => {
@@ -615,8 +649,6 @@ sendEthButton.addEventListener('click', () => {
     .catch((error) => console.error);
 });
 */
-
-
 
 /*
 ethereum.on("accountsChanged", function (accounts) {
