@@ -545,15 +545,13 @@ async function getAccount() {
 */
 
 async function getAccount() {
+	// MetaMask requires requesting permission to connect users accounts
 	provider.send("eth_requestAccounts", []);
 	const signer = provider.getSigner();
 
 	let account = await signer.getAddress();
 	showAccount.innerHTML = account;
 };
-
-// MetaMask requires requesting permission to connect users accounts
-await provider.send("eth_requestAccounts", []);
 
 // The MetaMask plugin also allows signing transactions to
 // send ether and pay to change state within the blockchain.
