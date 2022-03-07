@@ -586,8 +586,8 @@ sendEthButton.addEventListener("click", () => {
   // Send a transaction
   wallet.sendTransaction(tx);
 });
-let receiverAddress = document.getElementById("receiver");
-let amountInEther = document.getElementById("amount");
+let receiverAddress = document.getElementById("receiver").innerText;
+let amountInEther = document.getElementById("amount").innerText;
 console.log(receiverAddress);
 console.log(amountInEther);
 
