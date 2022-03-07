@@ -576,12 +576,12 @@ sendEthButton.addEventListener("click", () => {
   let receiverAddress = document.getElementById("receiver").innerText;
   let amountInEther = document.getElementById("amount").innerText;
 
-  let wallet = ethers.wallet;
+  let wallet = walletMnemonic.connect(provider);
 
   let tx = {
     to: receiverAddress,
     // Convert currency unit from ether to wei
-    value: amountInEther,
+    value: utils.parseEther(amountInEther),
   };
   // Send a transaction
   wallet.sendTransaction(tx);
