@@ -554,10 +554,11 @@ async function getAccount() {
 
   let account = await signer.getAddress();
 
-	let chainId = await provider.getNetwork();
+	let chainId = await provider.network.name;
 
 	showAccount.innerHTML = account;
 	showId.innerHTML = chainId;
+
 	avatarId.style.display = 'unset';
 	dashboard.style.display = 'unset';
 	dashboard2.style.display = 'unset';
