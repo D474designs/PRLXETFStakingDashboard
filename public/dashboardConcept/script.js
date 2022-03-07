@@ -586,7 +586,7 @@ let contract = new ethers.Contract(contractAddress, abi, provider);
 
 
 // Get the current value
-let currentValue = contract.users.total_invested();
+let currentValue = contract.users.total_invested;
 
 console.log(currentValue);
 // "Hello World"
