@@ -533,45 +533,48 @@ async function getAccount() {
 async function getAccount() {
   // MetaMask requires requesting permission to connect users accounts
   provider.send("eth_requestAccounts", []);
+
+	// The MetaMask plugin also allows signing transactions to
+	// send ether and pay to change state within the blockchain.
+	// For this, you need the account signer...
   const signer = provider.getSigner();
 
   let account = await signer.getAddress();
 
 	let chainIds = await provider.getNetwork();
-	let chainId = chainIds[name];
+	let chainId = chainIds[3];
 
 	showAccount.innerHTML = account;
 	showId.innerHTML = chainId;
 	avatarId.style.display = 'unset';
 	dashboard.style.display = 'unset';
 	dashboard2.style.display = 'unset';
+
+	// The address from the above deployment example
+	let contractAddress = "0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2";
+
+	// We connect to the Contract using a Provider, so we will only
+	// have read-only access to the Contract
+	let contract = new ethers.Contract(contractAddress, abi, provider);
+
+	// Get the current value
+	let currentValue = contract.users.total_invested;
+
+	console.log(currentValue);
+	// "Hello World"
+
+	ethereumButton.addEventListener("click", () => {
+	  getAccount();
+	});
 }
 
-// The MetaMask plugin also allows signing transactions to
-// send ether and pay to change state within the blockchain.
-// For this, you need the account signer...
-const signer = provider.getSigner();
 
-// The address from the above deployment example
-let contractAddress = "0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2";
 
-// We connect to the Contract using a Provider, so we will only
-// have read-only access to the Contract
-let contract = new ethers.Contract(contractAddress, abi, provider);
-
-// Get the current value
-let currentValue = contract.users.total_invested;
-
-console.log(currentValue);
-// "Hello World"
-
-ethereumButton.addEventListener("click", () => {
-  getAccount();
-});
-
+/*
 ethereum.on("accountsChanged", function (accounts) {
   // Time to reload your interface with accounts[0]!
 });
+*/
 
 /*
 async function getAccount() {
