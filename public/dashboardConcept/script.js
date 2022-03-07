@@ -540,24 +540,19 @@ async function getAccount() {
   const signer = provider.getSigner();
 
   // The address from the above deployment example
-  let contractAddress = "0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2";
+  const contractAddress = "0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2";
 
   // We connect to the Contract using a Provider, so we will only
   // have read-only access to the Contract
   let contract = new ethers.Contract(contractAddress, abi, provider);
 
   // Get the current value
-  let currentValue = contract.users.total_invested;
+  let currentValue = contract.withdrawFee;
 
   console.log(currentValue);
   // "Hello World"
 
-	let wallet = ethers.wallet;
-
   let account = await signer.getAddress();
-
-	let balance = await provider.getBalance();
-
   let chainIds = await signer.getChainId();
   let chainId = chainIds.chainId;
 
@@ -578,101 +573,15 @@ ethereumButton.addEventListener("click", () => {
 
 // Sending Ethereum to an address
 sendEthButton.addEventListener("click", () => {
-  let receiverAddress = document.getElementById("receiver").innerText;
-  let amountInEther = document.getElementById("amount").innerText;
+	const contractAddress = "0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2";
+	let contract = new ethers.Contract(contractAddress, abi, signer);
 
-  let wallet = ethers.wallet;
-
-  let tx = {
-    to: "0x85Afc81b91a1F75A654473431bd7e81E377ec03E",
-    // Convert currency unit from ether to wei
-    value: utils.parseEther("3"),
-  };
-  // Send a transaction
-  wallet.sendTransaction(tx);
 });
 
-
-
-/*
 // Creating a new staking pool
 sendEthButton2.addEventListener("click", () => {
 
-	let walletSigner = wallet.connect(window.ethersProvider)
-	window.ethersProvider.getGasPrice() // gasPrice
-
-	let private_key =
-  "41559d28e936dc92104ff30691519693fc753ffbee6251a611b9aa1878f12a4d"
-	let send_token_amount = "1"
-	let to_address = "0x4c10D2734Fb76D3236E522509181CC3Ba8DE0e80"
-	let send_address = "0xda27a282B5B6c5229699891CfA6b900A716539E6"
-	let gas_limit = "0x100000"
-	let wallet = new ethers.Wallet(private_key)
-	let walletSigner = wallet.connect(window.ethersProvider)
-	let contract_address = ""
-	window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
-
-	function send_token(
-  contract_address,
-  send_token_amount,
-  to_address,
-  send_account,
-  private_key
-) {
-  let wallet = new ethers.Wallet(private_key)
-  let walletSigner = wallet.connect(window.ethersProvider)
-
-  window.ethersProvider.getGasPrice().then((currentGasPrice) => {
-    let gas_price = ethers.utils.hexlify(parseInt(currentGasPrice))
-    console.log(`gas_price: ${gas_price}`)
-
-    if (contract_address) {
-      // general token send
-      let contract = new ethers.Contract(
-        contract_address,
-        send_abi,
-        walletSigner
-      )
-
-      // How many tokens?
-      let numberOfTokens = ethers.utils.parseUnits(send_token_amount, 18)
-      console.log(`numberOfTokens: ${numberOfTokens}`)
-
-      // Send tokens
-      contract.transfer(to_address, numberOfTokens).then((transferResult) => {
-        console.dir(transferResult)
-        alert("sent token")
-      })
-    } // ether send
-    else {
-      const tx = {
-        from: send_account,
-        to: to_address,
-        value: ethers.utils.parseEther(send_token_amount),
-        nonce: window.ethersProvider.getTransactionCount(
-          send_account,
-          "latest"
-        ),
-        gasLimit: ethers.utils.hexlify(gas_limit), // 100000
-        gasPrice: gas_price,
-      }
-      console.dir(tx)
-      try {
-        walletSigner.sendTransaction(tx).then((transaction) => {
-          console.dir(transaction)
-          alert("Send finished!")
-        })
-      } catch (error) {
-        alert("failed to send!!")
-      }
-    }
-  })
-}
-
 });
-*/
-
-
 
 // Editing an existing staking pool
 sendEthButton3.addEventListener("click", () => {
