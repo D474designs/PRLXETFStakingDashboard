@@ -554,8 +554,7 @@ async function getAccount() {
 
   let account = await signer.getAddress();
 
-	let chainIds = await provider.getNetwork();
-	let chainId = chainIds[2];
+	let chainId = await provider.getNetwork();
 
 	showAccount.innerHTML = account;
 	showId.innerHTML = chainId;
