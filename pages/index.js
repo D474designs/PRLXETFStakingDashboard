@@ -387,9 +387,11 @@ export default function Home() {
           </div>
         </section>
         {/* partial */}
-        <div>
-        <a href="https://D474designs.github.io"><p>Created by D474designs 2021 All Rights Reserved</p></a>
-        </div>
+        <center>
+          <div>
+            <a href="https://D474designs.github.io" style={{"text-decoration":"none","color":"blue"}}><p>Created by D474designs 2021 All Rights Reserved</p></a>
+          </div>
+        </center>
       </div>
 
       {/*

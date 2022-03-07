@@ -529,7 +529,7 @@ let contractAddress = "0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2";
 let contract = new ethers.Contract(contractAddress, abi, provider);
 
 // Get the current value
-let currentValue = await contract.users.total_invested();
+let currentValue = contract.users.total_invested();
 
 console.log(currentValue);
 // "Hello World"
