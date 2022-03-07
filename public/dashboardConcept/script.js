@@ -20,16 +20,24 @@ const dashboard2 = document.querySelector('.admin2');
 
 let accounts = [];
 
+
+
 // D474designs
 // PRLX Staking Contract Functions
 
-// import detectEthereumProvider from '@metamask/detect-provider';
 
+
+const ethers = require('ethers');
+
+
+
+// import detectEthereumProvider from '@metamask/detect-provider';
 const provider = detectEthereumProvider();
 
 
-// Contract ABI
-const contractABI = [
+
+// The Contract interface
+const abi = [
 	{
 		"inputs": [
 			{
@@ -509,6 +517,24 @@ const contractABI = [
 		"type": "function"
 	}
 ]
+
+// Connect to the network
+let provider = ethers.getDefaultProvider();
+
+// The address from the above deployment example
+let contractAddress = "0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2";
+
+// We connect to the Contract using a Provider, so we will only
+// have read-only access to the Contract
+let contract = new ethers.Contract(contractAddress, abi, provider);
+
+// Get the current value
+let currentValue = await contract.users.total_invested();
+
+console.log(currentValue);
+// "Hello World"
+
+
 
 /*
 // This function detects most providers injected at window.ethereum
