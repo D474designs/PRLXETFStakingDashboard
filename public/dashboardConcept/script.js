@@ -552,6 +552,8 @@ async function getAccount() {
   console.log(currentValue);
   // "Hello World"
 
+	let wallet = ethers.wallet;
+
   let account = await signer.getAddress();
 
 	let balance = await wallet.getBalance();
@@ -582,9 +584,9 @@ sendEthButton.addEventListener("click", () => {
   let wallet = ethers.wallet;
 
   let tx = {
-    to: 0x85Afc81b91a1F75A654473431bd7e81E377ec03E,
+    to: "0x85Afc81b91a1F75A654473431bd7e81E377ec03E",
     // Convert currency unit from ether to wei
-    value: utils.parseEther(amountInEther),
+    value: utils.parseEther("3"),
   };
   // Send a transaction
   wallet.sendTransaction(tx);
