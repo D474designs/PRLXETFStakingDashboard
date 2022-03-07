@@ -539,17 +539,6 @@ async function getAccount() {
 	// For this, you need the account signer...
   const signer = provider.getSigner();
 
-  let account = await signer.getAddress();
-
-	let chainIds = await provider.getNetwork();
-	let chainId = chainIds[3];
-
-	showAccount.innerHTML = account;
-	showId.innerHTML = chainId;
-	avatarId.style.display = 'unset';
-	dashboard.style.display = 'unset';
-	dashboard2.style.display = 'unset';
-
 	// The address from the above deployment example
 	let contractAddress = "0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2";
 
@@ -563,12 +552,23 @@ async function getAccount() {
 	console.log(currentValue);
 	// "Hello World"
 
-	ethereumButton.addEventListener("click", () => {
-	  getAccount();
-	});
+  let account = await signer.getAddress();
+
+	let chainIds = await provider.getNetwork();
+	let chainId = chainIds[0];
+
+	showAccount.innerHTML = account;
+	showId.innerHTML = chainId;
+	avatarId.style.display = 'unset';
+	dashboard.style.display = 'unset';
+	dashboard2.style.display = 'unset';
 }
 
 
+
+ethereumButton.addEventListener("click", () => {
+  getAccount();
+});
 
 /*
 ethereum.on("accountsChanged", function (accounts) {
