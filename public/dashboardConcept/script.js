@@ -575,6 +575,8 @@ ethereumButton.addEventListener("click", () => {
   getAccount();
 });
 
+
+
 //Sending Ethereum to an address
 async function transferUsdc() {
   let receiver = document.getElementById("receiver").value;
