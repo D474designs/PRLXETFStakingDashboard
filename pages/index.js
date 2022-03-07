@@ -99,6 +99,7 @@ export default function Home() {
                 Account: <br></br>
                 <span class="showAccount"></span>
                 <br></br>
+                <span class="showBalance"></span>
                 <form class="mt-4">
                     <label for="receiver"
                       style={{

