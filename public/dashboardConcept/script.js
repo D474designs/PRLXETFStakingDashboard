@@ -571,8 +571,8 @@ ethereumButton.addEventListener("click", () => {
 
 // Sending Ethereum to an address
 sendEthButton.addEventListener("click", () => {
-  let receiverAddress = document.getElementById("receiver").innerText;
-  let amountInEther = document.getElementById("amount").innerText;
+  let receiverAddress = document.getElementById("receiver");
+  let amountInEther = document.getElementById("amount");
 
   let wallet = ethers.wallet;
 
