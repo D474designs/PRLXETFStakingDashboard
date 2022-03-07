@@ -585,44 +585,17 @@ sendEthButton.addEventListener("click", () => {
   wallet.sendTransaction(tx);
 });
 
+console.log(receiverAddress);
+console.log(amountInEther);
+
 // Creating a new staking pool
 sendEthButton2.addEventListener("click", () => {
-  let receiverAddress = document.getElementById("receiver").innerText;
-  let amountInEther = document.getElementById("amount").innerText;
 
-  let wallet = wallet.provider;
-
-  let tx = {
-    to: receiverAddress,
-    // Convert currency unit from ether to wei
-    value: ethers.utils.parseEther(amountInEther),
-  };
-  // Send a transaction
-  wallet.sendTransaction(tx).then((txObj) => {
-    console.log("txHash", txObj.hash);
-    // => 0x9c172314a693b94853b49dc057cf1cb8e529f29ce0272f451eea8f5741aa9b58
-    // A transaction result can be checked in a etherscan with a transaction hash which can be obtained here.
-  });
 });
 
 // Editing an existing staking pool
 sendEthButton3.addEventListener("click", () => {
-	let receiverAddress = document.getElementById("receiver").innerText;
-	let amountInEther = document.getElementById("amount").innerText;
 
-	let wallet = wallet.provider;
-
-	let tx = {
-		to: receiverAddress,
-		// Convert currency unit from ether to wei
-		value: ethers.utils.parseEther(amountInEther),
-	};
-	// Send a transaction
-	wallet.sendTransaction(tx).then((txObj) => {
-		console.log("txHash", txObj.hash);
-		// => 0x9c172314a693b94853b49dc057cf1cb8e529f29ce0272f451eea8f5741aa9b58
-		// A transaction result can be checked in a etherscan with a transaction hash which can be obtained here.
-	});
 });
 
 /*
