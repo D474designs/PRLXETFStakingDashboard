@@ -551,6 +551,24 @@ async function getAccount() {
 
 	let account = await signer.getAddress();
 	showAccount.innerHTML = account;
+
+	// Look up the current block number
+	await provider.getBlockNumber()
+	// 14322885
+
+	// Get the balance of an account (by address or ENS name, if supported by network)
+	balance = await provider.getBalance("ethers.eth")
+	// { BigNumber: "82826475815887608" }
+
+	// Often you need to format the output to something more user-friendly,
+	// such as in ether (instead of wei)
+	ethers.utils.formatEther(balance)
+	// '0.082826475815887608'
+
+	// If a user enters a string in an input field, you may need
+	// to convert it from ether (as a string) to wei (as a BigNumber)
+	ethers.utils.parseEther("1.0")
+	// { BigNumber: "1000000000000000000" }
 };
 
 // The MetaMask plugin also allows signing transactions to
@@ -572,26 +590,6 @@ let currentValue = contract.users.total_invested();
 
 console.log(currentValue);
 // "Hello World"
-
-
-
-// Look up the current block number
-await provider.getBlockNumber()
-// 14322885
-
-// Get the balance of an account (by address or ENS name, if supported by network)
-balance = await provider.getBalance("ethers.eth")
-// { BigNumber: "82826475815887608" }
-
-// Often you need to format the output to something more user-friendly,
-// such as in ether (instead of wei)
-ethers.utils.formatEther(balance)
-// '0.082826475815887608'
-
-// If a user enters a string in an input field, you may need
-// to convert it from ether (as a string) to wei (as a BigNumber)
-ethers.utils.parseEther("1.0")
-// { BigNumber: "1000000000000000000" }
 
 
 
