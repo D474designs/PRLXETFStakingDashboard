@@ -556,7 +556,7 @@ async function getAccount() {
 
   let account = await signer.getAddress();
 
-	let balance = await wallet.getBalance();
+	let balance = await provider.getBalance();
 
   let chainIds = await signer.getChainId();
   let chainId = chainIds.chainId;
