@@ -8,18 +8,6 @@
 // https://D474developments.github
 // https://docs.metamask.io/guide/
 
-const ethereumButton = document.querySelector('.connectWallet');
-const sendEthButton = document.querySelector('.sendCrypto');
-const sendEthButton2 = document.querySelector('.sendCrypto2');
-const sendEthButton3 = document.querySelector('.sendCrypto3');
-const showAccount = document.querySelector('.showAccount');
-const showId = document.querySelector('.showId');
-const avatarId = document.querySelector('.accounts');
-const dashboard = document.querySelector('.admin');
-const dashboard2 = document.querySelector('.admin2');
-
-let accounts = [];
-
 
 
 // D474designs
@@ -27,7 +15,7 @@ let accounts = [];
 
 
 
-const ethers = require('ethers');
+// const ethers = require('ethers');
 
 
 
@@ -518,8 +506,35 @@ const abi = [
 	}
 ]
 
+
+
+const ethereumButton = document.querySelector('.connectWallet');
+const sendEthButton = document.querySelector('.sendCrypto');
+const sendEthButton2 = document.querySelector('.sendCrypto2');
+const sendEthButton3 = document.querySelector('.sendCrypto3');
+const showAccount = document.querySelector('.showAccount');
+const showId = document.querySelector('.showId');
+const avatarId = document.querySelector('.accounts');
+const dashboard = document.querySelector('.admin');
+const dashboard2 = document.querySelector('.admin2');
+
+let accounts = [];
+
+
+
 // Connect to the network
-let provider = ethers.getDefaultProvider();
+
+// A Web3Provider wraps a standard Web3 provider, which is
+// what MetaMask injects as window.ethereum into each page
+const provider = new ethers.providers.Web3Provider(window.ethereum)
+
+// MetaMask requires requesting permission to connect users accounts
+await provider.send("eth_requestAccounts", []);
+
+// The MetaMask plugin also allows signing transactions to
+// send ether and pay to change state within the blockchain.
+// For this, you need the account signer...
+const signer = provider.getSigner()
 
 // The address from the above deployment example
 let contractAddress = "0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2";
@@ -547,6 +562,7 @@ if (provider) {
 }
 */
 
+/*
 ethereum.on('accountsChanged', (accounts) => {
   // Handle the new accounts, or lack thereof.
   // "accounts" will always be an array, but it can be empty.
@@ -560,6 +576,7 @@ ethereum.on('chainChanged', (chainId) => {
   // We recommend reloading the page unless you have good reason not to.
   window.location.reload();
 });
+*/
 
 // Get the contract instance using your contract's abi and address:
 // const contractInstance = web3.eth.contract(contractABI).at(contractAddress);
@@ -601,6 +618,7 @@ async function connectToMetamask(){
 */
 
 //Sending Ethereum to an address
+/*
 sendEthButton.addEventListener('click', () => {
   ethereum
     .request({
@@ -677,6 +695,7 @@ async function getAccount() {
   dashboard.style.display = 'unset';
   dashboard2.style.display = 'unset';
 }
+*/
 
 /*
 ethereum
