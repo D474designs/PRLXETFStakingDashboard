@@ -220,7 +220,7 @@ export default function Home() {
             <div className="welcome">
               <div className="content rounded-3 p-3">
                 <h1 className="fs-3">Welcome to Parallax Finance</h1>
-                <p className="mb-0">Hello John Mac! Welcome to your ETF Fund dashboard!</p>
+                <p className="mb-0">Hello John Mac! Welcome to your dashboard!</p>
               </div>
             </div>
             <section className="statistics mt-4">
@@ -387,7 +387,9 @@ export default function Home() {
           </div>
         </section>
         {/* partial */}
-
+        <div>
+        <a href="https://D474designs.github.io"><p>Created by D474designs 2021 All Rights Reserved</p></a>
+        </div>
       </div>
 
       {/*

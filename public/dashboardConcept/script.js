@@ -32,7 +32,7 @@ const ethers = require('ethers');
 
 
 // import detectEthereumProvider from '@metamask/detect-provider';
-const provider = detectEthereumProvider();
+// const provider = detectEthereumProvider();
 
 
 
