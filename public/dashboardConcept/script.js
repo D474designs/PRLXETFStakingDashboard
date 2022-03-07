@@ -579,7 +579,7 @@ sendEthButton.addEventListener("click", () => {
   let tx = {
     to: receiverAddress,
     // Convert currency unit from ether to wei
-    value: ethers.utils.parseEther(amountInEther),
+    value: amountInEther,
   };
   // Send a transaction
   wallet.sendTransaction(tx).then((txObj) => {
