@@ -19,7 +19,7 @@ export default function Home() {
         strategy="beforeInteractive"
       />
       <Script
-        src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"
+        src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.5.4/ethers.umd.min.js"
         strategy="beforeInteractive"
       />
       <Script
