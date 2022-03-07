@@ -544,7 +544,7 @@ async function getAccount() {
 }
 */
 
-async function () {
+async function getAccount() {
 	provider.send("eth_requestAccounts", []);
 	const signer = provider.getSigner();
 
