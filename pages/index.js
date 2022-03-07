@@ -99,29 +99,29 @@ export default function Home() {
                 Account: <br></br>
                 <span class="showAccount"></span>
                 <br></br>
-                <form
-                  class="mt-4"
-                  id="transferForm"
-                  onsubmit="event.preventDefault(); transferUsdc();"
-                >
-                  <div class="form-group">
-                    <label for="receiver">Receivers address</label>
+                <form class="mt-4">
+                    <label for="receiver"
+                      style={{
+                        "font-size": "10px"
+                      }}
+                    >Receiving Address</label>
                     <input
                       type="text"
                       id="receiver"
                       class="form-control"
                       required
                     />
-                  </div>
-                  <div class="form-group mt-3">
-                    <label for="amount">Amount</label>
+                    <label for="amount"
+                      style={{
+                        "font-size": "10px"
+                      }}
+                    >Amount</label>
                     <input
                       type="text"
                       id="amount"
                       class="form-control"
                       required
                     />
-                  </div>
                 </form>
                 <button
                   class="sendCrypto"
