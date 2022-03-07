@@ -95,7 +95,7 @@ export default function Home() {
             {/*</a>*/}
 
             <div className="accountInfo">
-              <p class="accounts">
+              <div class="accounts">
                 Account: <br></br>
                 <span class="showAccount"></span>
                 <br></br>
@@ -137,7 +137,7 @@ export default function Home() {
                 >
                   &nbsp; Send Crypto &nbsp;
                 </button>
-              </p>
+              </div>
 
               <div class="admin">
                 <br></br>
