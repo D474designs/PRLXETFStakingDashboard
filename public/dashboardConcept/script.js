@@ -528,6 +528,30 @@ let accounts = [];
 // what MetaMask injects as window.ethereum into each page
 const provider = new ethers.providers.Web3Provider(window.ethereum)
 
+
+
+/*
+async function getAccount() {
+  let accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+  let account = accounts[0];
+  let chainIds = await ethereum.request({ method: 'eth_chainId' });
+  let chainId = chainIds;
+  showAccount.innerHTML = account;
+  showId.innerHTML = chainId;
+  avatarId.style.display = 'unset';
+  dashboard.style.display = 'unset';
+  dashboard2.style.display = 'unset';
+}
+*/
+
+async function () {
+	provider.send("eth_requestAccounts", []);
+	const signer = provider.getSigner();
+
+	let account = await signer.getAddress();
+	showAccount.innerHTML = account;
+};
+
 // MetaMask requires requesting permission to connect users accounts
 await provider.send("eth_requestAccounts", []);
 
@@ -543,11 +567,59 @@ let contractAddress = "0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2";
 // have read-only access to the Contract
 let contract = new ethers.Contract(contractAddress, abi, provider);
 
+
+
 // Get the current value
 let currentValue = contract.users.total_invested();
 
 console.log(currentValue);
 // "Hello World"
+
+
+
+// Look up the current block number
+await provider.getBlockNumber()
+// 14322885
+
+// Get the balance of an account (by address or ENS name, if supported by network)
+balance = await provider.getBalance("ethers.eth")
+// { BigNumber: "82826475815887608" }
+
+// Often you need to format the output to something more user-friendly,
+// such as in ether (instead of wei)
+ethers.utils.formatEther(balance)
+// '0.082826475815887608'
+
+// If a user enters a string in an input field, you may need
+// to convert it from ether (as a string) to wei (as a BigNumber)
+ethers.utils.parseEther("1.0")
+// { BigNumber: "1000000000000000000" }
+
+
+
+ethereumButton.addEventListener('click', () => {
+  getAccount();
+});
+
+ethereum.on('accountsChanged', function (accounts) {
+  // Time to reload your interface with accounts[0]!
+});
+
+
+
+/*
+async function getAccount() {
+  let accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+  let account = accounts[0];
+  let chainIds = await ethereum.request({ method: 'eth_chainId' });
+  let chainId = chainIds;
+  showAccount.innerHTML = account;
+  showId.innerHTML = chainId;
+  avatarId.style.display = 'unset';
+  dashboard.style.display = 'unset';
+  dashboard2.style.display = 'unset';
+}
+*/
 
 
 
