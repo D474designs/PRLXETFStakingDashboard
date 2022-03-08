@@ -552,15 +552,15 @@ async function getAccount() {
   console.log(currentValue);
   // "Hello World"
 
-	balance = await provider.getBalance("ethers.eth")
-	ethers.utils.formatEther(balance)
+  balance = await provider.getBalance();
+  ethers.utils.formatEther(balance);
 
   let account = await signer.getAddress();
   let chainIds = await signer.getChainId();
   let chainId = chainIds.chainId;
 
   showAccount.innerHTML = account;
-	showBalance.innerHTML = balance;
+  showBalance.innerHTML = balance;
   showId.innerHTML = chainId;
 
   avatarId.style.display = "unset";
@@ -571,8 +571,6 @@ async function getAccount() {
 ethereumButton.addEventListener("click", () => {
   getAccount();
 });
-
-
 
 /*
 // Sending Ethereum to an address
