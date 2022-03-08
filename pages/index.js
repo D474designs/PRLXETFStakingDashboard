@@ -97,11 +97,26 @@ export default function Home() {
             <div className="accountInfo">
               <div class="accounts">
                 Account: <br></br>
-                <span class="showAccount"></span>
+                <span class="showAccount"></span><br></br>
+                <span class="showBalance"></span><br></br>
+                <button
+                  class="sendCrypto"
+                  type="submit"
+                  style={{
+                    "background-color": "#ffc107",
+                    color: "#fff",
+                    "-webkit-text-shadow":
+                      "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                    "text-shadow":
+                      "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                  }}
+                >
+                  &nbsp; Send Crypto &nbsp;
+                </button>
               </div>
 
               <div class="admin">
-                <br></br> 
+                <br></br>
                 <br></br>
                 <div class="accounts2">Admin Options</div>
                 <span class="showId"></span>
