@@ -573,8 +573,6 @@ ethereumButton.addEventListener("click", () => {
 
 // Sending Ethereum to an address
 sendEthButton.addEventListener("click", () => {
-	const contractAddress = "0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2";
-	let contract = new ethers.Contract(contractAddress, abi, signer);
 
 });
 
