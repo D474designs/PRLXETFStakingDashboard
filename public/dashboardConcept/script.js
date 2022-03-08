@@ -547,7 +547,7 @@ async function getAccount() {
   let contract = new ethers.Contract(contractAddress, abi, provider);
 
   // Get the current value
-  let currentValue = contract.withdrawFee;
+  let currentValue = contract._withdrawFee;
 
   console.log(currentValue);
   // "Hello World"
