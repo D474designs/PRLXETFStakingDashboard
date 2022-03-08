@@ -552,12 +552,12 @@ async function getAccount() {
   console.log(currentValue);
   // "Hello World"
 
-  balance = await provider.getBalance();
-  ethers.utils.formatEther(balance);
-
   let account = await signer.getAddress();
   let chainIds = await signer.getChainId();
   let chainId = chainIds.chainId;
+
+	balance = await provider.getBalance(account);
+	ethers.utils.formatEther(balance);
 
   showAccount.innerHTML = account;
   showBalance.innerHTML = balance;
