@@ -574,6 +574,11 @@ ethereumButton.addEventListener("click", () => {
 });
 
 /*
+// If a user enters a string in an input field, you may need
+// to convert it from ether (as a string) to wei (as a BigNumber)
+ethers.utils.parseEther("1.0")
+// { BigNumber: "1000000000000000000" }
+
 // Sending Ethereum to an address
 sendEthButton.addEventListener("click", () => {
 
