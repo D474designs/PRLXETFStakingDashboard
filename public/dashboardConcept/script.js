@@ -503,6 +503,7 @@ const sendEthButton = document.querySelector(".sendCrypto");
 const sendEthButton2 = document.querySelector(".sendCrypto2");
 const sendEthButton3 = document.querySelector(".sendCrypto3");
 const showAccount = document.querySelector(".showAccount");
+const showBalance = document.querySelector(".showBalance")
 const showId = document.querySelector(".showId");
 const avatarId = document.querySelector(".accounts");
 const dashboard = document.querySelector(".admin");
