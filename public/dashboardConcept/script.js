@@ -556,8 +556,8 @@ async function getAccount() {
   let chainIds = await signer.getChainId();
   let chainId = chainIds.chainId;
 
-	balance = await provider.getBalance(account);
-	ethers.utils.formatEther(balance);
+	let balances = await provider.getBalance(account);
+	let balance = ethers.utils.formatEther(balances);
 
   showAccount.innerHTML = account;
   showBalance.innerHTML = balance;
