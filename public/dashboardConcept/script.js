@@ -571,6 +571,7 @@ ethereumButton.addEventListener("click", () => {
 
 
 
+/*
 // Sending Ethereum to an address
 sendEthButton.addEventListener("click", () => {
 
@@ -585,6 +586,7 @@ sendEthButton2.addEventListener("click", () => {
 sendEthButton3.addEventListener("click", () => {
 
 });
+*/
 
 /*
 sendEthButton.addEventListener('click', () => {
