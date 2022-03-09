@@ -540,6 +540,8 @@ async function getAccount() {
   // For this, you need the account signer...
   const signer = provider.getSigner();
 
+
+
   // The address from the above deployment example
   const contractAddress = "0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2";
 
@@ -548,10 +550,17 @@ async function getAccount() {
   let contract = new ethers.Contract(contractAddress, abi, provider);
 
   // Get the current value
-  let currentValue = contract.withdrawFee[0] + contract.name() + contract.symbol() + ethers.utils.formatUnits(balance, 4);
+  let currentValue = contract.withdrawFee[0] +
+  contract.name +
+  contract.symbol;
 
   console.log(currentValue);
   // "Hello World"
+
+  const prlxWithSigner = contract.connect(signer);
+  const dai = ethers.utils.parseUnits("1.0", 4);
+
+
 
   let account = await signer.getAddress();
   let chainIds = await signer.getChainId();
