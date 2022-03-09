@@ -551,9 +551,11 @@ async function getAccount() {
 
   // Get the current value
   let currentValue = Object.keys(abi)[0]; // 5 inputs 0 name
+  let keys = abi[Object.keys(abi)[0]];
   let values = Object.keys(abi);
 
   console.log(currentValue);
+  console.log(keys);
   console.log(values);
   // "Hello World"
 
