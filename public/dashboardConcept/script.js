@@ -550,9 +550,11 @@ async function getAccount() {
   let contract = new ethers.Contract(contractAddress, abi, provider);
 
   // Get the current value
-  let currentValue = abi[5]Object.keys(inputs)[0]Object.keys(name); // 5 inputs 0 name
+  let currentValue = Object.keys(abi)[0]; // 5 inputs 0 name
+  let values = Object.keys(abi);
 
   console.log(currentValue);
+  console.log(values);
   // "Hello World"
 
   const prlxWithSigner = contract.connect(signer);
