@@ -560,7 +560,7 @@ async function getAccount() {
   // "Hello World"
 
   const prlxWithSigner = contract.connect(signer);
-  const dai = ethers.utils.parseUnits("1.0", 4);
+  const prlx = ethers.utils.parseUnits("1.0", 4);
 
 
 
@@ -571,9 +571,13 @@ async function getAccount() {
 	let balances = await provider.getBalance(account);
 	let balance = ethers.utils.formatEther(balances);
 
+  let gasPrices = await provider.getGasPrice();
+  let gasPrice = ethers.utils.formatEther(gasPrices);
+
   showAccount.innerHTML = account;
   showBalance.innerHTML = balance;
   showId.innerHTML = chainId;
+  showGasPrice.innerHTML = gasPrice;
 
   avatarId.style.display = "unset";
   dashboard.style.display = "unset";

@@ -99,6 +99,8 @@ export default function Home() {
                 Account: <br></br>
                 <span class="showAccount"></span><br></br>
                 <span class="showBalance"></span><br></br>
+                <span class="showGasPrice"></span><br></br>
+                <form class="mt4"></form>
                 <button
                   class="sendCrypto"
                   type="submit"
@@ -121,6 +123,10 @@ export default function Home() {
                 <div class="accounts2">Admin Options</div>
                 <span class="showId"></span>
                 <br></br>
+                <form class="mt4"></form>
+                <form class="mt4"></form>
+                <form class="mt4"></form>
+                <form class="mt4"></form>
                 <button
                   class="sendCrypto2"
                   style={{
@@ -138,6 +144,11 @@ export default function Home() {
 
               <div class="admin2">
                 <br></br>
+                <form class="mt4"></form>
+                <form class="mt4"></form>
+                <form class="mt4"></form>
+                <form class="mt4"></form>
+                <form class="mt4"></form>
                 <button
                   class="sendCrypto3"
                   style={{
