@@ -505,6 +505,7 @@ const sendEthButton3 = document.querySelector(".sendCrypto3");
 const showAccount = document.querySelector(".showAccount");
 const showBalance = document.querySelector(".showBalance")
 const showId = document.querySelector(".showId");
+const showGasPrice = document.querySelector(".showGasPrice");
 const avatarId = document.querySelector(".accounts");
 const dashboard = document.querySelector(".admin");
 const dashboard2 = document.querySelector(".admin2");
