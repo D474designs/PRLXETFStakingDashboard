@@ -184,6 +184,8 @@ export default function Home() {
                       <a href="#">PRLX Invested</a>
                     </li>
                   </ul>
+                </li>
+              </ul>
             </div>
           </center>
 
