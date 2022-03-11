@@ -592,7 +592,7 @@ async function getAccount() {
   avatarId.style.display = "unset";
   dashboard.style.display = "unset";
   dashboard2.style.display = "unset";
-  connectWallet.style.display = "none";
+  ethereumButton.style.display = "none";
 }
 
 ethereumButton.addEventListener("click", () => {
