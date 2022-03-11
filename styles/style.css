@@ -83,13 +83,11 @@ body {
 
 .pools {
   text-align: left !important;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 28px;
+  padding-right: 28px;
 }
 
 .form {
-  width: 150px !important;
-  text-align: center !important;
 }
 
 .showAccount {
