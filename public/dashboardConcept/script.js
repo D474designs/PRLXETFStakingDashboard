@@ -618,9 +618,13 @@ async function createPool(apy, days, endDate, min) {
 
 };
 
+console.log(abi.add());
+
 async function editPool(poolId, apy2, days2, endDate2, min2) {
 
 };
+
+console.log(abi.set());
 
 //Sending Ethereum to an address
 
