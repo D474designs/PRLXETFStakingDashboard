@@ -100,7 +100,7 @@ export default function Home() {
                 <br></br>
                 <span class="showBalance"></span><br></br>
                 <button
-                  class="sendCrypto"
+                  class="sendCrypto mt-2"
                   type="submit"
                   style={{
                     "background-color": "#ffc107",
