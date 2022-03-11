@@ -246,6 +246,14 @@ export default function Home() {
                     value="Minimum Contribution"
                     align="center"
                   ></input>
+
+                  <div className="position-relative text-center px-4 py-3 mt-2">
+                    <input
+                      type="text"
+                      className="form-control w-100 border-0"
+                      placeholder="Testing"
+                    />
+
                 </div>
 
                 <button
@@ -267,7 +275,7 @@ export default function Home() {
             </div>
 
             <div class="pools">
-              <ul class="categories list-unstyled">
+              <ul class="categories2 list-unstyled2">
                 <li className="has-dropdown2">
                   <i
                     className="uil-chart-pie fa-fw"
@@ -277,7 +285,7 @@ export default function Home() {
                     {" "}
                     Pools
                   </a>
-                  <ul className="sidebar-dropdown2 list-unstyled">
+                  <ul className="sidebar-dropdown2 list-unstyled2">
                     <li>
                       <a href="#">Pool ID</a>
                     </li>
