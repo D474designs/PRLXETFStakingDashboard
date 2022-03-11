@@ -545,6 +545,15 @@ async function getAccount() {
 
   // The address from the above deployment example
   const contractAddress = "0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2";
+  
+  // John Mac Admin Address
+  // 0xd2BF0077Ba0AA9A44b99afA7655A0314b7e9bDEB
+
+  // Data The Destroyer Admin Address
+  // 0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2
+
+  // No Owner Contract Address
+  //
 
   // We connect to the Contract using a Provider, so we will only
   // have read-only access to the Contract

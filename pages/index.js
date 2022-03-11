@@ -100,7 +100,7 @@ export default function Home() {
               <div class="accounts">
                 Account: <br></br>
                 <span class="showAccount"></span><br></br>
-                <span class="showBalance"></span><br></br><br></br>
+                <span class="showBalance"></span><br></br>
                 <button
                   class="sendCrypto"
                   type="submit"
@@ -124,7 +124,7 @@ export default function Home() {
                 <span class="showId"></span><br></br>
                 <span class="showGasPrice"></span><br></br><br></br>
 
-                <ul className="categories list-unstyled">
+                <div className="categories list-unstyled">
                   <li className="has-dropdown">
                     <i className="uil-chart-pie fa-fw" />
                     <a href="#"> Pools</a>
@@ -146,7 +146,7 @@ export default function Home() {
                       </li>
                     </ul>
                   </li>
-                </ul>
+                </div>
 
                 <div class="form">
                   <input type="text" id="" name="" class="
