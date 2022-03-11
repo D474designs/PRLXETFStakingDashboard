@@ -196,16 +196,6 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.sidebar ul > li.has-dropdown2 > a:after {
-  content: "\eb3a";
-  font-family: unicons-line;
-  font-size: 1rem;
-  line-height: 1.8;
-  float: right;
-  color: #000;
-  transition: all 0.3s ease-in-out;
-}
-
 .sidebar ul .opened > a:after {
   transform: rotate(-90deg);
 }
@@ -221,16 +211,6 @@ body {
 }
 
 .sidebar ul .sidebar-dropdown > li > a {
-  font-size: 0.85rem;
-  padding: 0.5rem 0;
-  display: block;
-}
-
-.sidebar ul .sidebar-dropdown2.active {
-  display: block;
-}
-
-.sidebar ul .sidebar-dropdown2 > li > a {
   font-size: 0.85rem;
   padding: 0.5rem 0;
   display: block;
