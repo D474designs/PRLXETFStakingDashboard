@@ -97,10 +97,9 @@ export default function Home() {
             {/*</a>*/}
 
             <div className="accountInfo">
-              <div class="accounts">
-                Account: <br></br>
+              <div class="accounts"><br></br>
                 <span class="showAccount"></span><br></br>
-                <span class="showBalance"></span><br></br>
+                <span class="showBalance"></span><br></br><br></br>
                 <button
                   class="sendCrypto"
                   type="submit"

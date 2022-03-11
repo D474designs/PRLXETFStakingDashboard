@@ -82,11 +82,14 @@ body {
 }
 
 .pools {
-  text-align: center !important;
+  text-align: left !important;
 }
 
 .form {
-  width: 200px;
+  width: 150px;
+  align-items: center;
+  align-self: center;
+  align-content: center;
 }
 
 .showAccount {
