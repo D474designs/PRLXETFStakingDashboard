@@ -99,7 +99,6 @@ export default function Home() {
                 Account: <br></br>
                 <span class="showAccount"></span><br></br>
                 <span class="showBalance"></span><br></br>
-                <span class="showGasPrice"></span><br></br>
                 <form class="mt4"></form>
                 <button
                   class="sendCrypto"
@@ -122,11 +121,12 @@ export default function Home() {
                 <br></br>
                 <div class="accounts2">Admin Options</div>
                 <span class="showId"></span>
+                <span class="showGasPrice"></span><br></br>
                 <br></br>
-                <form class="mt4"></form>
-                <form class="mt4"></form>
-                <form class="mt4"></form>
-                <form class="mt4"></form>
+                <input type="text" id="" name="" class="mt4"></input>
+                <input type="text" id="" name="" class="mt4"></input>
+                <input type="text" id="" name="" class="mt4"></input>
+                <input type="text" id="" name="" class="mt4"></input>
                 <button
                   class="sendCrypto2"
                   style={{
@@ -144,11 +144,11 @@ export default function Home() {
 
               <div class="admin2">
                 <br></br>
-                <form class="mt4"></form>
-                <form class="mt4"></form>
-                <form class="mt4"></form>
-                <form class="mt4"></form>
-                <form class="mt4"></form>
+                <input type="text" id="" name="" class="mt4"></input>
+                <input type="text" id="" name="" class="mt4"></input>
+                <input type="text" id="" name="" class="mt4"></input>
+                <input type="text" id="" name="" class="mt4"></input>
+                <input type="text" id="" name="" class="mt4"></input>
                 <button
                   class="sendCrypto3"
                   style={{
@@ -163,6 +163,27 @@ export default function Home() {
                   &nbsp; Edit Pool &nbsp;
                 </button>
               </div>
+              <ul className="categories list-unstyled">
+                <li className="has-dropdown">
+                  <i className="uil-activity fa-fw" />
+                  <a href="#"> Pools</a>
+                  <ul className="sidebar-dropdown list-unstyled">
+                    <li>
+                      <a href="#">Pool ID</a>
+                    </li>
+                    <li>
+                      <a href="#">APY</a>
+                    </li>
+                    <li>
+                      <a href="#">End Date</a>
+                    </li>
+                    <li>
+                      <a href="#">Minimum</a>
+                    </li>
+                    <li>
+                      <a href="#">PRLX Invested</a>
+                    </li>
+                  </ul>
             </div>
           </center>
 
