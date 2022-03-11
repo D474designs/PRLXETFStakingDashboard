@@ -3,6 +3,12 @@ import Header from "@components/Header";
 import Footer from "@components/Footer";
 import Script from "next/script";
 
+
+
+// Navbar broke on small screens/mobile in this version
+
+
+
 export default function Home() {
   return (
     <div>

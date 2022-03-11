@@ -11,10 +11,6 @@ export default function Home() {
         strategy="beforeInteractive"
       />
       <Script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        strategy="beforeInteractive"
-      />
-      <Script
         src="https://unpkg.com/@metamask/detect-provider/dist/detect-provider.min.js"
         strategy="beforeInteractive"
       />
@@ -27,9 +23,15 @@ export default function Home() {
         <meta charSet="UTF-8" />
         <title>PRLX ETF - Dashboard</title>
         <link rel="icon" href="/favicon.ico" />
+        {/*
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+        />
+        */}
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
         />
         <link
           rel="stylesheet"
