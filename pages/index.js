@@ -122,7 +122,7 @@ export default function Home() {
                 <div class="accounts2">Admin Options</div>
                 <span class="showId"></span><br></br>
                 <span class="showGasPrice"></span><br></br><br></br>
-
+                {/*
                 <ul className="categories list-unstyled pools">
                   <li className="has-dropdown">
                     <i className="uil-chart-pie fa-fw" />
@@ -146,7 +146,7 @@ export default function Home() {
                     </ul>
                   </li>
                 </ul>
-                {/*
+                */}
                 <div class="form">
                   <input type="text" id="" name="" class="
                   bg-light
@@ -165,7 +165,7 @@ export default function Home() {
                   text-muted text-lowercase
                   rounded-pill"></input>
                 </div>
-                */}
+
                 <button
                   class="sendCrypto2"
                   style={{
@@ -183,7 +183,7 @@ export default function Home() {
 
               <div class="admin2">
                 <br></br>
-                {/*
+
                 <div class="form">
                   <input type="text" id="" name="" class="
                   bg-light
@@ -206,7 +206,7 @@ export default function Home() {
                   text-muted text-lowercase
                   rounded-pill"></input>
                 </div>
-                */}
+
                 <button
                   class="sendCrypto3"
                   style={{
