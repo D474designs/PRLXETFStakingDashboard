@@ -6,14 +6,13 @@
 
 [![Netlify x Parallax DeFi](https://i.imgur.com/GNzT3is.png) **Live Site Preview**](https://prlx-etf-staking.netlify.app/)
 
-***Make sure to use the MetaMask browser if you are on mobile!***
+***[Make sure to use the MetaMask browser if you are on mobile!]***(https://metamask.io/)
 
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/46648482-644c-4c80-bafb-872057e51b6b/deploy-status)](https://app.netlify.com/sites/next-dev-starter/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ce654043-3f4d-4c29-8412-01b29760fe5a/deploy-status)](https://app.netlify.com/sites/prlx-etf-staking/deploys)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ce654043-3f4d-4c29-8412-01b29760fe5a/deploy-status)](https://app.netlify.com/sites/keen-panini-593524/deploys)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ce654043-3f4d-4c29-8412-01b29760fe5a/deploy-status)](https://app.netlify.com/sites/prlx-etf-staking/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/46648482-644c-4c80-bafb-872057e51b6b/deploy-status)](https://app.netlify.com/sites/next-dev-starter/deploys)
 
 ## Dashboard Concept & Test Interface
 ### in partnership with [D474designs](https://D474designs.github.io/) and [D474media](https://D474media.github.io/)
