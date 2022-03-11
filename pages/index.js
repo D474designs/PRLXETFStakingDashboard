@@ -81,7 +81,7 @@ export default function Home() {
             {/*<a href="/dAppConcept/src/index.html">*/}
             <button
               id="connectButton"
-              className="connectWallet"
+              class="connectWallet"
               style={{
                 "background-color": "#ffc107",
                 color: "#fff",
@@ -123,7 +123,50 @@ export default function Home() {
                 <span class="showId"></span><br></br>
                 <span class="showGasPrice"></span><br></br><br></br>
 
+                <div class="pools">
+                  <ul className="categories list-unstyled">
+                    <li className="has-dropdown">
+                      <i className="uil-chart-pie fa-fw" />
+                      <a href="#"> Pools</a>
+                      <ul className="sidebar-dropdown list-unstyled">
+                        <li>
+                          <a href="#">Pool ID</a>
+                        </li>
+                        <li>
+                          <a href="#">APY</a>
+                        </li>
+                        <li>
+                          <a href="#">End Date</a>
+                        </li>
+                        <li>
+                          <a href="#">Minimum</a>
+                        </li>
+                        <li>
+                          <a href="#">PRLX Invested</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
 
+                <div class="form">
+                  <input type="text" id="" name="" class="
+                  bg-light
+                  text-muted text-lowercase
+                  rounded-pill"></input>
+                  <input type="text" id="" name="" class="
+                  bg-light
+                  text-muted text-lowercase
+                  rounded-pill"></input>
+                  <input type="text" id="" name="" class="
+                  bg-light
+                  text-muted text-lowercase
+                  rounded-pill"></input>
+                  <input type="text" id="" name="" class="
+                  bg-light
+                  text-muted text-lowercase
+                  rounded-pill"></input>
+                </div>
 
                 <button
                   class="sendCrypto2"
@@ -143,7 +186,28 @@ export default function Home() {
               <div class="admin2">
                 <br></br>
 
-
+                <div class="form">
+                  <input type="text" id="" name="" class="
+                  bg-light
+                  text-muted text-lowercase
+                  rounded-pill"></input>
+                  <input type="text" id="" name="" class="
+                  bg-light
+                  text-muted text-lowercase
+                  rounded-pill"></input>
+                  <input type="text" id="" name="" class="
+                  bg-light
+                  text-muted text-lowercase
+                  rounded-pill"></input>
+                  <input type="text" id="" name="" class="
+                  bg-light
+                  text-muted text-lowercase
+                  rounded-pill"></input>
+                  <input type="text" id="" name="" class="
+                  bg-light
+                  text-muted text-lowercase
+                  rounded-pill"></input>
+                </div>
 
                 <button
                   class="sendCrypto3"
