@@ -98,7 +98,8 @@ export default function Home() {
               <div class="accounts">
                 <span class="showAccount"></span>
                 <br></br>
-                <span class="showBalance"></span><br></br>
+                <span class="showBalance"></span>
+                <br></br>
                 <button
                   class="sendCrypto mt-2"
                   type="submit"
@@ -178,48 +179,48 @@ export default function Home() {
               <div class="admin2">
                 <br></br>
 
-                  <div className="position-relative text-center px-4 py-3 mt-2">
-                    <input
-                      type="text"
-                      className="form-control w-100 border-0"
-                      placeholder="Pool ID"
-                      id=""
-                      name=""
-                      class=""
-                    />
-                    <input
-                      type="text"
-                      className="form-control w-100 border-0"
-                      placeholder="APY"
-                      id=""
-                      name=""
-                      class=""
-                    />
-                    <input
-                      type="text"
-                      className="form-control w-100 border-0"
-                      placeholder="Length in Days"
-                      id=""
-                      name=""
-                      class=""
-                    />
-                    <input
-                      type="text"
-                      className="form-control w-100 border-0"
-                      placeholder="End Date"
-                      id=""
-                      name=""
-                      class=""
-                    />
-                    <input
-                      type="text"
-                      className="form-control w-100 border-0"
-                      placeholder="Minimum Contribution"
-                      id=""
-                      name=""
-                      class=""
-                    />
-                  </div>
+                <div className="position-relative text-center px-4 py-3 mt-2">
+                  <input
+                    type="text"
+                    className="form-control w-100 border-0"
+                    placeholder="Pool ID"
+                    id=""
+                    name=""
+                    class=""
+                  />
+                  <input
+                    type="text"
+                    className="form-control w-100 border-0"
+                    placeholder="APY"
+                    id=""
+                    name=""
+                    class=""
+                  />
+                  <input
+                    type="text"
+                    className="form-control w-100 border-0"
+                    placeholder="Length in Days"
+                    id=""
+                    name=""
+                    class=""
+                  />
+                  <input
+                    type="text"
+                    className="form-control w-100 border-0"
+                    placeholder="End Date"
+                    id=""
+                    name=""
+                    class=""
+                  />
+                  <input
+                    type="text"
+                    className="form-control w-100 border-0"
+                    placeholder="Minimum Contribution"
+                    id=""
+                    name=""
+                    class=""
+                  />
+                </div>
 
                 <button
                   class="sendCrypto3"
@@ -774,7 +775,7 @@ export default function Home() {
         </section>
         {/* partial */}
       </div>
-<Footer />
+      <Footer />
     </div>
   );
 }

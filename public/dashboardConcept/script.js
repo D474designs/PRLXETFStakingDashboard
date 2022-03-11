@@ -597,11 +597,19 @@ async function getAccount() {
   dashboard.style.display = "unset";
   dashboard2.style.display = "unset";
   ethereumButton.style.display = "none";
-}
+};
 
 ethereumButton.addEventListener("click", () => {
   getAccount();
 });
+
+async function createPool(apy, days, endDate, min) {
+
+};
+
+async function editPool(poolId, apy2, days2, endDate2, min2) {
+
+};
 
 /*
 // If a user enters a string in an input field, you may need
