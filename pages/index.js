@@ -124,7 +124,7 @@ export default function Home() {
                 <span class="showId"></span><br></br>
                 <span class="showGasPrice"></span><br></br><br></br>
 
-                <div className="categories list-unstyled">
+                <ul className="categories list-unstyled pools">
                   <li className="has-dropdown">
                     <i className="uil-chart-pie fa-fw" />
                     <a href="#"> Pools</a>
@@ -146,32 +146,24 @@ export default function Home() {
                       </li>
                     </ul>
                   </li>
-                </div>
+                </ul>
 
                 <div class="form">
                   <input type="text" id="" name="" class="
                   bg-light
                   text-muted text-lowercase
-                  p-2
-                  px-3
                   rounded-pill"></input>
                   <input type="text" id="" name="" class="
                   bg-light
                   text-muted text-lowercase
-                  p-2
-                  px-3
                   rounded-pill"></input>
                   <input type="text" id="" name="" class="
                   bg-light
                   text-muted text-lowercase
-                  p-2
-                  px-3
                   rounded-pill"></input>
                   <input type="text" id="" name="" class="
                   bg-light
                   text-muted text-lowercase
-                  p-2
-                  px-3
                   rounded-pill"></input>
                 </div>
 
@@ -196,32 +188,22 @@ export default function Home() {
                   <input type="text" id="" name="" class="
                   bg-light
                   text-muted text-lowercase
-                  p-2
-                  px-3
                   rounded-pill"></input>
                   <input type="text" id="" name="" class="
                   bg-light
                   text-muted text-lowercase
-                  p-2
-                  px-3
                   rounded-pill"></input>
                   <input type="text" id="" name="" class="
                   bg-light
                   text-muted text-lowercase
-                  p-2
-                  px-3
                   rounded-pill"></input>
                   <input type="text" id="" name="" class="
                   bg-light
                   text-muted text-lowercase
-                  p-2
-                  px-3
                   rounded-pill"></input>
                   <input type="text" id="" name="" class="
                   bg-light
                   text-muted text-lowercase
-                  p-2
-                  px-3
                   rounded-pill"></input>
                 </div>
 

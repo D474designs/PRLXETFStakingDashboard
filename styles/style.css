@@ -81,6 +81,10 @@ body {
   font-weight: bolder;
 }
 
+.pools {
+  text-align: center !important;
+}
+
 .form {
   width: 200px;
 }
