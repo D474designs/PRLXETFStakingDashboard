@@ -833,22 +833,25 @@ $(".sidebar .categories2").addEventListener("click", function (event) {
     const toOpen = find(item, ".sidebar-dropdown2");
 
     if (toOpen) {
-      toOpen.classList.add("active");
+      toOpen.classList.add("active2");
     }
 
     siblings(item).forEach((sibling) => {
       const toClose = find(sibling, ".sidebar-dropdown2");
 
       if (toClose) {
-        toClose.classList.remove("active");
+        toClose.classList.remove("active2");
       }
     });
   } else {
-    find(item, ".sidebar-dropdown2").classList.toggle("active");
+    find(item, ".sidebar-dropdown2").classList.toggle("active2");
   }
 });
 
 console.log("D474designs x D474media | All Right Reserved 2022 Copyright");
+
+
+
 
 function $(selector) {
   return document.querySelector(selector);
