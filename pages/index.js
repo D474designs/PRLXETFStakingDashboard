@@ -171,7 +171,6 @@ export default function Home() {
                 >
                   &nbsp; Create Pool &nbsp;
                 </button>
-                <br></br>
               </div>
 
               <div class="admin2">
@@ -233,7 +232,6 @@ export default function Home() {
                 >
                   &nbsp; Edit Pool &nbsp;
                 </button>
-                <br></br>
               </div>
               <br></br>
             </div>
