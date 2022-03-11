@@ -568,7 +568,10 @@ async function getAccount() {
   console.log(currentValue);
   console.log(keys);
   console.log(values);
+
   // "Hello World"
+
+  console.log(contract.methods);
 
   const prlxWithSigner = contract.connect(signer);
   const prlx = ethers.utils.parseUnits("1.0", 4);
@@ -618,13 +621,13 @@ async function createPool(apy, days, endDate, min) {
 
 };
 
-console.log(abi.add());
+// console.log(abi.add());
 
 async function editPool(poolId, apy2, days2, endDate2, min2) {
 
 };
 
-console.log(abi.set());
+// console.log(abi.set());
 
 //Sending Ethereum to an address
 
