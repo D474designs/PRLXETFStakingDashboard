@@ -124,51 +124,39 @@ export default function Home() {
                 <span class="showGasPrice"></span>
                 <br></br>
 
-                <div class="form" className="position-relative text-center px-4 py-3 mt-2">
+                <div className="position-relative text-center px-4 py-3 mt-2">
                   <input
                     type="text"
+                    className="form-control w-100 border-0"
+                    placeholder="APY"
                     id=""
                     name=""
                     class="
-                  bg-light
-                  text-muted text-lowercase
-                  rounded-pill"
-                    value="APY"
-                    align="center"
-                  ></input>
+                  />
                   <input
                     type="text"
+                    className="form-control w-100 border-0"
+                    placeholder="Length in Days"
                     id=""
                     name=""
                     class="
-                  bg-light
-                  text-muted text-lowercase
-                  rounded-pill"
-                    value="Length in Days"
-                    align="center"
-                  ></input>
+                  />
                   <input
                     type="text"
+                    className="form-control w-100 border-0"
+                    placeholder="End Date"
                     id=""
                     name=""
                     class="
-                  bg-light
-                  text-muted text-lowercase
-                  rounded-pill"
-                    value="End Date"
-                    align="center"
-                  ></input>
+                  />
                   <input
                     type="text"
+                    className="form-control w-100 border-0"
+                    placeholder="Minimum Contribution"
                     id=""
                     name=""
                     class="
-                  bg-light
-                  text-muted text-lowercase
-                  rounded-pill"
-                    value="Minimum Contribution"
-                    align="center"
-                  ></input>
+                  />
                 </div>
 
                 <button
@@ -190,69 +178,46 @@ export default function Home() {
               <div class="admin2">
                 <br></br>
 
-                <div class="form" className="position-relative text-center px-4 py-3 mt-2">
-                  <input
-                    type="text"
-                    id=""
-                    name=""
-                    class="
-                  bg-light
-                  text-muted text-lowercase
-                  rounded-pill"
-                    value="Pool ID"
-                    align="center"
-                  ></input>
-                  <input
-                    type="text"
-                    id=""
-                    name=""
-                    class="
-                  bg-light
-                  text-muted text-lowercase
-                  rounded-pill"
-                    value="APY"
-                    align="center"
-                  ></input>
-                  <input
-                    type="text"
-                    id=""
-                    name=""
-                    class="
-                  bg-light
-                  text-muted text-lowercase
-                  rounded-pill"
-                    value="Length in Days"
-                    align="center"
-                  ></input>
-                  <input
-                    type="text"
-                    id=""
-                    name=""
-                    class="
-                  bg-light
-                  text-muted text-lowercase
-                  rounded-pill"
-                    value="End Date"
-                    align="center"
-                  ></input>
-                  <input
-                    type="text"
-                    id=""
-                    name=""
-                    class="
-                  bg-light
-                  text-muted text-lowercase
-                  rounded-pill"
-                    value="Minimum Contribution"
-                    align="center"
-                  ></input>
-                </div>
-
                   <div className="position-relative text-center px-4 py-3 mt-2">
                     <input
                       type="text"
                       className="form-control w-100 border-0"
-                      placeholder="Testing"
+                      placeholder="Pool ID"
+                      id=""
+                      name=""
+                      class="
+                    />
+                    <input
+                      type="text"
+                      className="form-control w-100 border-0"
+                      placeholder="APY"
+                      id=""
+                      name=""
+                      class="
+                    />
+                    <input
+                      type="text"
+                      className="form-control w-100 border-0"
+                      placeholder="Length in Days"
+                      id=""
+                      name=""
+                      class="
+                    />
+                    <input
+                      type="text"
+                      className="form-control w-100 border-0"
+                      placeholder="End Date"
+                      id=""
+                      name=""
+                      class="
+                    />
+                    <input
+                      type="text"
+                      className="form-control w-100 border-0"
+                      placeholder="Minimum Contribution"
+                      id=""
+                      name=""
+                      class="
                     />
                   </div>
 
@@ -311,7 +276,7 @@ export default function Home() {
             <input
               type="text"
               className="form-control w-100 border-0 bg-transparent"
-              placeholder="Search here"
+              placeholder="Search Here"
             />
             <i className="fa fa-search position-absolute d-block fs-6" />
           </div>
