@@ -195,16 +195,6 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.sidebar ul > li.has-dropdown2 > a:after {
-  content: "\eb3a";
-  font-family: unicons-line;
-  font-size: 1rem;
-  line-height: 1.8;
-  float: right;
-  color: #000;
-  transition: all 0.3s ease-in-out;
-}
-
 .sidebar ul .opened > a:after {
   transform: rotate(-90deg);
 }

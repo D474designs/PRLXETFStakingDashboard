@@ -267,8 +267,7 @@ export default function Home() {
             </div>
 
             <div class="pools">
-              <ul className="categories list-unstyled">
-                <li className="has-dropdown2">
+                <li className="has-dropdown">
                   <i
                     className="uil-chart-pie fa-fw"
                     style={{ color: "#000" }}
@@ -295,7 +294,6 @@ export default function Home() {
                     </li>
                   </ul>
                 </li>
-              </ul>
             </div>
           </center>
 
