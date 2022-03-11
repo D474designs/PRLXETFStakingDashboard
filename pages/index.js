@@ -97,7 +97,7 @@ export default function Home() {
             {/*</a>*/}
 
             <div className="accountInfo">
-              <div class="accounts"><br></br>
+              <div class="accounts">
                 <span class="showAccount"></span><br></br>
                 <span class="showBalance"></span><br></br><br></br>
                 <button
@@ -146,7 +146,7 @@ export default function Home() {
                     </ul>
                   </li>
                 </ul>
-                /*
+                {/*
                 <div class="form">
                   <input type="text" id="" name="" class="
                   bg-light
@@ -165,7 +165,7 @@ export default function Home() {
                   text-muted text-lowercase
                   rounded-pill"></input>
                 </div>
-                */
+                */}
                 <button
                   class="sendCrypto2"
                   style={{
@@ -183,7 +183,7 @@ export default function Home() {
 
               <div class="admin2">
                 <br></br>
-                /*
+                {/*
                 <div class="form">
                   <input type="text" id="" name="" class="
                   bg-light
@@ -206,7 +206,7 @@ export default function Home() {
                   text-muted text-lowercase
                   rounded-pill"></input>
                 </div>
-                */
+                */}
                 <button
                   class="sendCrypto3"
                   style={{
