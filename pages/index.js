@@ -11,10 +11,6 @@ export default function Home() {
         strategy="beforeInteractive"
       />
       <Script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        strategy="beforeInteractive"
-      />
-      <Script
         src="https://unpkg.com/@metamask/detect-provider/dist/detect-provider.min.js"
         strategy="beforeInteractive"
       />
@@ -27,9 +23,15 @@ export default function Home() {
         <meta charSet="UTF-8" />
         <title>PRLX ETF - Dashboard</title>
         <link rel="icon" href="/favicon.ico" />
+        /*
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+        />
+        */
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
         />
         <link
           rel="stylesheet"
@@ -123,10 +125,30 @@ export default function Home() {
                 <span class="showId"></span>
                 <span class="showGasPrice"></span><br></br>
                 <br></br>
-                <input type="text" id="" name="" class="mt4"></input>
-                <input type="text" id="" name="" class="mt4"></input>
-                <input type="text" id="" name="" class="mt4"></input>
-                <input type="text" id="" name="" class="mt4"></input>
+                <input type="text" id="" name="" class="
+                bg-light
+                text-muted text-lowercase
+                p-2
+                px-3
+                rounded-pill"></input>
+                <input type="text" id="" name="" class="
+                bg-light
+                text-muted text-lowercase
+                p-2
+                px-3
+                rounded-pill"></input>
+                <input type="text" id="" name="" class="
+                bg-light
+                text-muted text-lowercase
+                p-2
+                px-3
+                rounded-pill"></input>
+                <input type="text" id="" name="" class="
+                bg-light
+                text-muted text-lowercase
+                p-2
+                px-3
+                rounded-pill"></input>
                 <button
                   class="sendCrypto2"
                   style={{
@@ -144,11 +166,36 @@ export default function Home() {
 
               <div class="admin2">
                 <br></br>
-                <input type="text" id="" name="" class="mt4"></input>
-                <input type="text" id="" name="" class="mt4"></input>
-                <input type="text" id="" name="" class="mt4"></input>
-                <input type="text" id="" name="" class="mt4"></input>
-                <input type="text" id="" name="" class="mt4"></input>
+                <input type="text" id="" name="" class="
+                bg-light
+                text-muted text-lowercase
+                p-2
+                px-3
+                rounded-pill"></input>
+                <input type="text" id="" name="" class="
+                bg-light
+                text-muted text-lowercase
+                p-2
+                px-3
+                rounded-pill"></input>
+                <input type="text" id="" name="" class="
+                bg-light
+                text-muted text-lowercase
+                p-2
+                px-3
+                rounded-pill"></input>
+                <input type="text" id="" name="" class="
+                bg-light
+                text-muted text-lowercase
+                p-2
+                px-3
+                rounded-pill"></input>
+                <input type="text" id="" name="" class="
+                bg-light
+                text-muted text-lowercase
+                p-2
+                px-3
+                rounded-pill"></input>
                 <button
                   class="sendCrypto3"
                   style={{
@@ -163,9 +210,8 @@ export default function Home() {
                   &nbsp; Edit Pool &nbsp;
                 </button>
               </div>
-              <ul className="categories list-unstyled">
                 <li className="has-dropdown">
-                  <i className="uil-activity fa-fw" />
+                  <i className="uil-down-arrow fa-fw" />
                   <a href="#"> Pools</a>
                   <ul className="sidebar-dropdown list-unstyled">
                     <li>
@@ -185,7 +231,6 @@ export default function Home() {
                     </li>
                   </ul>
                 </li>
-              </ul>
             </div>
           </center>
 
