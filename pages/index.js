@@ -96,7 +96,8 @@ export default function Home() {
 
             <div className="accountInfo">
               <div class="accounts">
-                <span class="showAccount"></span><br></br>
+                <span class="showAccount"></span>
+                <br></br>
                 <span class="showBalance"></span>
                 <button
                   class="sendCrypto"
@@ -118,14 +119,22 @@ export default function Home() {
                 <br></br>
                 <br></br>
                 <div class="accounts2">Admin Options</div>
-                <span class="showId"></span><br></br>
-                <span class="showGasPrice"></span><br></br>
+                <span class="showId"></span>
+                <br></br>
+                <span class="showGasPrice"></span>
+                <br></br>
 
                 <div class="pools">
                   <ul className="categories list-unstyled">
-                    <li className="has-dropdown">
-                      <i className="uil-chart-pie fa-fw" style={{"color":"#000"}} />
-                      <a href="#" style={{"color":"#000"}}> Pools</a>
+                    <li className="has-dropdown2">
+                      <i
+                        className="uil-chart-pie fa-fw"
+                        style={{ color: "#000" }}
+                      />
+                      <a href="#" style={{ color: "#000" }}>
+                        {" "}
+                        Pools
+                      </a>
                       <ul className="sidebar-dropdown list-unstyled">
                         <li>
                           <a href="#">Pool ID</a>
@@ -148,22 +157,50 @@ export default function Home() {
                 </div>
 
                 <div class="form">
-                  <input type="text" id="" name="" class="
+                  <input
+                    type="text"
+                    id=""
+                    name=""
+                    class="
                   bg-light
                   text-muted text-lowercase
-                  rounded-pill" value="APY" align="center"></input>
-                  <input type="text" id="" name="" class="
+                  rounded-pill"
+                    value="APY"
+                    align="center"
+                  ></input>
+                  <input
+                    type="text"
+                    id=""
+                    name=""
+                    class="
                   bg-light
                   text-muted text-lowercase
-                  rounded-pill" value="Length in Days" align="center"></input>
-                  <input type="text" id="" name="" class="
+                  rounded-pill"
+                    value="Length in Days"
+                    align="center"
+                  ></input>
+                  <input
+                    type="text"
+                    id=""
+                    name=""
+                    class="
                   bg-light
                   text-muted text-lowercase
-                  rounded-pill" value="End Date" align="center"></input>
-                  <input type="text" id="" name="" class="
+                  rounded-pill"
+                    value="End Date"
+                    align="center"
+                  ></input>
+                  <input
+                    type="text"
+                    id=""
+                    name=""
+                    class="
                   bg-light
                   text-muted text-lowercase
-                  rounded-pill" value="Minimum Contribution" align="center"></input>
+                  rounded-pill"
+                    value="Minimum Contribution"
+                    align="center"
+                  ></input>
                 </div>
 
                 <button
@@ -178,33 +215,69 @@ export default function Home() {
                   }}
                 >
                   &nbsp; Create Pool &nbsp;
-                </button><br></br>
+                </button>
+                <br></br>
               </div>
 
               <div class="admin2">
                 <br></br>
 
                 <div class="form">
-                  <input type="text" id="" name="" class="
+                  <input
+                    type="text"
+                    id=""
+                    name=""
+                    class="
                   bg-light
                   text-muted text-lowercase
-                  rounded-pill" value="Pool ID" align="center"></input>
-                  <input type="text" id="" name="" class="
+                  rounded-pill"
+                    value="Pool ID"
+                    align="center"
+                  ></input>
+                  <input
+                    type="text"
+                    id=""
+                    name=""
+                    class="
                   bg-light
                   text-muted text-lowercase
-                  rounded-pill" value="APY" align="center"></input>
-                  <input type="text" id="" name="" class="
+                  rounded-pill"
+                    value="APY"
+                    align="center"
+                  ></input>
+                  <input
+                    type="text"
+                    id=""
+                    name=""
+                    class="
                   bg-light
                   text-muted text-lowercase
-                  rounded-pill" value="Length in Days" align="center"></input>
-                  <input type="text" id="" name="" class="
+                  rounded-pill"
+                    value="Length in Days"
+                    align="center"
+                  ></input>
+                  <input
+                    type="text"
+                    id=""
+                    name=""
+                    class="
                   bg-light
                   text-muted text-lowercase
-                  rounded-pill" value="End Date" align="center"></input>
-                  <input type="text" id="" name="" class="
+                  rounded-pill"
+                    value="End Date"
+                    align="center"
+                  ></input>
+                  <input
+                    type="text"
+                    id=""
+                    name=""
+                    class="
                   bg-light
                   text-muted text-lowercase
-                  rounded-pill" value="Minimum Contribution" align="center"></input>
+                  rounded-pill"
+                    value="Minimum Contribution"
+                    align="center"
+                  ></input>
                 </div>
 
                 <button
@@ -219,8 +292,10 @@ export default function Home() {
                   }}
                 >
                   &nbsp; Edit Pool &nbsp;
-                </button><br></br>
-              </div><br></br>
+                </button>
+                <br></br>
+              </div>
+              <br></br>
             </div>
           </center>
 
@@ -739,8 +814,8 @@ export default function Home() {
       </div>
 
       {/*
-        <Footer />
-      */}
+<Footer />
+*/}
     </div>
   );
 }
