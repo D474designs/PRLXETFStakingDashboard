@@ -151,19 +151,19 @@ export default function Home() {
                   <input type="text" id="" name="" class="
                   bg-light
                   text-muted text-lowercase
-                  rounded-pill"></input>
+                  rounded-pill" value="APY" align="center"></input>
                   <input type="text" id="" name="" class="
                   bg-light
                   text-muted text-lowercase
-                  rounded-pill"></input>
+                  rounded-pill" value="Length in Days" align="center"></input>
                   <input type="text" id="" name="" class="
                   bg-light
                   text-muted text-lowercase
-                  rounded-pill"></input>
+                  rounded-pill" value="End Date" align="center"></input>
                   <input type="text" id="" name="" class="
                   bg-light
                   text-muted text-lowercase
-                  rounded-pill"></input>
+                  rounded-pill" value="Minimum Contribution" align="center"></input>
                 </div>
 
                 <button
@@ -188,23 +188,23 @@ export default function Home() {
                   <input type="text" id="" name="" class="
                   bg-light
                   text-muted text-lowercase
-                  rounded-pill"></input>
+                  rounded-pill" value="Pool ID" align="center"></input>
                   <input type="text" id="" name="" class="
                   bg-light
                   text-muted text-lowercase
-                  rounded-pill"></input>
+                  rounded-pill" value="APY" align="center"></input>
                   <input type="text" id="" name="" class="
                   bg-light
                   text-muted text-lowercase
-                  rounded-pill"></input>
+                  rounded-pill" value="Length in Days" align="center"></input>
                   <input type="text" id="" name="" class="
                   bg-light
                   text-muted text-lowercase
-                  rounded-pill"></input>
+                  rounded-pill" value="End Date" align="center"></input>
                   <input type="text" id="" name="" class="
                   bg-light
                   text-muted text-lowercase
-                  rounded-pill"></input>
+                  rounded-pill" value="Minimum Contribution" align="center"></input>
                 </div>
 
                 <button
