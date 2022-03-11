@@ -122,31 +122,33 @@ export default function Home() {
                 <div class="accounts2">Admin Options</div>
                 <span class="showId"></span><br></br>
                 <span class="showGasPrice"></span><br></br><br></br>
-                {/*
-                <ul className="categories list-unstyled pools">
-                  <li className="has-dropdown">
-                    <i className="uil-chart-pie fa-fw" />
-                    <a href="#"> Pools</a>
-                    <ul className="sidebar-dropdown list-unstyled">
-                      <li>
-                        <a href="#">Pool ID</a>
-                      </li>
-                      <li>
-                        <a href="#">APY</a>
-                      </li>
-                      <li>
-                        <a href="#">End Date</a>
-                      </li>
-                      <li>
-                        <a href="#">Minimum</a>
-                      </li>
-                      <li>
-                        <a href="#">PRLX Invested</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-                */}
+
+                <div class="pools">
+                  <ul className="categories list-unstyled">
+                    <li className="has-dropdown">
+                      <i className="uil-chart-pie fa-fw" />
+                      <a href="#"> Pools</a>
+                      <ul className="sidebar-dropdown list-unstyled">
+                        <li>
+                          <a href="#">Pool ID</a>
+                        </li>
+                        <li>
+                          <a href="#">APY</a>
+                        </li>
+                        <li>
+                          <a href="#">End Date</a>
+                        </li>
+                        <li>
+                          <a href="#">Minimum</a>
+                        </li>
+                        <li>
+                          <a href="#">PRLX Invested</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+
                 <div class="form">
                   <input type="text" id="" name="" class="
                   bg-light
