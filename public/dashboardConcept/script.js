@@ -812,6 +812,42 @@ ethereum
   .catch(console.error);
 */
 
+var slideNavDropdown = $(".sidebar-dropdown2");
+
+$(".sidebar .categories2").addEventListener("click", function (event) {
+  event.preventDefault();
+
+  const item = event.target.closest(".has-dropdown2");
+
+  if (!item) {
+    return;
+  }
+
+  item.classList.toggle("opened");
+
+  siblings(item).forEach((sibling) => {
+    sibling.classList.remove("opened");
+  });
+
+  if (item.classList.contains("opened")) {
+    const toOpen = find(item, ".sidebar-dropdown2");
+
+    if (toOpen) {
+      toOpen.classList.add("active");
+    }
+
+    siblings(item).forEach((sibling) => {
+      const toClose = find(sibling, ".sidebar-dropdown2");
+
+      if (toClose) {
+        toClose.classList.remove("active");
+      }
+    });
+  } else {
+    find(item, ".sidebar-dropdown2").classList.toggle("active");
+  }
+});
+
 console.log("D474designs x D474media | All Right Reserved 2022 Copyright");
 
 function $(selector) {
