@@ -138,6 +138,7 @@ body {
 }
 .sidebar ul .sidebar-dropdown2.active {
   display: block;
+  color: #000;
 }
 
 .sidebar ul .sidebar-dropdown2 > li > a {
