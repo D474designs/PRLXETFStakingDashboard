@@ -123,10 +123,10 @@ export default function Home() {
                 <div class="accounts2">Admin Options</div>
                 <span class="showId"></span><br></br>
                 <span class="showGasPrice"></span><br></br>
-                <br></br>
+
                 <ul className="categories list-unstyled">
                   <li className="has-dropdown">
-                    <i className="uil-down-arrow fa-fw" />
+                    <i className="uil-chart-pie fa-fw" />
                     <a href="#"> Pools</a>
                     <ul className="sidebar-dropdown list-unstyled">
                       <li>
@@ -146,9 +146,9 @@ export default function Home() {
                       </li>
                     </ul>
                   </li>
-                </ul><br></br>
-                <br></br>
-                <div class="mt4">
+                </ul>
+
+                <div class="form">
                   <input type="text" id="" name="" class="
                   bg-light
                   text-muted text-lowercase
@@ -174,6 +174,7 @@ export default function Home() {
                   px-3
                   rounded-pill"></input>
                 </div>
+
                 <button
                   class="sendCrypto2"
                   style={{
@@ -191,7 +192,7 @@ export default function Home() {
 
               <div class="admin2">
                 <br></br>
-                <div class="mt4">
+                <div class="form">
                   <input type="text" id="" name="" class="
                   bg-light
                   text-muted text-lowercase
@@ -223,6 +224,7 @@ export default function Home() {
                   px-3
                   rounded-pill"></input>
                 </div>
+
                 <button
                   class="sendCrypto3"
                   style={{
@@ -236,7 +238,7 @@ export default function Home() {
                 >
                   &nbsp; Edit Pool &nbsp;
                 </button>
-              </div><br></br><br></br>
+              </div>
             </div>
           </center>
 
