@@ -108,6 +108,10 @@ body {
   font-size: 8px;
 }
 
+.showTransactionCount {
+  font-size: 8px;
+}
+
 .sendCrypto {
   padding-top: 5px;
 }
