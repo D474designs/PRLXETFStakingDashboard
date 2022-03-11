@@ -246,6 +246,7 @@ export default function Home() {
                     value="Minimum Contribution"
                     align="center"
                   ></input>
+                </div>
 
                   <div className="position-relative text-center px-4 py-3 mt-2">
                     <input
@@ -253,8 +254,7 @@ export default function Home() {
                       className="form-control w-100 border-0"
                       placeholder="Testing"
                     />
-
-                </div>
+                  </div>
 
                 <button
                   class="sendCrypto3"
