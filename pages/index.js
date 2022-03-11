@@ -220,7 +220,7 @@ export default function Home() {
                 >
                   &nbsp; Edit Pool &nbsp;
                 </button><br></br>
-              </div><br></br><br></br>
+              </div><br></br>
             </div>
           </center>
 
