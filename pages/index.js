@@ -122,7 +122,6 @@ export default function Home() {
                 <span class="showId"></span>
                 <br></br>
                 <span class="showGasPrice"></span>
-                <br></br>
 
                 <div className="position-relative text-center px-4 py-3 mt-2">
                   <input
