@@ -1,7 +1,7 @@
 .footer {
   width: 100%;
   height: 85px;
-  border-top: 1px dotted #eaeaea;
+  border-top: 3px dotted #eaeaea;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10,4 +10,5 @@
 .logo {
   height: 1em;
   margin: 5px;
+  padding-bottom: .1em;
 }

@@ -603,6 +603,8 @@ ethereumButton.addEventListener("click", () => {
   getAccount();
 });
 
+
+
 async function createPool(apy, days, endDate, min) {
 
 };
@@ -610,6 +612,65 @@ async function createPool(apy, days, endDate, min) {
 async function editPool(poolId, apy2, days2, endDate2, min2) {
 
 };
+
+//Sending Ethereum to an address
+
+sendEthButton.addEventListener('click', () => {
+  ethereum
+    .request({
+      method: 'eth_sendTransaction',
+      params: [
+        {
+          from: ethereum.selectedAddress,
+          to: '0x85Afc81b91a1F75A654473431bd7e81E377ec03E',
+          value: '0x29a2241af62c0000',
+          gasPrice: '0x09184e72a000',
+          gas: '0x2710',
+          chainId: '0x3',
+        },
+      ],
+    })
+    .then((txHash) => console.log(txHash))
+    .catch((error) => console.error);
+});
+
+sendEthButton2.addEventListener('click', () => {
+  ethereum
+    .request({
+      method: 'eth_sendTransaction',
+      params: [
+        {
+          from: ethereum.selectedAddress,
+          to: '0x85Afc81b91a1F75A654473431bd7e81E377ec03E',
+          value: '0x29a2241af62c0000',
+          gasPrice: '0x09184e72a000',
+          gas: '0x2710',
+          chainId: '0x3',
+        },
+      ],
+    })
+    .then((txHash) => console.log(txHash))
+    .catch((error) => console.error);
+});
+
+sendEthButton3.addEventListener('click', () => {
+  ethereum
+    .request({
+      method: 'eth_sendTransaction',
+      params: [
+        {
+          from: ethereum.selectedAddress,
+          to: '0x85Afc81b91a1F75A654473431bd7e81E377ec03E',
+          value: '0x29a2241af62c0000',
+          gasPrice: '0x09184e72a000',
+          gas: '0x2710',
+          chainId: '0x3',
+        },
+      ],
+    })
+    .then((txHash) => console.log(txHash))
+    .catch((error) => console.error);
+});
 
 /*
 // If a user enters a string in an input field, you may need
@@ -718,65 +779,6 @@ async function connectToMetamask(){
    console.log("Account:", await signer.getAddress());
 }
 */
-
-//Sending Ethereum to an address
-
-sendEthButton.addEventListener('click', () => {
-  ethereum
-    .request({
-      method: 'eth_sendTransaction',
-      params: [
-        {
-          from: ethereum.selectedAddress,
-          to: '0x85Afc81b91a1F75A654473431bd7e81E377ec03E',
-          value: '0x29a2241af62c0000',
-          gasPrice: '0x09184e72a000',
-          gas: '0x2710',
-          chainId: '0x3',
-        },
-      ],
-    })
-    .then((txHash) => console.log(txHash))
-    .catch((error) => console.error);
-});
-
-sendEthButton2.addEventListener('click', () => {
-  ethereum
-    .request({
-      method: 'eth_sendTransaction',
-      params: [
-        {
-          from: ethereum.selectedAddress,
-          to: '0x85Afc81b91a1F75A654473431bd7e81E377ec03E',
-          value: '0x29a2241af62c0000',
-          gasPrice: '0x09184e72a000',
-          gas: '0x2710',
-          chainId: '0x3',
-        },
-      ],
-    })
-    .then((txHash) => console.log(txHash))
-    .catch((error) => console.error);
-});
-
-sendEthButton3.addEventListener('click', () => {
-  ethereum
-    .request({
-      method: 'eth_sendTransaction',
-      params: [
-        {
-          from: ethereum.selectedAddress,
-          to: '0x85Afc81b91a1F75A654473431bd7e81E377ec03E',
-          value: '0x29a2241af62c0000',
-          gasPrice: '0x09184e72a000',
-          gas: '0x2710',
-          chainId: '0x3',
-        },
-      ],
-    })
-    .then((txHash) => console.log(txHash))
-    .catch((error) => console.error);
-});
 
 /*
 ethereumButton.addEventListener('click', () => {
