@@ -146,16 +146,6 @@ body {
   display: block;
 }
 
-.sidebar ul > li.has-dropdown2 > a:after {
-  content: "\eb3a";
-  font-family: unicons-line;
-  font-size: 1rem;
-  line-height: 1.8;
-  float: right;
-  color: #000;
-  transition: all 0.3s ease-in-out;
-}
-
 .list-unstyled2 {
   padding-left: 0;
   list-style: none;
