@@ -569,7 +569,7 @@ async function getAccount() {
   console.log(keys);
   console.log(values);
 
-  console.log(contract.interface.functions());
+  console.log(contract.interface.functions);
 
   // "Hello World"
 
