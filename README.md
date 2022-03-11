@@ -6,7 +6,7 @@
 
 [![Netlify x Parallax DeFi](https://i.imgur.com/GNzT3is.png) **Live Site Preview**](https://prlx-etf-staking.netlify.app/)
 
-***[Make sure to use the MetaMask browser if you are on mobile!]***(https://metamask.io/)
+[***Make sure to use the MetaMask browser if you are on mobile!***](https://metamask.io/)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ce654043-3f4d-4c29-8412-01b29760fe5a/deploy-status)](https://app.netlify.com/sites/prlx-etf-staking/deploys)
 
