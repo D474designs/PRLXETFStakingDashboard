@@ -7,7 +7,7 @@ export default function Footer() {
         <img src="/netliheart.svg" alt="Netlify Logo" className={styles.logo} />
         <a
           href="https://D474designs.github.io"
-          style={{ "text-decoration": "none", "color": "blue", "font-size": "1em" }}
+          style={{ "text-decoration": "none", "color": "#198754", "font-size": "1em" }}
         >
           <p>Created by D474designs 2021 All Rights Reserved</p>
         </a>

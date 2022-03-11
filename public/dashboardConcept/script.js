@@ -604,15 +604,15 @@ ethereumButton.addEventListener("click", () => {
 });
 
 let apy = document.getElementById("apy");
-let apy = document.getElementById("days");
-let apy = document.getElementById("endDate");
-let apy = document.getElementById("min");
+let days = document.getElementById("days");
+let endDate = document.getElementById("endDate");
+let min = document.getElementById("min");
 
-let apy = document.getElementById("poolId");
-let apy = document.getElementById("apy2");
-let apy = document.getElementById("days2");
-let apy = document.getElementById("endDate2");
-let apy = document.getElementById("min2");
+let poolId = document.getElementById("poolId");
+let apy2 = document.getElementById("apy2");
+let days2 = document.getElementById("days2");
+let endDate2 = document.getElementById("endDate2");
+let min2 = document.getElementById("min2");
 
 async function createPool(apy, days, endDate, min) {
 
