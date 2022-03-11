@@ -610,23 +610,25 @@ ethereumButton.addEventListener("click", () => {
   getAccount();
 });
 
+let apy = document.getElementById("apy");
+let days = document.getElementById("days");
+let endDate = document.getElementById("endDate");
+let min = document.getElementById("min");
 
+let poolId = document.getElementById("poolId");
+let apy2 = document.getElementById("apy2");
+let days2 = document.getElementById("days2");
+let endDate2 = document.getElementById("endDate2");
+let min2 = document.getElementById("min2");
 
 async function createPool(apy, days, endDate, min) {
-  let apy = document.getElementById("apy");
-  let days = document.getElementById("days");
-  let endDate = document.getElementById("endDate");
-  let min = document.getElementById("min");
+
 };
 
 // console.log(abi.add());
 
 async function editPool(poolId, apy2, days2, endDate2, min2) {
-  let poolId = document.getElementById("poolId");
-  let apy2 = document.getElementById("apy2");
-  let days2 = document.getElementById("days2");
-  let endDate2 = document.getElementById("endDate2");
-  let min2 = document.getElementById("min2");
+
 };
 
 // console.log(abi.set());
