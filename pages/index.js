@@ -131,7 +131,7 @@ export default function Home() {
                     placeholder="APY"
                     id=""
                     name=""
-                    class="
+                    class=""
                   />
                   <input
                     type="text"
@@ -139,7 +139,7 @@ export default function Home() {
                     placeholder="Length in Days"
                     id=""
                     name=""
-                    class="
+                    class=""
                   />
                   <input
                     type="text"
@@ -147,7 +147,7 @@ export default function Home() {
                     placeholder="End Date"
                     id=""
                     name=""
-                    class="
+                    class=""
                   />
                   <input
                     type="text"
@@ -155,7 +155,7 @@ export default function Home() {
                     placeholder="Minimum Contribution"
                     id=""
                     name=""
-                    class="
+                    class=""
                   />
                 </div>
 
@@ -185,7 +185,7 @@ export default function Home() {
                       placeholder="Pool ID"
                       id=""
                       name=""
-                      class="
+                      class=""
                     />
                     <input
                       type="text"
@@ -193,7 +193,7 @@ export default function Home() {
                       placeholder="APY"
                       id=""
                       name=""
-                      class="
+                      class=""
                     />
                     <input
                       type="text"
@@ -201,7 +201,7 @@ export default function Home() {
                       placeholder="Length in Days"
                       id=""
                       name=""
-                      class="
+                      class=""
                     />
                     <input
                       type="text"
@@ -209,7 +209,7 @@ export default function Home() {
                       placeholder="End Date"
                       id=""
                       name=""
-                      class="
+                      class=""
                     />
                     <input
                       type="text"
@@ -217,7 +217,7 @@ export default function Home() {
                       placeholder="Minimum Contribution"
                       id=""
                       name=""
-                      class="
+                      class=""
                     />
                   </div>
 

@@ -134,6 +134,7 @@ body {
   padding-top: 10px;
   padding-left: 30px;
   display: none;
+  color: #000;
 }
 .sidebar ul .sidebar-dropdown2.active {
   display: block;
@@ -148,6 +149,7 @@ body {
 .list-unstyled2 {
   padding-left: 0;
   list-style: none;
+  color: #000;
 }
 
 .categories2 {
