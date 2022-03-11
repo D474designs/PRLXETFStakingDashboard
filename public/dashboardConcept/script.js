@@ -506,6 +506,7 @@ const showAccount = document.querySelector(".showAccount");
 const showBalance = document.querySelector(".showBalance")
 const showId = document.querySelector(".showId");
 const showGasPrice = document.querySelector(".showGasPrice");
+const showTransactionCount = document.querySelector(".showTransactionCount");
 const avatarId = document.querySelector(".accounts");
 const dashboard = document.querySelector(".admin");
 const dashboard2 = document.querySelector(".admin2");
@@ -584,10 +585,13 @@ async function getAccount() {
   let gasPrices = await provider.getGasPrice();
   let gasPrice = ethers.utils.formatEther(gasPrices);
 
+  let transactions = await signer.getTransactionCount();
+
   showAccount.innerHTML = account;
   showBalance.innerHTML = balance;
   showId.innerHTML = chainId;
   showGasPrice.innerHTML = gasPrice;
+  showTransactionCount.innerHTML = transactions;
 
   avatarId.style.display = "unset";
   dashboard.style.display = "unset";
