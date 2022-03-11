@@ -571,7 +571,9 @@ async function getAccount() {
 
   // "Hello World"
 
-  console.log(contract.methods);
+  const iface = new Interface(abi);
+  iface.format(FormatTypes.full);
+  console.log(iface);
 
   const prlxWithSigner = contract.connect(signer);
   const prlx = ethers.utils.parseUnits("1.0", 4);
