@@ -86,7 +86,6 @@ body {
   padding-left: 28px;
   padding-right: 28px;
   background-color: #6f6486;
-  color: black;
 }
 
 .connectWallet {
@@ -193,6 +192,16 @@ body {
   line-height: 1.8;
   float: right;
   color: var(--dk-gray-500);
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar ul > li.has-dropdown2 > a:after {
+  content: "\eb3a";
+  font-family: unicons-line;
+  font-size: 1rem;
+  line-height: 1.8;
+  float: right;
+  color: #000;
   transition: all 0.3s ease-in-out;
 }
 

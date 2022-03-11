@@ -19,15 +19,13 @@ export default function Home() {
         strategy="beforeInteractive"
       />
       <Script src="/dashboardConcept/script.js" strategy="beforeInteractive" />
-
       <Head>
         <meta charSet="UTF-8" />
         <title>PRLX ETF - Dashboard</title>
         <link rel="icon" href="/favicon.ico" />
-
         <link
           rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
         />
         <link
           rel="stylesheet"
@@ -122,7 +120,7 @@ export default function Home() {
                 <div class="pools">
                   <ul className="categories list-unstyled">
                     <li className="has-dropdown">
-                      <i className="uil-chart-pie fa-fw" />
+                      <i className="uil-chart-pie fa-fw" style={{"color":"#000"}} />
                       <a href="#"> Pools</a>
                       <ul className="sidebar-dropdown list-unstyled">
                         <li>
