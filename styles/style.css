@@ -146,13 +146,13 @@ body {
   display: block;
 }
 
-.list-unstyled2 {
+.sidebar ul .list-unstyled2 {
   padding-left: 0;
   list-style: none;
   color: #000;
 }
 
-.categories2 {
+.sidebar ul .categories2 {
 }
 
 /** --------------------------------
