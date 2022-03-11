@@ -79,7 +79,7 @@ export default function Home() {
             {/*<a href="/dAppConcept/src/index.html">*/}
             <button
               id="connectButton"
-              className="connectWallet"
+              class="connectWallet"
               style={{
                 "background-color": "#ffc107",
                 color: "#fff",
@@ -96,11 +96,8 @@ export default function Home() {
 
             <div className="accountInfo">
               <div class="accounts">
-                Account: <br></br>
                 <span class="showAccount"></span><br></br>
-                <span class="showBalance"></span><br></br>
-                <span class="showGasPrice"></span><br></br>
-                <form class="mt4"></form>
+                <span class="showBalance"></span><br></br><br></br>
                 <button
                   class="sendCrypto"
                   type="submit"
@@ -121,12 +118,54 @@ export default function Home() {
                 <br></br>
                 <br></br>
                 <div class="accounts2">Admin Options</div>
-                <span class="showId"></span>
-                <br></br>
-                <form class="mt4"></form>
-                <form class="mt4"></form>
-                <form class="mt4"></form>
-                <form class="mt4"></form>
+                <span class="showId"></span><br></br>
+                <span class="showGasPrice"></span><br></br><br></br>
+
+                <div class="pools">
+                  <ul className="categories list-unstyled">
+                    <li className="has-dropdown">
+                      <i className="uil-chart-pie fa-fw" style={{"color":"#000"}} />
+                      <a href="#"> Pools</a>
+                      <ul className="sidebar-dropdown list-unstyled">
+                        <li>
+                          <a href="#">Pool ID</a>
+                        </li>
+                        <li>
+                          <a href="#">APY</a>
+                        </li>
+                        <li>
+                          <a href="#">End Date</a>
+                        </li>
+                        <li>
+                          <a href="#">Minimum</a>
+                        </li>
+                        <li>
+                          <a href="#">PRLX Invested</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="form">
+                  <input type="text" id="" name="" class="
+                  bg-light
+                  text-muted text-lowercase
+                  rounded-pill"></input>
+                  <input type="text" id="" name="" class="
+                  bg-light
+                  text-muted text-lowercase
+                  rounded-pill"></input>
+                  <input type="text" id="" name="" class="
+                  bg-light
+                  text-muted text-lowercase
+                  rounded-pill"></input>
+                  <input type="text" id="" name="" class="
+                  bg-light
+                  text-muted text-lowercase
+                  rounded-pill"></input>
+                </div>
+
                 <button
                   class="sendCrypto2"
                   style={{
@@ -144,11 +183,30 @@ export default function Home() {
 
               <div class="admin2">
                 <br></br>
-                <form class="mt4"></form>
-                <form class="mt4"></form>
-                <form class="mt4"></form>
-                <form class="mt4"></form>
-                <form class="mt4"></form>
+
+                <div class="form">
+                  <input type="text" id="" name="" class="
+                  bg-light
+                  text-muted text-lowercase
+                  rounded-pill"></input>
+                  <input type="text" id="" name="" class="
+                  bg-light
+                  text-muted text-lowercase
+                  rounded-pill"></input>
+                  <input type="text" id="" name="" class="
+                  bg-light
+                  text-muted text-lowercase
+                  rounded-pill"></input>
+                  <input type="text" id="" name="" class="
+                  bg-light
+                  text-muted text-lowercase
+                  rounded-pill"></input>
+                  <input type="text" id="" name="" class="
+                  bg-light
+                  text-muted text-lowercase
+                  rounded-pill"></input>
+                </div>
+
                 <button
                   class="sendCrypto3"
                   style={{
