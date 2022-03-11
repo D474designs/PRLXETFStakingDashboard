@@ -766,9 +766,8 @@ export default function Home() {
         </section>
         {/* partial */}
       </div>
-      {/*
+      {/**/}
       <Footer />
-      */}
     </div>
   );
 }
