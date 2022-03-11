@@ -131,33 +131,29 @@ export default function Home() {
                     type="text"
                     className="form-control w-100 border-0"
                     placeholder="APY"
-                    id=""
-                    name=""
-                    class=""
+                    id="apy"
+                    name="apy"
                   />
                   <input
                     type="text"
                     className="form-control w-100 border-0"
                     placeholder="Length in Days"
-                    id=""
-                    name=""
-                    class=""
+                    id="days"
+                    name="days"
                   />
                   <input
                     type="text"
                     className="form-control w-100 border-0"
                     placeholder="End Date"
-                    id=""
-                    name=""
-                    class=""
+                    id="endDate"
+                    name="endDate"
                   />
                   <input
                     type="text"
                     className="form-control w-100 border-0"
                     placeholder="Minimum Contribution"
-                    id=""
-                    name=""
-                    class=""
+                    id="min"
+                    name="min"
                   />
                 </div>
 
@@ -184,41 +180,36 @@ export default function Home() {
                     type="text"
                     className="form-control w-100 border-0"
                     placeholder="Pool ID"
-                    id=""
-                    name=""
-                    class=""
+                    id="poolId"
+                    name="poolId"
                   />
                   <input
                     type="text"
                     className="form-control w-100 border-0"
                     placeholder="APY"
-                    id=""
-                    name=""
-                    class=""
+                    id="apy2"
+                    name="apy2"
                   />
                   <input
                     type="text"
                     className="form-control w-100 border-0"
                     placeholder="Length in Days"
-                    id=""
-                    name=""
-                    class=""
+                    id="days2"
+                    name="days2"
                   />
                   <input
                     type="text"
                     className="form-control w-100 border-0"
                     placeholder="End Date"
-                    id=""
-                    name=""
-                    class=""
+                    id="endDate2"
+                    name="endDate2"
                   />
                   <input
                     type="text"
                     className="form-control w-100 border-0"
                     placeholder="Minimum Contribution"
-                    id=""
-                    name=""
-                    class=""
+                    id="min2"
+                    name="min2"
                   />
                 </div>
 
