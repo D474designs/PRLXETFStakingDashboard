@@ -86,12 +86,15 @@ body {
   padding-left: 28px;
   padding-right: 28px;
   background-color: #6f6486;
+  color: black;
 }
 
 .connectWallet {
+
 }
 
 .form {
+  margin: 0 auto;
 }
 
 .showAccount {
