@@ -1,3 +1,4 @@
+
 import Head from "next/head";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
@@ -98,7 +99,8 @@ export default function Home() {
               <div class="accounts">
                 <span class="showAccount"></span>
                 <br></br>
-                <span class="showBalance"></span><br></br>
+                <span class="showBalance"></span>
+                <br></br>
                 <button
                   class="sendCrypto"
                   type="submit"
