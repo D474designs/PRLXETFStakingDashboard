@@ -125,7 +125,7 @@ export default function Home() {
                   <ul className="categories list-unstyled">
                     <li className="has-dropdown2">
                       <i className="uil-chart-pie fa-fw" style={{"color":"#000"}} />
-                      <a href="#"> Pools</a>
+                      <a href="#" style={{"color":"#000"}}> Pools</a>
                       <ul className="sidebar-dropdown list-unstyled">
                         <li>
                           <a href="#">Pool ID</a>
@@ -178,7 +178,7 @@ export default function Home() {
                   }}
                 >
                   &nbsp; Create Pool &nbsp;
-                </button>
+                </button><br></br>
               </div>
 
               <div class="admin2">
@@ -219,7 +219,7 @@ export default function Home() {
                   }}
                 >
                   &nbsp; Edit Pool &nbsp;
-                </button>
+                </button><br></br>
               </div><br></br><br></br>
             </div>
           </center>
