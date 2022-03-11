@@ -97,7 +97,7 @@ export default function Home() {
             <div className="accountInfo">
               <div class="accounts">
                 <span class="showAccount"></span><br></br>
-                <span class="showBalance"></span><br></br><br></br>
+                <span class="showBalance"></span>
                 <button
                   class="sendCrypto"
                   type="submit"
@@ -119,14 +119,14 @@ export default function Home() {
                 <br></br>
                 <div class="accounts2">Admin Options</div>
                 <span class="showId"></span><br></br>
-                <span class="showGasPrice"></span><br></br><br></br>
+                <span class="showGasPrice"></span>
 
                 <div class="pools">
                   <ul className="categories list-unstyled">
                     <li className="has-dropdown2">
                       <i className="uil-chart-pie fa-fw" style={{"color":"#000"}} />
                       <a href="#" style={{"color":"#000"}}> Pools</a>
-                      <ul className="sidebar-dropdown list-unstyled">
+                      <ul className="sidebar-dropdown2 list-unstyled">
                         <li>
                           <a href="#">Pool ID</a>
                         </li>
