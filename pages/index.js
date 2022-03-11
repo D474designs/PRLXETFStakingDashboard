@@ -75,7 +75,229 @@ export default function Home() {
             </div>
           </div>
 
+          <center>
+            {/*<a href="/dAppConcept/src/index.html">*/}
+            <button
+              id="connectButton"
+              class="connectWallet"
+              style={{
+                "background-color": "#ffc107",
+                color: "#fff",
+                outline: "7px solid #313348",
+                "-webkit-text-shadow":
+                  "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                "text-shadow":
+                  "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+              }}
+            >
+              &nbsp; Connect wallet &nbsp;
+            </button>
+            {/*</a>*/}
 
+            <div className="accountInfo">
+              <div class="accounts">
+                <span class="showAccount"></span>
+                <br></br>
+                <span class="showBalance"></span><br></br>
+                <button
+                  class="sendCrypto"
+                  type="submit"
+                  style={{
+                    "background-color": "#ffc107",
+                    color: "#fff",
+                    "-webkit-text-shadow":
+                      "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                    "text-shadow":
+                      "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                  }}
+                >
+                  &nbsp; Send Crypto &nbsp;
+                </button>
+              </div>
+
+              <div class="admin">
+                <br></br>
+                <br></br>
+                <div class="accounts2">Admin Options</div>
+                <span class="showId"></span>
+                <br></br>
+                <span class="showGasPrice"></span>
+                <br></br>
+
+                <div class="form">
+                  <input
+                    type="text"
+                    id=""
+                    name=""
+                    class="
+                  bg-light
+                  text-muted text-lowercase
+                  rounded-pill"
+                    value="APY"
+                    align="center"
+                  ></input>
+                  <input
+                    type="text"
+                    id=""
+                    name=""
+                    class="
+                  bg-light
+                  text-muted text-lowercase
+                  rounded-pill"
+                    value="Length in Days"
+                    align="center"
+                  ></input>
+                  <input
+                    type="text"
+                    id=""
+                    name=""
+                    class="
+                  bg-light
+                  text-muted text-lowercase
+                  rounded-pill"
+                    value="End Date"
+                    align="center"
+                  ></input>
+                  <input
+                    type="text"
+                    id=""
+                    name=""
+                    class="
+                  bg-light
+                  text-muted text-lowercase
+                  rounded-pill"
+                    value="Minimum Contribution"
+                    align="center"
+                  ></input>
+                </div>
+
+                <button
+                  class="sendCrypto2"
+                  style={{
+                    "background-color": "#ffc107",
+                    color: "#fff",
+                    "-webkit-text-shadow":
+                      "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                    "text-shadow":
+                      "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                  }}
+                >
+                  &nbsp; Create Pool &nbsp;
+                </button>
+                <br></br>
+              </div>
+
+              <div class="admin2">
+                <br></br>
+
+                <div class="form">
+                  <input
+                    type="text"
+                    id=""
+                    name=""
+                    class="
+                  bg-light
+                  text-muted text-lowercase
+                  rounded-pill"
+                    value="Pool ID"
+                    align="center"
+                  ></input>
+                  <input
+                    type="text"
+                    id=""
+                    name=""
+                    class="
+                  bg-light
+                  text-muted text-lowercase
+                  rounded-pill"
+                    value="APY"
+                    align="center"
+                  ></input>
+                  <input
+                    type="text"
+                    id=""
+                    name=""
+                    class="
+                  bg-light
+                  text-muted text-lowercase
+                  rounded-pill"
+                    value="Length in Days"
+                    align="center"
+                  ></input>
+                  <input
+                    type="text"
+                    id=""
+                    name=""
+                    class="
+                  bg-light
+                  text-muted text-lowercase
+                  rounded-pill"
+                    value="End Date"
+                    align="center"
+                  ></input>
+                  <input
+                    type="text"
+                    id=""
+                    name=""
+                    class="
+                  bg-light
+                  text-muted text-lowercase
+                  rounded-pill"
+                    value="Minimum Contribution"
+                    align="center"
+                  ></input>
+                </div>
+
+                <button
+                  class="sendCrypto3"
+                  style={{
+                    "background-color": "#ffc107",
+                    color: "#fff",
+                    "-webkit-text-shadow":
+                      "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                    "text-shadow":
+                      "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                  }}
+                >
+                  &nbsp; Edit Pool &nbsp;
+                </button>
+                <br></br>
+              </div>
+              <br></br>
+            </div>
+
+            <div class="pools">
+              <ul className="categories list-unstyled">
+                <li className="has-dropdown2">
+                  <i
+                    className="uil-chart-pie fa-fw"
+                    style={{ color: "#000" }}
+                  />
+                  <a href="#" style={{ color: "#000" }}>
+                    {" "}
+                    Pools
+                  </a>
+                  <ul className="sidebar-dropdown list-unstyled">
+                    <li>
+                      <a href="#">Pool ID</a>
+                    </li>
+                    <li>
+                      <a href="#">APY</a>
+                    </li>
+                    <li>
+                      <a href="#">End Date</a>
+                    </li>
+                    <li>
+                      <a href="#">Minimum</a>
+                    </li>
+                    <li>
+                      <a href="#">PRLX Invested</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </center>
 
           <div className="search position-relative text-center px-4 py-3 mt-2">
             <input
