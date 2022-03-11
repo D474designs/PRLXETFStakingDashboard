@@ -198,7 +198,6 @@ body {
 
 .sidebar ul > li.has-dropdown2 > a:after {
   content: "\eb3a";
-  background: #000;
   font-family: unicons-line;
   font-size: 1rem;
   line-height: 1.8;
