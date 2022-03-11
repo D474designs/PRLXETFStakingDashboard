@@ -124,7 +124,7 @@ export default function Home() {
                 <span class="showGasPrice"></span>
                 <br></br>
 
-                <div class="form">
+                <div class="form" className="position-relative text-center px-4 py-3 mt-2">
                   <input
                     type="text"
                     id=""
@@ -190,7 +190,7 @@ export default function Home() {
               <div class="admin2">
                 <br></br>
 
-                <div class="form">
+                <div class="form" className="position-relative text-center px-4 py-3 mt-2">
                   <input
                     type="text"
                     id=""
