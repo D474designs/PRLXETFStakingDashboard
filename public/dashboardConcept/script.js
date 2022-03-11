@@ -569,11 +569,15 @@ async function getAccount() {
   console.log(keys);
   console.log(values);
 
+  console.log(contract.interface.functions());
+
   // "Hello World"
 
+  /*
   const iface = new Interface(abi);
   iface.format(FormatTypes.full);
   console.log(iface);
+  */
 
   const prlxWithSigner = contract.connect(signer);
   const prlx = ethers.utils.parseUnits("1.0", 4);
