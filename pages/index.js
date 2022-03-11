@@ -122,7 +122,7 @@ export default function Home() {
                 <br></br>
                 <div class="accounts2">Admin Options</div>
                 <span class="showId"></span><br></br>
-                <span class="showGasPrice"></span><br></br>
+                <span class="showGasPrice"></span><br></br><br></br>
 
                 <ul className="categories list-unstyled">
                   <li className="has-dropdown">
