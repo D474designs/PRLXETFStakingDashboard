@@ -267,7 +267,7 @@ export default function Home() {
             </div>
 
             <div class="pools">
-              <ul class="categories2 list-unstyled">
+              <ul class="categories list-unstyled">
                 <li className="has-dropdown2">
                   <i
                     className="uil-chart-pie fa-fw"
