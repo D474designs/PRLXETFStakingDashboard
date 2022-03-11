@@ -603,7 +603,16 @@ ethereumButton.addEventListener("click", () => {
   getAccount();
 });
 
+let apy = document.getElementById("apy");
+let apy = document.getElementById("days");
+let apy = document.getElementById("endDate");
+let apy = document.getElementById("min");
 
+let apy = document.getElementById("poolId");
+let apy = document.getElementById("apy2");
+let apy = document.getElementById("days2");
+let apy = document.getElementById("endDate2");
+let apy = document.getElementById("min2");
 
 async function createPool(apy, days, endDate, min) {
 
