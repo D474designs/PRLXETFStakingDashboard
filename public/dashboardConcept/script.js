@@ -561,11 +561,9 @@ async function getAccount() {
   let contract = new ethers.Contract(contractAddress, abi, provider);
 
   // Get the current value
-  let currentValue = Object.keys(abi)[0]; // 5 inputs 0 name
   let keys = abi[Object.keys(abi)[0]];
   let values = Object.keys(abi);
 
-  console.log(currentValue);
   console.log(keys);
   console.log(values);
 
@@ -612,25 +610,23 @@ ethereumButton.addEventListener("click", () => {
   getAccount();
 });
 
-let apy = document.getElementById("apy");
-let days = document.getElementById("days");
-let endDate = document.getElementById("endDate");
-let min = document.getElementById("min");
 
-let poolId = document.getElementById("poolId");
-let apy2 = document.getElementById("apy2");
-let days2 = document.getElementById("days2");
-let endDate2 = document.getElementById("endDate2");
-let min2 = document.getElementById("min2");
 
 async function createPool(apy, days, endDate, min) {
-
+  let apy = document.getElementById("apy");
+  let days = document.getElementById("days");
+  let endDate = document.getElementById("endDate");
+  let min = document.getElementById("min");
 };
 
 // console.log(abi.add());
 
 async function editPool(poolId, apy2, days2, endDate2, min2) {
-
+  let poolId = document.getElementById("poolId");
+  let apy2 = document.getElementById("apy2");
+  let days2 = document.getElementById("days2");
+  let endDate2 = document.getElementById("endDate2");
+  let min2 = document.getElementById("min2");
 };
 
 // console.log(abi.set());
@@ -884,8 +880,8 @@ $(".sidebar .categories2").addEventListener("click", function (event) {
   }
 });
 
-console.log("D474designs x D474media | All Right Reserved 2022 Copyright");
-
+console.log("D474designs x D474media");
+console.log("All Right Reserved 2022 Copyright");
 
 
 
