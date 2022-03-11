@@ -98,7 +98,7 @@ export default function Home() {
               <div class="accounts">
                 <span class="showAccount"></span>
                 <br></br>
-                <span class="showBalance"></span>
+                <span class="showBalance"></span><br></br>
                 <button
                   class="sendCrypto"
                   type="submit"
@@ -123,38 +123,6 @@ export default function Home() {
                 <br></br>
                 <span class="showGasPrice"></span>
                 <br></br>
-
-                <div class="pools">
-                  <ul className="categories list-unstyled">
-                    <li className="has-dropdown2">
-                      <i
-                        className="uil-chart-pie fa-fw"
-                        style={{ color: "#000" }}
-                      />
-                      <a href="#" style={{ color: "#000" }}>
-                        {" "}
-                        Pools
-                      </a>
-                      <ul className="sidebar-dropdown list-unstyled">
-                        <li>
-                          <a href="#">Pool ID</a>
-                        </li>
-                        <li>
-                          <a href="#">APY</a>
-                        </li>
-                        <li>
-                          <a href="#">End Date</a>
-                        </li>
-                        <li>
-                          <a href="#">Minimum</a>
-                        </li>
-                        <li>
-                          <a href="#">PRLX Invested</a>
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
 
                 <div class="form">
                   <input
@@ -217,6 +185,37 @@ export default function Home() {
                   &nbsp; Create Pool &nbsp;
                 </button>
                 <br></br>
+                <div class="pools">
+                  <ul className="categories list-unstyled">
+                    <li className="has-dropdown2">
+                      <i
+                        className="uil-chart-pie fa-fw"
+                        style={{ color: "#000" }}
+                      />
+                      <a href="#" style={{ color: "#000" }}>
+                        {" "}
+                        Pools
+                      </a>
+                      <ul className="sidebar-dropdown list-unstyled">
+                        <li>
+                          <a href="#">Pool ID</a>
+                        </li>
+                        <li>
+                          <a href="#">APY</a>
+                        </li>
+                        <li>
+                          <a href="#">End Date</a>
+                        </li>
+                        <li>
+                          <a href="#">Minimum</a>
+                        </li>
+                        <li>
+                          <a href="#">PRLX Invested</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
               </div>
 
               <div class="admin2">
