@@ -93,7 +93,6 @@ body {
 }
 
 .form {
-  all: unset;
 }
 
 .showAccount {
@@ -122,6 +121,40 @@ body {
 
 .sendCrypto3 {
   padding-top: 5px;
+}
+
+.sidebar ul > li.has-dropdown2 > a:after {
+  content: "\eb3a";
+  font-family: unicons-line;
+  font-size: 1rem;
+  line-height: 1.8;
+  float: right;
+  color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar ul .sidebar-dropdown2 {
+  padding-top: 10px;
+  padding-left: 30px;
+  display: none;
+}
+.sidebar ul .sidebar-dropdown2.active {
+  display: block;
+}
+
+.sidebar ul .sidebar-dropdown2 > li > a {
+  font-size: 0.85rem;
+  padding: 0.5rem 0;
+  display: block;
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.categories2 {
+
 }
 
 /** --------------------------------
