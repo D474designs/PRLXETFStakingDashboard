@@ -623,26 +623,22 @@ let min2 = document.getElementById("min2");
 console.log(contract.interface.functions);
 
 sendEthButton2.addEventListener("click", () => {
-  createPool(apy, days, endDate, min) {
     let _apy = apy;
     let _days = days;
     let _endDate = endDate;
     let _min = min;
     contract.interface.add(_apy, _days, _endDate, _min);
-  };
 });
 
 // console.log(abi.add());
 
 sendEthButton3.addEventListener("click", () => {
-  createPool(apy, days, endDate, min) {
     let _pid = pid;
     let _apy = apy2;
     let _days = days2;
     let _endDate = endDate2;
     let _min = min2;
     contract.interface.set(_pid, _apy, _days, _endDate, _min);
-  };
 });
 
 // console.log(abi.set());
