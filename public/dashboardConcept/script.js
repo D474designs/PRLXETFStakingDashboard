@@ -614,7 +614,7 @@ let min2 = document.getElementById("min2");
 const signer = provider.getSigner();
 console.log(contract.interface.functions);
 
-sendEthButton2.addEventListener async ("click", () => {
+sendEthButton2.addEventListener("click", async () => {
 
   let provider = ethers.getDefaultProvider();
   const signer = provider.getSigner();
@@ -636,7 +636,7 @@ sendEthButton2.addEventListener async ("click", () => {
 
 // console.log(abi.add());
 
-sendEthButton3.addEventListener async ("click", () => {
+sendEthButton3.addEventListener("click", async () => {
 
   let provider = ethers.getDefaultProvider();
   const signer = provider.getSigner();
