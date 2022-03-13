@@ -614,13 +614,10 @@ let min2 = document.getElementById("min2");
 const signer = provider.getSigner();
 console.log(contract.interface.functions);
 
-sendEthButton2.addEventListener("click", () => {
+sendEthButton2.addEventListener async ("click", () => {
 
   let provider = ethers.getDefaultProvider();
   const signer = provider.getSigner();
-  let privateKey = '0x0123456789012345678901234567890123456789012345678901234567890123';
-  let wallet = new ethers.Wallet(privateKey, provider);
-  let contractWithSigner = contract.connect(wallet);
 
 
   let _apy = apy;
@@ -628,7 +625,7 @@ sendEthButton2.addEventListener("click", () => {
   let _endDate = endDate;
   let _min = min;
 
-  let tx = await contractWithSigner.add(_apy, _days, _endDate, _min);
+  let tx = await signer.contract.add(_apy, _days, _endDate, _min);
   // contract.add(_apy, _days, _endDate, _min);
 
   console.log(tx.hash);
@@ -639,7 +636,7 @@ sendEthButton2.addEventListener("click", () => {
 
 // console.log(abi.add());
 
-sendEthButton3.addEventListener("click", () => {
+sendEthButton3.addEventListener async ("click", () => {
 
   let provider = ethers.getDefaultProvider();
   const signer = provider.getSigner();
@@ -650,7 +647,7 @@ sendEthButton3.addEventListener("click", () => {
   let _endDate = endDate2;
   let _min = min2;
 
-  let tx = await contractWithSigner.set(_pid, _apy, _days, _endDate, _min);
+  let tx = await signer.contract.set(_pid, _apy, _days, _endDate, _min);
   // contract.set(_pid, _apy, _days, _endDate, _min);
 
   console.log(tx.hash);
