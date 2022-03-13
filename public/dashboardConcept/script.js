@@ -503,7 +503,7 @@ const sendEthButton = document.querySelector(".sendCrypto");
 const sendEthButton2 = document.querySelector(".sendCrypto2");
 const sendEthButton3 = document.querySelector(".sendCrypto3");
 const showAccount = document.querySelector(".showAccount");
-const showBalance = document.querySelector(".showBalance")
+const showBalance = document.querySelector(".showBalance");
 const showId = document.querySelector(".showId");
 const showGasPrice = document.querySelector(".showGasPrice");
 const showTransactionCount = document.querySelector(".showTransactionCount");
@@ -545,7 +545,6 @@ const contractAddress = "0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2";
 // have read-only access to the Contract
 const contract = new ethers.Contract(contractAddress, abi, provider);
 
-
 async function getAccount() {
   // MetaMask requires requesting permission to connect users accounts
   provider.send("eth_requestAccounts", []);
@@ -573,14 +572,12 @@ async function getAccount() {
   const prlxWithSigner = contract.connect(signer);
   const prlx = ethers.utils.parseUnits("1.0", 4);
 
-
-
   let account = await signer.getAddress();
   let chainIds = await signer.getChainId();
   let chainId = chainIds;
 
-	let balances = await provider.getBalance(account);
-	let balance = ethers.utils.formatEther(balances);
+  let balances = await provider.getBalance(account);
+  let balance = ethers.utils.formatEther(balances);
 
   let gasPrices = await provider.getGasPrice();
   let gasPrice = ethers.utils.formatEther(gasPrices);
@@ -597,7 +594,7 @@ async function getAccount() {
   dashboard.style.display = "unset";
   dashboard2.style.display = "unset";
   ethereumButton.style.display = "none";
-};
+}
 
 ethereumButton.addEventListener("click", () => {
   getAccount();
@@ -618,40 +615,42 @@ const signer = provider.getSigner();
 console.log(contract.interface.functions);
 
 sendEthButton2.addEventListener("click", () => {
-    let _apy = apy;
-    let _days = days;
-    let _endDate = endDate;
-    let _min = min;
-    contract.add(_apy, _days, _endDate, _min);
+  const signer = provider.getSigner();
+  let _apy = apy;
+  let _days = days;
+  let _endDate = endDate;
+  let _min = min;
+  contract.add(_apy, _days, _endDate, _min);
 });
 
 // console.log(abi.add());
 
 sendEthButton3.addEventListener("click", () => {
-    let _pid = pid;
-    let _apy = apy2;
-    let _days = days2;
-    let _endDate = endDate2;
-    let _min = min2;
-    contract.set(_pid, _apy, _days, _endDate, _min);
+  const signer = provider.getSigner();
+  let _pid = pid;
+  let _apy = apy2;
+  let _days = days2;
+  let _endDate = endDate2;
+  let _min = min2;
+  contract.set(_pid, _apy, _days, _endDate, _min);
 });
 
 // console.log(abi.set());
 
 //Sending Ethereum to an address
 
-sendEthButton.addEventListener('click', () => {
+sendEthButton.addEventListener("click", () => {
   ethereum
     .request({
-      method: 'eth_sendTransaction',
+      method: "eth_sendTransaction",
       params: [
         {
           from: ethereum.selectedAddress,
-          to: '0x85Afc81b91a1F75A654473431bd7e81E377ec03E',
-          value: '0x29a2241af62c0000',
-          gasPrice: '0x09184e72a000',
-          gas: '0x2710',
-          chainId: '0x3',
+          to: "0x85Afc81b91a1F75A654473431bd7e81E377ec03E",
+          value: "0x29a2241af62c0000",
+          gasPrice: "0x09184e72a000",
+          gas: "0x2710",
+          chainId: "0x3",
         },
       ],
     })
@@ -891,8 +890,6 @@ $(".sidebar .categories2").addEventListener("click", function (event) {
 
 console.log("D474designs x D474media");
 console.log("All Right Reserved 2022 Copyright");
-
-
 
 function $(selector) {
   return document.querySelector(selector);
