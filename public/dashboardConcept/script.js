@@ -600,25 +600,17 @@ ethereumButton.addEventListener("click", () => {
   getAccount();
 });
 
-let apy = document.getElementById("apy");
-let days = document.getElementById("days");
-let endDate = document.getElementById("endDate");
-let min = document.getElementById("min");
-
-let poolId = document.getElementById("poolId");
-let apy2 = document.getElementById("apy2");
-let days2 = document.getElementById("days2");
-let endDate2 = document.getElementById("endDate2");
-let min2 = document.getElementById("min2");
-
 const signer = provider.getSigner();
 console.log(contract.interface.functions);
 
 sendEthButton2.addEventListener("click", async () => {
+  let apy = document.getElementById("apy");
+  let days = document.getElementById("days");
+  let endDate = document.getElementById("endDate");
+  let min = document.getElementById("min");
 
   provider.send("eth_requestAccounts", []);
   const signer = provider.getSigner();
-
 
   let _apy = apy;
   let _days = days;
@@ -631,12 +623,19 @@ sendEthButton2.addEventListener("click", async () => {
   console.log(tx.hash);
   await tx.wait();
   let newValue = await contract.poolInfo(tx.pid);
-  console.log(apy + lockPeriodInDays + totalDeposit + startDate + endDate + minContrib);
+  console.log(
+    apy + lockPeriodInDays + totalDeposit + startDate + endDate + minContrib
+  );
 });
 
 // console.log(abi.add());
 
 sendEthButton3.addEventListener("click", async () => {
+  let poolId = document.getElementById("poolId");
+  let apy2 = document.getElementById("apy2");
+  let days2 = document.getElementById("days2");
+  let endDate2 = document.getElementById("endDate2");
+  let min2 = document.getElementById("min2");
 
   provider.send("eth_requestAccounts", []);
   const signer = provider.getSigner();
@@ -653,7 +652,9 @@ sendEthButton3.addEventListener("click", async () => {
   console.log(tx.hash);
   await tx.wait();
   let newValue = await contract.poolInfo(tx.pid);
-  console.log(apy + lockPeriodInDays + totalDeposit + startDate + endDate + minContrib);
+  console.log(
+    apy + lockPeriodInDays + totalDeposit + startDate + endDate + minContrib
+  );
 });
 
 // console.log(abi.set());
