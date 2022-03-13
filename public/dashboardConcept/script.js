@@ -616,22 +616,32 @@ console.log(contract.interface.functions);
 
 sendEthButton2.addEventListener("click", () => {
 
-  const provider = new ethers.providers.Web3Provider(window.ethereum);
+  let provider = ethers.getDefaultProvider();
   const signer = provider.getSigner();
+  let privateKey = '0x0123456789012345678901234567890123456789012345678901234567890123';
+  let wallet = new ethers.Wallet(privateKey, provider);
+  let contractWithSigner = contract.connect(wallet);
+
 
   let _apy = apy;
   let _days = days;
   let _endDate = endDate;
   let _min = min;
 
-  contract.add(_apy, _days, _endDate, _min);
+  let tx = await contractWithSigner.add(_apy, _days, _endDate, _min);
+  // contract.add(_apy, _days, _endDate, _min);
+
+  console.log(tx.hash);
+  await tx.wait();
+  let newValue = await contract.poolInfo(tx.pid);
+  console.log(apy + lockPeriodInDays + totalDeposit + startDate + endDate + minContrib);
 });
 
 // console.log(abi.add());
 
 sendEthButton3.addEventListener("click", () => {
 
-  const provider = new ethers.providers.Web3Provider(window.ethereum);
+  let provider = ethers.getDefaultProvider();
   const signer = provider.getSigner();
 
   let _pid = pid;
@@ -639,8 +649,14 @@ sendEthButton3.addEventListener("click", () => {
   let _days = days2;
   let _endDate = endDate2;
   let _min = min2;
-  
-  contract.set(_pid, _apy, _days, _endDate, _min);
+
+  let tx = await contractWithSigner.set(_pid, _apy, _days, _endDate, _min);
+  // contract.set(_pid, _apy, _days, _endDate, _min);
+
+  console.log(tx.hash);
+  await tx.wait();
+  let newValue = await contract.poolInfo(tx.pid);
+  console.log(apy + lockPeriodInDays + totalDeposit + startDate + endDate + minContrib);
 });
 
 // console.log(abi.set());
