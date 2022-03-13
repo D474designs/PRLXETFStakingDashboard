@@ -615,23 +615,31 @@ const signer = provider.getSigner();
 console.log(contract.interface.functions);
 
 sendEthButton2.addEventListener("click", () => {
+
+  const provider = new ethers.providers.Web3Provider(window.ethereum);
   const signer = provider.getSigner();
+
   let _apy = apy;
   let _days = days;
   let _endDate = endDate;
   let _min = min;
+
   contract.add(_apy, _days, _endDate, _min);
 });
 
 // console.log(abi.add());
 
 sendEthButton3.addEventListener("click", () => {
+
+  const provider = new ethers.providers.Web3Provider(window.ethereum);
   const signer = provider.getSigner();
+
   let _pid = pid;
   let _apy = apy2;
   let _days = days2;
   let _endDate = endDate2;
   let _min = min2;
+  
   contract.set(_pid, _apy, _days, _endDate, _min);
 });
 
