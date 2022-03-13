@@ -616,7 +616,7 @@ console.log(contract.interface.functions);
 
 sendEthButton2.addEventListener("click", async () => {
 
-  let provider = ethers.getDefaultProvider();
+  provider.send("eth_requestAccounts", []);
   const signer = provider.getSigner();
 
 
@@ -638,7 +638,7 @@ sendEthButton2.addEventListener("click", async () => {
 
 sendEthButton3.addEventListener("click", async () => {
 
-  let provider = ethers.getDefaultProvider();
+  provider.send("eth_requestAccounts", []);
   const signer = provider.getSigner();
 
   let _pid = pid;
