@@ -622,7 +622,7 @@ sendEthButton2.addEventListener("click", () => {
     let _days = days;
     let _endDate = endDate;
     let _min = min;
-    contract.interface.add(_apy, _days, _endDate, _min);
+    contract.add(_apy, _days, _endDate, _min);
 });
 
 // console.log(abi.add());
@@ -633,7 +633,7 @@ sendEthButton3.addEventListener("click", () => {
     let _days = days2;
     let _endDate = endDate2;
     let _min = min2;
-    contract.interface.set(_pid, _apy, _days, _endDate, _min);
+    contract.set(_pid, _apy, _days, _endDate, _min);
 });
 
 // console.log(abi.set());
