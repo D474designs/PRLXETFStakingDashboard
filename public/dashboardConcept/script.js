@@ -532,6 +532,19 @@ async function getAccount() {
   dashboard2.style.display = 'unset';
 }
 */
+// The address from the above deployment example
+const contractAddress = "0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2";
+
+// John Mac Admin Address
+// 0xd2BF0077Ba0AA9A44b99afA7655A0314b7e9bDEB
+
+// Data The Destroyer Admin Address
+// 0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2
+
+// We connect to the Contract using a Provider, so we will only
+// have read-only access to the Contract
+const contract = new ethers.Contract(contractAddress, abi, provider);
+
 
 async function getAccount() {
   // MetaMask requires requesting permission to connect users accounts
@@ -541,24 +554,6 @@ async function getAccount() {
   // send ether and pay to change state within the blockchain.
   // For this, you need the account signer...
   const signer = provider.getSigner();
-
-
-
-  // The address from the above deployment example
-  const contractAddress = "0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2";
-
-  // John Mac Admin Address
-  // 0xd2BF0077Ba0AA9A44b99afA7655A0314b7e9bDEB
-
-  // Data The Destroyer Admin Address
-  // 0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2
-
-  // No Owner Contract Address
-  //
-
-  // We connect to the Contract using a Provider, so we will only
-  // have read-only access to the Contract
-  let contract = new ethers.Contract(contractAddress, abi, provider);
 
   // Get the current value
   let keys = abi[Object.keys(abi)[0]];
@@ -619,7 +614,7 @@ let days2 = document.getElementById("days2");
 let endDate2 = document.getElementById("endDate2");
 let min2 = document.getElementById("min2");
 
-
+const signer = provider.getSigner();
 console.log(contract.interface.functions);
 
 sendEthButton2.addEventListener("click", () => {
