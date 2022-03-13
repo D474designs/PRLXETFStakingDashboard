@@ -567,8 +567,6 @@ async function getAccount() {
   console.log(keys);
   console.log(values);
 
-  console.log(contract.interface.functions);
-
   // "Hello World"
 
   /*
@@ -621,15 +619,31 @@ let days2 = document.getElementById("days2");
 let endDate2 = document.getElementById("endDate2");
 let min2 = document.getElementById("min2");
 
-async function createPool(apy, days, endDate, min) {
 
-};
+console.log(contract.interface.functions);
+
+sendEthButton2.addEventListener("click", () => {
+  createPool(apy, days, endDate, min) {
+    let _apy = apy;
+    let _days = days;
+    let _endDate = endDate;
+    let _min = min;
+    contract.interface.add(_apy, _days, _endDate, _min);
+  };
+});
 
 // console.log(abi.add());
 
-async function editPool(poolId, apy2, days2, endDate2, min2) {
-
-};
+sendEthButton3.addEventListener("click", () => {
+  createPool(apy, days, endDate, min) {
+    let _pid = pid;
+    let _apy = apy2;
+    let _days = days2;
+    let _endDate = endDate2;
+    let _min = min2;
+    contract.interface.set(_pid, _apy, _days, _endDate, _min);
+  };
+});
 
 // console.log(abi.set());
 
@@ -654,6 +668,7 @@ sendEthButton.addEventListener('click', () => {
     .catch((error) => console.error);
 });
 
+/*
 sendEthButton2.addEventListener('click', () => {
   ethereum
     .request({
@@ -691,6 +706,7 @@ sendEthButton3.addEventListener('click', () => {
     .then((txHash) => console.log(txHash))
     .catch((error) => console.error);
 });
+*/
 
 /*
 // If a user enters a string in an input field, you may need
