@@ -107,7 +107,7 @@ export default function Home() {
                 <span class="showBalance"></span>
                 <br></br>
 
-                <form className="position-relative text-center px-4 py-3" }}>
+                <form className="position-relative text-center px-4 py-3">
 
                 <input
                   type="text"
@@ -142,7 +142,7 @@ export default function Home() {
                 />&nbsp;<i class="fa fa-qrcode qRCode" aria-hidden="true" onclick="scanQRCode()" />
                 </form>
 
-                <form className="position-relative text-center px-4 py-3" }}>
+                <form className="position-relative text-center px-4 py-3">
 
                 <input
                   type="text"
@@ -181,7 +181,7 @@ export default function Home() {
                 <br></br>
                 <span class="showTransactionCount"></span>
 
-                <div className="position-relative text-center px-4 py-3" }}>
+                <div className="position-relative text-center px-4 py-3">
                   <input
                     type="text"
                     className="form-control w-100 border-0"
@@ -234,7 +234,7 @@ export default function Home() {
               <div class="admin2">
                 <br></br>
 
-                <div className="position-relative text-center px-4 py-3" }}>
+                <div className="position-relative text-center px-4 py-3">
                   <input
                     type="text"
                     className="form-control w-100 border-0"
@@ -332,11 +332,12 @@ export default function Home() {
 
           <div className="search position-relative text-center w-100 px-4 py-3">
 
+            <i className="fa fa-search" style={{ color: "#9ca3af" }} />
             <input
               type="text"
               className="form-control border-0 bg-transparent"
               placeholder="Search Here"
-            /><i className="fa fa-search" style={{ color: "#9ca3af" }} />
+            />
           </div>
           <ul className="categories list-unstyled">
             <li className="has-dropdown">
