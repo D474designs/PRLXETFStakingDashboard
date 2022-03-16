@@ -134,28 +134,21 @@ export default function Home() {
                 />
                 </form>
 
+                <form className="position-relative text-center px-4 py-3 mt-2" style={{ "z-index": "1000", }}>
 
+                <input
+                  type="text"
+                  className="form-control w-100 border-0"
+                  placeholder="Pool Identification Number"
+                  id="poolIdNumber"
+                  name="poolIdNumber"
+                />
 
-                <div className="position-relative text-center px-4 py-3 mt-2" style={{ "z-index": "1000", }}>
-                  <input
-                    type="text"
-                    className="form-control w-100 border-0"
-                    placeholder="Amount of Crypto"
-                    id="crypto"
-                    name="crypto"
-                  />
-                  <input
-                    type="text"
-                    className="form-control w-100 border-0"
-                    placeholder="Recipient Address"
-                    id="recipient"
-                    name="recipient"
-                  />
-                </div>
-
-                <button
-                  class="sendCrypto mt-2"
-                  type="submit"
+                <input
+                  type="button"
+                  value=" Pool Information "
+                  class="poolInformation mt-2"
+                  id="poolInformation"
                   style={{
                     "background-color": "#ffc107",
                     color: "#fff",
@@ -164,10 +157,8 @@ export default function Home() {
                     "text-shadow":
                       "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
                   }}
-                >
-                  &nbsp; Send Crypto &nbsp;
-                </button>
-              </div>
+                />
+                </form>
 
               <div class="admin">
                 <br></br>
