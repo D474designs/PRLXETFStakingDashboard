@@ -106,17 +106,19 @@ export default function Home() {
                     type="text"
                     className="form-control w-100 border-0"
                     placeholder="Amount of Crypto"
+                    pattern="^[0-9]*[.,]?[0-9]*$"
                     id="crypto"
                     name="crypto"
-                    value=""
+                    value="0"
                   />
                   <input
                     type="text"
                     className="form-control w-100 border-0"
                     placeholder="Recipient Address"
+                    pattern="^[0-9]*[.,]?[0-9]*$"
                     id="recipient"
                     name="recipient"
-                    value=""
+                    value="0"
                   />
                 </div>
 

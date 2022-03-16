@@ -504,10 +504,26 @@ const sendEthButton2 = document.querySelector(".sendCrypto2");
 const sendEthButton3 = document.querySelector(".sendCrypto3");
 const showAccount = document.querySelector(".showAccount");
 const showBalance = document.querySelector(".showBalance");
+
+const crypto = document.querySelector("#crypto");
+const recipient = document.querySelector("#recipient");
+
 const showId = document.querySelector(".showId");
 const showNetwork = document.querySelector(".showNetwork");
 const showGasPrice = document.querySelector(".showGasPrice");
 const showTransactionCount = document.querySelector(".showTransactionCount");
+
+const apy = document.querySelector("#apy");
+const days = document.querySelector("#days");
+const endDate = document.querySelector("#endDate");
+const minContrib = document.querySelector("#minContrib");
+
+const pid = document.querySelector("#pid");
+const apy2 = document.querySelector("#apy2");
+const days2 = document.querySelector("#days2");
+const endDate2 = document.querySelector("#endDate2");
+const minContrib2 = document.querySelector("#minContrib2");
+
 const avatarId = document.querySelector(".accounts");
 const dashboard = document.querySelector(".admin");
 const dashboard2 = document.querySelector(".admin2");
@@ -615,24 +631,22 @@ console.log(contract.interface.functions);
 //Sending Ethereum to an address
 
 sendEthButton.addEventListener("click", async () => {
-  let crypto = document.getElementById("crypto");
-  let recipient = document.getElementById("recipient");
+  let cryptoz = crypto.innerHTML;
+  let recipients = recipient.innerHTML;
   /*
-  let cryptoz = ethers.utils.hexValue(crypto);
-  let recipients = recipient;
+  let cryptozz = ethers.utils.hexValue(cryptoz);
   let gasPrice = await provider.getGasPrice();
   let gas = ethers.utils.hexValue(gasPrice);
   let chainId = await signer.getChainId();
   */
-  console.log(crypto);
-  console.log(recipient);
+  console.log(cryptoz);
+  console.log(recipients);
   /*
-  console.log("Value Hex: " + cryptoz);
+  console.log("Value Hex: " + cryptozz);
   console.log(gasPrice);
   console.log("Gas Price: " + ethers.utils.formatEther(gasPrice));
   console.log("Gas Hex: " + gas);
   console.log(chainId);
-  */
 
   ethereum
     .request({
@@ -641,8 +655,8 @@ sendEthButton.addEventListener("click", async () => {
         {
           from: ethereum.selectedAddress,
           to: recipients,
-          value: cryptoz,
-          gasPrice: gasPrice,
+          value: cryptozz,
+          gasPrice: gas,
           gas: gas,
           chainId: chainId,
         },
@@ -651,6 +665,7 @@ sendEthButton.addEventListener("click", async () => {
     .then((txHash) => console.log(txHash))
     .catch((error) => console.error);
 });
+*/
 
 sendEthButton2.addEventListener("click", async () => {
   let apy = document.getElementById("apy");
