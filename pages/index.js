@@ -26,7 +26,7 @@ export default function Home() {
         src="https://kit.fontawesome.com/04555906ba.js"
         strategy="beforeInteractive"
       />
-      
+
       <Script src="/dashboardConcept/script.js" strategy="beforeInteractive" />
 
       <Head>
@@ -292,7 +292,7 @@ export default function Home() {
                   &nbsp; Edit Pool &nbsp;
                 </button>
               </div>
-              <br></br>
+              <br></br><br></br>
 
             <div class="pools">
               <ul class="categories2 list-unstyled2">
