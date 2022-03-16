@@ -627,7 +627,7 @@ sendEthButton.addEventListener("click", () => {
           value: crypto,
           gasPrice: signer.getGasPrice(),
           gas: signer.getGasPrice(),
-          chainId: chainId,
+          chainId: signer.getChainId(),
         },
       ],
     })
