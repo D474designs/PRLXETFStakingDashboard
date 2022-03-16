@@ -626,8 +626,9 @@ sendEthButton.addEventListener("click", async () => {
 
   console.log(crypto);
   console.log(recipient);
-  console.log(("Value Hex: " + cryptoz);
-  console.log("Gas Price: "ethers.utils.formatEther(gasPrice));
+  console.log("Value Hex: " + cryptoz);
+  console.log(gasPrice);
+  console.log("Gas Price: " + ethers.utils.formatEther(gasPrice));
   console.log("Gas Hex: " + gas);
   console.log(chainId);
 
