@@ -650,19 +650,18 @@ const prlxWithSigner = contract.connect(signer);
 const prlx = ethers.utils.parseUnits("1.0", 4);
 console.log(contract.interface.functions);
 
+
+
+async function sendEth(cryptoz) {
+  console.log(cryptoz);
+}
+
 //Sending Ethereum to an address
 var button = document.getElementById("sendCrypto"),
 cryptoz =  button.form.crypto.value;
 button.onclick = function() {
     sendEth(cryptoz);
-
     console.log(cryptoz);
-}
-
-async function sendEth(cryptoz) {
-
-  console.log(cryptoz);
-
 }
 
 /*
