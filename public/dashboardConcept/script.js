@@ -622,7 +622,7 @@ async function getAccount() {
       await ethereum.request({
         method: 'wallet_switchEthereumChain',
         params: [{
-          chainId: '97',
+          chainId: '0x61',
           }
         ],
       });
