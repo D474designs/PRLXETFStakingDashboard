@@ -618,8 +618,8 @@ sendEthButton.addEventListener("click", async () => {
   let crypto = document.getElementById("crypto");
   let recipient = document.getElementById("recipient");
 
-  let cryptoz = RLP.encode(crypto);
-  let recipients = RLP.encode(recipient);
+  let cryptoz = ethers.utils.RLP.encode(crypto);
+  let recipients = ethers.utils.RLP.encode(recipient);
   let gasPrice = await provider.getGasPrice();
   let chainId = await signer.getChainId();
 
