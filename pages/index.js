@@ -332,12 +332,13 @@ export default function Home() {
           </center>
 
           <div className="search position-relative text-center px-4 py-3 mt-2">
+
+          <i className="fa fa-search" style={{ color: "#fff" }} />
             <input
               type="text"
               className="form-control w-100 border-0 bg-transparent"
               placeholder="Search Here"
             />
-            <i className="fa fa-search" />
           </div>
           <ul className="categories list-unstyled">
             <li className="has-dropdown">
