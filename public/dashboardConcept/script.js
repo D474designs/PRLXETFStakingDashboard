@@ -579,7 +579,7 @@ async function getAccount() {
   let chainIds = await signer.getChainId();
   let chainId = chainIds;
 
-  let networks = await provider.getNetwork();
+  let networks = await provider.getNetwork(network);
   let network = networks;
 
   let balances = await provider.getBalance(account);
