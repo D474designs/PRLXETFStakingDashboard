@@ -634,7 +634,7 @@ async function getAccount() {
             method: 'wallet_addEthereumChain',
             params: [
               {
-                chainId: '97',
+                chainId: '0x61',
                 chainName: 'Binance Smart Chain Testnet',
                 nativeCurrency: {
                   name: 'BNB',
