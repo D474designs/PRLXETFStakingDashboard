@@ -569,9 +569,11 @@ async function getAccount() {
   // MetaMask requires requesting permission to connect users accounts
   provider.send("eth_requestAccounts", []);
 
-  provider.ready;
-  if (provider.ready = false){
-          window.alert('Remove this app from your Connected Sites, via MetaMask desktop, and try again!');
+  try {
+    await provider.ready;
+  } catch (addError) {
+    window.alert('Remove this app from your Connected Sites, via MetaMask desktop, and try again!');
+    // handle "add" error
   }
 
   // The MetaMask plugin also allows signing transactions to
