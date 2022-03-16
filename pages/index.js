@@ -122,6 +122,8 @@ export default function Home() {
                 <div class="accounts2">Admin Options</div>
                 <span class="showId"></span>
                 <br></br>
+                <span class="showNetwork"></span>
+                <br></br>
                 <span class="showGasPrice"></span>
                 <br></br>
                 <span class="showTransactionCount"></span>

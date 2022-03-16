@@ -505,6 +505,7 @@ const sendEthButton3 = document.querySelector(".sendCrypto3");
 const showAccount = document.querySelector(".showAccount");
 const showBalance = document.querySelector(".showBalance");
 const showId = document.querySelector(".showId");
+const showNetwork = document.querySelector(".showNetwork");
 const showGasPrice = document.querySelector(".showGasPrice");
 const showTransactionCount = document.querySelector(".showTransactionCount");
 const avatarId = document.querySelector(".accounts");
@@ -573,8 +574,12 @@ async function getAccount() {
   const prlx = ethers.utils.parseUnits("1.0", 4);
 
   let account = await signer.getAddress();
+
   let chainIds = await signer.getChainId();
   let chainId = chainIds;
+
+  let networks = await signer.getNetwork();
+  let network = networks;
 
   let balances = await provider.getBalance(account);
   let balance = ethers.utils.formatEther(balances);
@@ -587,6 +592,7 @@ async function getAccount() {
   showAccount.innerHTML = account;
   showBalance.innerHTML = balance;
   showId.innerHTML = chainId;
+  showId.innerHTML = network;
   showGasPrice.innerHTML = gasPrice;
   showTransactionCount.innerHTML = transactions;
 
