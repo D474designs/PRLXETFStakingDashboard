@@ -337,7 +337,7 @@ export default function Home() {
               className="form-control w-100 border-0 bg-transparent"
               placeholder="Search Here"
             />
-            <i className="fa fa-search position-absolute d-block fs-6" />
+            <i className="fa fa-search />
           </div>
           <ul className="categories list-unstyled">
             <li className="has-dropdown">
