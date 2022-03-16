@@ -657,7 +657,7 @@ async function sendEth(cryptoz) {
 }
 
 //Sending Ethereum to an address
-var button = document.getElementById("sendCrypto"),
+var button = document.getElementById("crypto"),
 cryptoz =  button.form.crypto.value;
 button.onclick = function() {
     sendEth(cryptoz);
