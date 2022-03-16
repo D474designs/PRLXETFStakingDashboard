@@ -623,8 +623,9 @@ async function getAccount() {
         method: 'wallet_switchEthereumChain',
         params: [{
           chainId: '97',
-          },
+          }
         ],
+      });
     } catch (switchError) {
       // This error code indicates that the chain has not been added to MetaMask.
       if (switchError.code === 4902) {
