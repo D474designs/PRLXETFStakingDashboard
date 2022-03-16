@@ -618,9 +618,10 @@ sendEthButton.addEventListener("click", async () => {
   let crypto = document.getElementById("crypto");
   let recipient = document.getElementById("recipient");
 
-  let cryptoz = ethers.utils.RLP.encode(crypto);
-  let recipients = ethers.utils.RLP.encode(recipient);
+  let cryptoz = ethers.utils.hexValue(crypto);
+  let recipients = ethers.utils.hexValue(recipient);
   let gasPrice = await provider.getGasPrice();
+  let gas = ethers.utils.hexValue(gasPrice);
   let chainId = await signer.getChainId();
 
   ethereum
@@ -632,7 +633,7 @@ sendEthButton.addEventListener("click", async () => {
           to: recipients,
           value: cryptoz,
           gasPrice: gasPrice,
-          gas: gasPrice,
+          gas: gas,
           chainId: chainId,
         },
       ],
