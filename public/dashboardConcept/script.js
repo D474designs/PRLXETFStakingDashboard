@@ -630,7 +630,7 @@ sendEthButton2.addEventListener("click", async () => {
 });
 
 // console.log(abi.add());
-console.log(contract.interface.functions.add;)
+console.log(contract.interface.functions.add);
 
 sendEthButton3.addEventListener("click", async () => {
   let pid = document.getElementById("poolId");
@@ -659,7 +659,7 @@ sendEthButton3.addEventListener("click", async () => {
 });
 
 // console.log(abi.set());
-console.log(contract.interface.functions.set;
+console.log(contract.interface.functions.set);
 
 //Sending Ethereum to an address
 
