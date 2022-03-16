@@ -612,6 +612,29 @@ const prlxWithSigner = contract.connect(signer);
 const prlx = ethers.utils.parseUnits("1.0", 4);
 console.log(contract.interface.functions);
 
+//Sending Ethereum to an address
+
+sendEthButton.addEventListener("click", () => {
+  let crypto = document.getElementById("crypto");
+  let recipient = document.getElementById("recipient");
+  ethereum
+    .request({
+      method: "eth_sendTransaction",
+      params: [
+        {
+          from: ethereum.selectedAddress,
+          to: recipient,
+          value: crypto,
+          gasPrice: signer.getGasPrice(),
+          gas: signer.getGasPrice(),
+          chainId: chainId,
+        },
+      ],
+    })
+    .then((txHash) => console.log(txHash))
+    .catch((error) => console.error);
+});
+
 sendEthButton2.addEventListener("click", async () => {
   let apy = document.getElementById("apy");
   let days = document.getElementById("days");

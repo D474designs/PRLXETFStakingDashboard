@@ -100,6 +100,24 @@ export default function Home() {
                 <br></br>
                 <span class="showBalance"></span>
                 <br></br>
+
+                <div className="position-relative text-center px-4 py-3 mt-2">
+                  <input
+                    type="text"
+                    className="form-control w-100 border-0"
+                    placeholder="Amount of Crypto"
+                    id="crypto"
+                    name="crypto"
+                  />
+                  <input
+                    type="text"
+                    className="form-control w-100 border-0"
+                    placeholder="Recipient Address"
+                    id="recipient"
+                    name="recipient"
+                  />
+                </div>
+
                 <button
                   class="sendCrypto mt-2"
                   type="submit"
