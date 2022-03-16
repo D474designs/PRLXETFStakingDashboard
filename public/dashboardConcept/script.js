@@ -593,7 +593,7 @@ async function getAccount() {
   showAccount.innerHTML = account;
   showBalance.innerHTML = balance;
   showId.innerHTML = chainId;
-  showId.innerHTML = network;
+  showNetwork.innerHTML = network;
   showGasPrice.innerHTML = gasPrice;
   showTransactionCount.innerHTML = transactions;
 
