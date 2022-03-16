@@ -101,7 +101,7 @@ export default function Home() {
                 <span class="showBalance"></span>
                 <br></br>
 
-                <div className="position-relative text-center px-4 py-3 mt-2" style="z-index: 1000 !important;">
+                <div className="position-relative text-center px-4 py-3 mt-2" style={{ "z-index": "1000", }}>
                   <input
                     type="text"
                     className="form-control w-100 border-0"
@@ -148,7 +148,7 @@ export default function Home() {
                 <br></br>
                 <span class="showTransactionCount"></span>
 
-                <div className="position-relative text-center px-4 py-3 mt-2" style="z-index: 1000 !important;">
+                <div className="position-relative text-center px-4 py-3 mt-2" style={{ "z-index": "1000", }}>
                   <input
                     type="text"
                     className="form-control w-100 border-0"
@@ -201,7 +201,7 @@ export default function Home() {
               <div class="admin2">
                 <br></br>
 
-                <div className="position-relative text-center px-4 py-3 mt-2" style="z-index: 1000 !important;">
+                <div className="position-relative text-center px-4 py-3 mt-2" style={{ "z-index": "1000", }}>
                   <input
                     type="text"
                     className="form-control w-100 border-0"

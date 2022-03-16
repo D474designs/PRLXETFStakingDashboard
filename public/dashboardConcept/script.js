@@ -617,6 +617,28 @@ async function getAccount() {
   dashboard.style.display = "unset";
   dashboard2.style.display = "unset";
   ethereumButton.style.display = "none";
+
+  ethereum
+    .request({
+      method: 'wallet_watchAsset',
+      params: {
+        type: 'BEP20',
+        options: {
+          address: '0x914F3e2CbE92b3F6e3f41b36c40d90C989e2712e',
+          symbol: 'PRLX',
+          decimals: 4,
+          image: 'https://i.imgur.com/TWBpYZMt.png',
+        },
+      },
+    })
+    .then((success) => {
+      if (success) {
+        console.log('Parallax BSC BEP-20 [PRLX]');
+      } else {
+        throw new Error('An Error Has Occurred');
+      }
+    })
+    .catch(console.error);
 }
 
 ethereumButton.addEventListener("click", () => {
@@ -941,6 +963,8 @@ ethereum
   })
   .catch(console.error);
 */
+
+
 
 var slideNavDropdown = $(".sidebar-dropdown2");
 
