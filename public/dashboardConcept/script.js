@@ -499,9 +499,12 @@ const abi = [
 ];
 
 const ethereumButton = document.querySelector(".connectWallet");
+
 const sendEthButton = document.querySelector(".sendCrypto");
 const sendEthButton2 = document.querySelector(".sendCrypto2");
 const sendEthButton3 = document.querySelector(".sendCrypto3");
+const qRCode = document.querySelector(".qRCode");
+
 const showAccount = document.querySelector(".showAccount");
 const showBalance = document.querySelector(".showBalance");
 /*
