@@ -139,7 +139,7 @@ export default function Home() {
                 <input
                   type="text"
                   className="form-control w-100 border-0"
-                  placeholder="Pool Identification Number"
+                  placeholder="PID"
                   id="poolIdNumber"
                   name="poolIdNumber"
                 />
