@@ -651,9 +651,22 @@ const prlx = ethers.utils.parseUnits("1.0", 4);
 console.log(contract.interface.functions);
 
 //Sending Ethereum to an address
+var button = document.getElementById("sendCrypto"),
+cryptoz =  button.form.crypto.value;
+button.onclick = function() {
+    sendEth(cryptoz);
 
+    console.log(cryptoz);
+}
+
+async function sendEth(cryptoz) {
+
+  console.log(cryptoz);
+
+}
+
+/*
 sendEthButton.addEventListener("click", async () => {
-  /*
   let cryptoz = crypto.innerHTML;
   let recipients = recipient.innerHTML;
 
@@ -687,8 +700,8 @@ sendEthButton.addEventListener("click", async () => {
     })
     .then((txHash) => console.log(txHash))
     .catch((error) => console.error);
-    */
 });
+*/
 
 sendEthButton2.addEventListener("click", async () => {
   let apy = document.getElementById("apy");

@@ -101,6 +101,45 @@ export default function Home() {
                 <span class="showBalance"></span>
                 <br></br>
 
+                <form className="position-relative text-center px-4 py-3 mt-2" style={{ "z-index": "1000", }}>
+                <input type="text" id="formValueId" name="valueId"/>
+                <input type="button" onclick="foo(this.form.valueId.value)"/>
+
+
+
+                <input
+                  type="text"
+                  className="form-control w-100 border-0"
+                  placeholder="Amount of Crypto"
+                  id="crypto"
+                  name="crypto"
+                />
+                <input
+                  type="text"
+                  className="form-control w-100 border-0"
+                  placeholder="Recipient Address"
+                  id="recipient"
+                  name="recipient"
+                />
+
+                <button
+                  class="sendCrypto mt-2"
+                  type="submit"
+                  style={{
+                    "background-color": "#ffc107",
+                    color: "#fff",
+                    "-webkit-text-shadow":
+                      "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                    "text-shadow":
+                      "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                  }}
+                >
+                  &nbsp; Send Crypto &nbsp;
+                </button>
+                </form>
+
+
+
                 <div className="position-relative text-center px-4 py-3 mt-2" style={{ "z-index": "1000", }}>
                   <input
                     type="text"
