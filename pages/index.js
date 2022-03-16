@@ -317,7 +317,8 @@ export default function Home() {
             </div>
 
             </div>
-            
+
+            </div>
           </center>
 
           <div className="search position-relative text-center px-4 py-3 mt-2">
