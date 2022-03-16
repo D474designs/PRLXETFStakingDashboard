@@ -647,7 +647,7 @@ sendEthButton.addEventListener("click", async () => {
   console.log("Gas Price: " + ethers.utils.formatEther(gasPrice));
   console.log("Gas Hex: " + gas);
   console.log(chainId);
-
+  
   ethereum
     .request({
       method: "eth_sendTransaction",
@@ -664,8 +664,8 @@ sendEthButton.addEventListener("click", async () => {
     })
     .then((txHash) => console.log(txHash))
     .catch((error) => console.error);
+    */
 });
-*/
 
 sendEthButton2.addEventListener("click", async () => {
   let apy = document.getElementById("apy");
