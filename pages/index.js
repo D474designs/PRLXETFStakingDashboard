@@ -181,7 +181,7 @@ export default function Home() {
                 <br></br>
                 <span class="showTransactionCount"></span>
 
-                <div className="position-relative text-center px-4 py-3">
+                <form className="position-relative text-center px-4 py-3">
                   <input
                     type="text"
                     className="form-control w-100 border-0"
@@ -214,27 +214,27 @@ export default function Home() {
                     name="min"
                     value=""
                   />
-                </div>
-
-                <button
-                  class="sendCrypto2"
-                  style={{
-                    "background-color": "#ffc107",
-                    color: "#fff",
-                    "-webkit-text-shadow":
-                      "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
-                    "text-shadow":
-                      "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
-                  }}
-                >
-                  &nbsp; Create Pool &nbsp;
-                </button>
+                  <input
+                    type="button"
+                    value=" Create Pool "
+                    class="sendCrypto2"
+                    id="sendCrypto2"
+                    style={{
+                      "background-color": "#ffc107",
+                      color: "#fff",
+                      "-webkit-text-shadow":
+                        "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                      "text-shadow":
+                        "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                    }}
+                  />
+                </form>
               </div>
 
               <div class="admin2">
                 <br></br>
 
-                <div className="position-relative text-center px-4 py-3">
+                <form className="position-relative text-center px-4 py-3">
                   <input
                     type="text"
                     className="form-control w-100 border-0"
@@ -275,21 +275,21 @@ export default function Home() {
                     name="min2"
                     value=""
                   />
-                </div>
-
-                <button
-                  class="sendCrypto3"
-                  style={{
-                    "background-color": "#ffc107",
-                    color: "#fff",
-                    "-webkit-text-shadow":
-                      "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
-                    "text-shadow":
-                      "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
-                  }}
-                >
-                  &nbsp; Edit Pool &nbsp;
-                </button>
+                  <input
+                    type="button"
+                    value=" Edit Pool "
+                    class="sendCrypto3"
+                    id="sendCrypto3"
+                    style={{
+                      "background-color": "#ffc107",
+                      color: "#fff",
+                      "-webkit-text-shadow":
+                        "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                      "text-shadow":
+                        "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                    }}
+                  />
+                </form>
               </div>
               <br></br><br></br>
 
