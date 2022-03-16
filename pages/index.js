@@ -109,7 +109,6 @@ export default function Home() {
                   placeholder="Amount of Crypto"
                   id="crypto"
                   name="crypto"
-                  value=""
                 />
                 <input
                   type="text"
@@ -117,8 +116,6 @@ export default function Home() {
                   placeholder="Recipient Address"
                   id="recipient"
                   name="recipient"
-
-                  value=""
                 />
 
                 <input
