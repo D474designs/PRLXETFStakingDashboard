@@ -618,7 +618,8 @@ sendEthButton2.addEventListener("click", async () => {
   let _min = min;
   */
 
-  let tx = await signer.abi.add(apy, days, endDate, min);
+  let tx = await signer.abi.add({ _apy: apy, _lockPeriodInDays: days, _endDate: endDate, _minContrib: min },
+  (err, res) => { /** do something with results **/ });
   // contract.add(_apy, _days, _endDate, _min);
 
   console.log(tx.hash);
@@ -647,7 +648,8 @@ sendEthButton3.addEventListener("click", async () => {
   var _min = min2;
   */
 
-  let tx = await signer.abi.set(pid, apy2, days2, endDate2, min2);
+  let tx = await signer.abi.set({ _pid: pid, _apy: apy2, _lockPeriodInDays: days2, _endDate: endDate2, _minContrib: min2 },
+  (err, res) => { /** do something with results **/ });
   // contract.set(_pid, _apy, _days, _endDate, _min);
 
   console.log(tx.hash);
@@ -659,7 +661,7 @@ sendEthButton3.addEventListener("click", async () => {
 });
 
 // console.log(abi.set());
-console.log(abi);
+console.log(abi[8]);
 
 //Sending Ethereum to an address
 
