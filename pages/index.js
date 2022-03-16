@@ -332,7 +332,7 @@ export default function Home() {
 
           <div className="search position-relative text-center w-100 px-4 py-3 mt-2">
 
-            <i className="fa fa-search" style={{ color: "#fff" }} />
+            <i className="fa fa-search" style={{ color: "#9ca3af" }} />
             <input
               type="text"
               className="form-control border-0 bg-transparent"
