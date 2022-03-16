@@ -617,17 +617,23 @@ console.log(contract.interface.functions);
 sendEthButton.addEventListener("click", async () => {
   let crypto = document.getElementById("crypto");
   let recipient = document.getElementById("recipient");
+
+  let cryptoz = RLP.encode(crypto);
+  let recipients = RLP.encode(recipient);
+  let gasPrice = await provider.getGasPrice();
+  let chainId = await signer.getChainId();
+
   ethereum
     .request({
       method: "eth_sendTransaction",
       params: [
         {
           from: ethereum.selectedAddress,
-          to: recipient,
+          to: recipients,
           value: crypto,
-          gasPrice: await provider.getGasPrice(),
-          gas: await provider.getGasPrice(),
-          chainId: await signer.getChainId(),
+          gasPrice: gasPrice,
+          gas: gasPrice,
+          chainId: chainId,
         },
       ],
     })
