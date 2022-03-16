@@ -630,7 +630,7 @@ sendEthButton.addEventListener("click", async () => {
         {
           from: ethereum.selectedAddress,
           to: recipients,
-          value: crypto,
+          value: cryptoz,
           gasPrice: gasPrice,
           gas: gasPrice,
           chainId: chainId,
