@@ -617,20 +617,22 @@ console.log(contract.interface.functions);
 sendEthButton.addEventListener("click", async () => {
   let crypto = document.getElementById("crypto");
   let recipient = document.getElementById("recipient");
-
+  /*
   let cryptoz = ethers.utils.hexValue(crypto);
   let recipients = recipient;
   let gasPrice = await provider.getGasPrice();
   let gas = ethers.utils.hexValue(gasPrice);
   let chainId = await signer.getChainId();
-
+  */
   console.log(crypto);
   console.log(recipient);
+  /*
   console.log("Value Hex: " + cryptoz);
   console.log(gasPrice);
   console.log("Gas Price: " + ethers.utils.formatEther(gasPrice));
   console.log("Gas Hex: " + gas);
   console.log(chainId);
+  */
 
   ethereum
     .request({
