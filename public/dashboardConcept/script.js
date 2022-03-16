@@ -568,7 +568,11 @@ const contract = new ethers.Contract(contractAddress, abi, provider);
 async function getAccount() {
   // MetaMask requires requesting permission to connect users accounts
   provider.send("eth_requestAccounts", []);
+
   provider.ready;
+  if (provider.ready = false){
+          window.alert('Remove this app from your Connected Sites, via MetaMask desktop, and try again!');
+  }
 
   // The MetaMask plugin also allows signing transactions to
   // send ether and pay to change state within the blockchain.
@@ -697,7 +701,8 @@ async function scanQRCode() {
       console.log(result);
     })
     .catch((error) => {
-      console.log('Please use mobile to scan QR codes')
+      console.log('Please use mobile to scan QR codes');
+      window.alert('Please use mobile to scan QR codes');
       console.log(error);
     });
 };
