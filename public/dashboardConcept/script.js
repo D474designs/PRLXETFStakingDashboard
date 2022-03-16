@@ -612,12 +612,14 @@ sendEthButton2.addEventListener("click", async () => {
   provider.send("eth_requestAccounts", []);
   const signer = provider.getSigner();
 
+  /*
   let _apy = apy;
   let _days = days;
   let _endDate = endDate;
   let _min = min;
+  */
 
-  let tx = await signer.contract.add(_apy, _days, _endDate, _min);
+  let tx = await signer.contract.add(apy, days, endDate, min);
   // contract.add(_apy, _days, _endDate, _min);
 
   console.log(tx.hash);
@@ -631,7 +633,7 @@ sendEthButton2.addEventListener("click", async () => {
 // console.log(abi.add());
 
 sendEthButton3.addEventListener("click", async () => {
-  let poolId = document.getElementById("poolId");
+  let pid = document.getElementById("poolId");
   let apy2 = document.getElementById("apy2");
   let days2 = document.getElementById("days2");
   let endDate2 = document.getElementById("endDate2");
@@ -640,13 +642,15 @@ sendEthButton3.addEventListener("click", async () => {
   provider.send("eth_requestAccounts", []);
   const signer = provider.getSigner();
 
-  let _pid = pid;
-  let _apy = apy2;
-  let _days = days2;
-  let _endDate = endDate2;
-  let _min = min2;
+  /*
+  var _pid = pid;
+  var _apy = apy2;
+  var _days = days2;
+  var _endDate = endDate2;
+  var _min = min2;
+  */
 
-  let tx = await signer.contract.set(_pid, _apy, _days, _endDate, _min);
+  let tx = await signer.contract.set(pid, apy2, days2, endDate2, min2);
   // contract.set(_pid, _apy, _days, _endDate, _min);
 
   console.log(tx.hash);
