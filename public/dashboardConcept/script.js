@@ -622,7 +622,7 @@ async function getAccount() {
       await ethereum.request({
         method: 'wallet_switchEthereumChain',
         params: [{ chainId: '97';
-        chainName: Binance Smart Chain Testnet;
+        chainName: 'Binance Smart Chain Testnet';
         nativeCurrency: {
           name: 'BNB';
           symbol: 'BNB'; // 2-6 characters long
