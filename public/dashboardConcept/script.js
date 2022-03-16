@@ -627,10 +627,10 @@ async function getAccount() {
           name: 'BNB',
           symbol: 'BNB', // 2-6 characters long
           decimals: 18,
-        };
-        rpcUrls: string[https://data-seed-prebsc-1-s1.binance.org:8545/],
-        blockExplorerUrls?: string[https://testnet.bscscan.com],
-        iconUrls?: string[https://i.imgur.com/TWBpYZMt.png], // Currently ignored. }],
+        },
+        rpcUrls: string['https://data-seed-prebsc-1-s1.binance.org:8545/''],
+        blockExplorerUrls?: string['https://testnet.bscscan.com'],
+        iconUrls?: string['https://i.imgur.com/TWBpYZMt.png'], // Currently ignored. }],
       });
     } catch (switchError) {
       // This error code indicates that the chain has not been added to MetaMask.
