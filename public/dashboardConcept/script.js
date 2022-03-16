@@ -504,15 +504,15 @@ const sendEthButton2 = document.querySelector(".sendCrypto2");
 const sendEthButton3 = document.querySelector(".sendCrypto3");
 const showAccount = document.querySelector(".showAccount");
 const showBalance = document.querySelector(".showBalance");
-
+/*
 const crypto = document.querySelector("#crypto");
 const recipient = document.querySelector("#recipient");
-
+*/
 const showId = document.querySelector(".showId");
 const showNetwork = document.querySelector(".showNetwork");
 const showGasPrice = document.querySelector(".showGasPrice");
 const showTransactionCount = document.querySelector(".showTransactionCount");
-
+/*
 const apy = document.querySelector("#apy");
 const days = document.querySelector("#days");
 const endDate = document.querySelector("#endDate");
@@ -523,7 +523,7 @@ const apy2 = document.querySelector("#apy2");
 const days2 = document.querySelector("#days2");
 const endDate2 = document.querySelector("#endDate2");
 const minContrib2 = document.querySelector("#minContrib2");
-
+*/
 const avatarId = document.querySelector(".accounts");
 const dashboard = document.querySelector(".admin");
 const dashboard2 = document.querySelector(".admin2");
