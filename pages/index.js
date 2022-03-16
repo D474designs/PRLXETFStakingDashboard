@@ -27,7 +27,7 @@ export default function Home() {
         strategy="beforeInteractive"
       />
 
-      <Script src="/dashboardConcept/script.js" strategy="beforeInteractive" />
+      <Script src="/dashboardConcept/script.js" strategy="beforeInteractive" crossorigin="anonymous" />
 
       <Head>
         <meta charSet="UTF-8" />
