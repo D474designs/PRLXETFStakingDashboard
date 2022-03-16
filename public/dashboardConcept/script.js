@@ -659,7 +659,7 @@ sendEthButton3.addEventListener("click", async () => {
 });
 
 // console.log(abi.set());
-console.log(abi[9]);
+console.log(abi);
 
 //Sending Ethereum to an address
 
