@@ -283,7 +283,6 @@ export default function Home() {
                 </button>
               </div>
               <br></br>
-            </div>
 
             <div class="pools">
               <ul class="categories2 list-unstyled2">
@@ -316,6 +315,9 @@ export default function Home() {
                 </li>
               </ul>
             </div>
+
+            </div>
+            
           </center>
 
           <div className="search position-relative text-center px-4 py-3 mt-2">
