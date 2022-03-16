@@ -9,7 +9,7 @@ export default function Footer() {
           href="https://D474designs.github.io"
           style={{ "text-decoration": "none", "color": "#198754", "font-size": "1em", "font-weight": "bolder" }}
         >
-          <p>Created by D474designs 2021 All Rights Reserved</p>
+          <p>Created by D474designs<br></br>2021 All Rights Reserved</p>
         </a>
       </footer>
     </>
