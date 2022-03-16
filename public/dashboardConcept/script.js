@@ -618,7 +618,7 @@ sendEthButton2.addEventListener("click", async () => {
   let _min = min;
   */
 
-  let tx = await signer.contract.interface.add(apy, days, endDate, min);
+  let tx = await signer.abi.add(apy, days, endDate, min);
   // contract.add(_apy, _days, _endDate, _min);
 
   console.log(tx.hash);
@@ -630,7 +630,7 @@ sendEthButton2.addEventListener("click", async () => {
 });
 
 // console.log(abi.add());
-console.log(abi.add);
+console.log(abi[0]);
 
 sendEthButton3.addEventListener("click", async () => {
   let pid = document.getElementById("poolId");
@@ -647,7 +647,7 @@ sendEthButton3.addEventListener("click", async () => {
   var _min = min2;
   */
 
-  let tx = await signer.contract.set(pid, apy2, days2, endDate2, min2);
+  let tx = await signer.abi.set(pid, apy2, days2, endDate2, min2);
   // contract.set(_pid, _apy, _days, _endDate, _min);
 
   console.log(tx.hash);
@@ -659,7 +659,7 @@ sendEthButton3.addEventListener("click", async () => {
 });
 
 // console.log(abi.set());
-console.log(abi.set);
+console.log(abi[9]);
 
 //Sending Ethereum to an address
 
