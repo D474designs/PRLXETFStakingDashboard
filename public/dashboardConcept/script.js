@@ -618,7 +618,7 @@ async function getAccount() {
   dashboard2.style.display = "unset";
   ethereumButton.style.display = "none";
 
-      try {
+    try {
       await ethereum.request({
         method: 'wallet_switchEthereumChain',
         params: [{
@@ -678,6 +678,21 @@ async function getAccount() {
     })
     .catch(console.error);
 }
+
+async function scanQRCode() {
+  ethereum
+    .request({
+      method: 'wallet_scanQRCode',
+      // The regex string must be valid input to the RegExp constructor, if provided
+      params: ['\\D'],
+    })
+    .then((result) => {
+      console.log(result);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
 
 
 

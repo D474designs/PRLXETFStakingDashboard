@@ -128,6 +128,10 @@ body {
   padding-top: 5px;
 }
 
+.qRCode {
+  font-size: 8px;
+}
+
 .sidebar ul > li.has-dropdown2 > a:after {
   content: "\eb3a";
   font-family: unicons-line;

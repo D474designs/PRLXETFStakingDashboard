@@ -119,6 +119,7 @@ export default function Home() {
                   name="recipient"
                   value=""
                 />
+                <i className="qrcode fa fa-qrcode position-absolute d-block fs-6" onclick="scanQRCode()" />
 
                 <input
                   type="button"
