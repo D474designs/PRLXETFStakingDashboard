@@ -102,10 +102,6 @@ export default function Home() {
                 <br></br>
 
                 <form className="position-relative text-center px-4 py-3 mt-2" style={{ "z-index": "1000", }}>
-                <input type="text" id="formValueId" name="valueId"/>
-                <input type="button" onclick="foo(this.form.valueId.value)"/>
-
-
 
                 <input
                   type="text"
@@ -122,9 +118,11 @@ export default function Home() {
                   name="recipient"
                 />
 
-                <button
+                <input
+                  type="button"
                   class="sendCrypto mt-2"
                   type="submit"
+                  id="sendCrypto"
                   style={{
                     "background-color": "#ffc107",
                     color: "#fff",
