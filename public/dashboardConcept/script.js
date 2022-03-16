@@ -680,6 +680,8 @@ async function getAccount() {
     .catch(console.error);
 }
 
+
+
 async function scanQRCode() {
   ethereum
     .request({
