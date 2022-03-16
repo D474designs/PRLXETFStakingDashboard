@@ -621,17 +621,10 @@ async function getAccount() {
       try {
       await ethereum.request({
         method: 'wallet_switchEthereumChain',
-        params: [{ chainId: '97',
-        chainName: 'Binance Smart Chain Testnet',
-        nativeCurrency: {
-          name: 'BNB',
-          symbol: 'BNB', // 2-6 characters long
-          decimals: 18,
-        },
-        rpcUrls: string['https://data-seed-prebsc-1-s1.binance.org:8545/'],
-        blockExplorerUrls: string['https://testnet.bscscan.com'],
-        iconUrls: string['https://i.imgur.com/TWBpYZMt.png'], // Currently ignored. }],
-      });
+        params: [{
+          chainId: '97',
+          },
+        ],
     } catch (switchError) {
       // This error code indicates that the chain has not been added to MetaMask.
       if (switchError.code === 4902) {
@@ -642,6 +635,14 @@ async function getAccount() {
               {
                 chainId: '97',
                 chainName: 'Binance Smart Chain Testnet',
+                nativeCurrency: {
+                  name: 'BNB',
+                  symbol: 'BNB', // 2-6 characters long
+                  decimals: 18,
+                },
+                rpcUrls: string['https://data-seed-prebsc-1-s1.binance.org:8545/'],
+                blockExplorerUrls: string['https://testnet.bscscan.com'],
+                iconUrls: string['https://i.imgur.com/TWBpYZMt.png'], // Currently ignored.
                 rpcUrls: ['https://data-seed-prebsc-1-s1.binance.org:8545/'] /* ... */,
               },
             ],
