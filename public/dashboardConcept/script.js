@@ -624,6 +624,11 @@ sendEthButton.addEventListener("click", async () => {
   let gas = ethers.utils.hexValue(gasPrice);
   let chainId = await signer.getChainId();
 
+  console.log(crypto);
+  console.log(recipient);
+  console.log(gasPrice);
+  console.log(chainId);
+
   ethereum
     .request({
       method: "eth_sendTransaction",
