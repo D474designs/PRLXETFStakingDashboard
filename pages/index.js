@@ -22,7 +22,9 @@ export default function Home() {
         src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.5.4/ethers.umd.min.js"
         strategy="beforeInteractive"
       />
+
       <Script src="/dashboardConcept/script.js" strategy="beforeInteractive" />
+
       <Head>
         <meta charSet="UTF-8" />
         <title>PRLX ETF - Dashboard</title>
@@ -34,6 +36,10 @@ export default function Home() {
         <link
           rel="stylesheet"
           href="https://unicons.iconscout.com/release/v3.0.6/css/line.css"
+        />
+        <link
+          rel="stylesheet"
+          href="https://kit.fontawesome.com/04555906ba.js"
         />
       </Head>
 
