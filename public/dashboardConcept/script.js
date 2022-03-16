@@ -622,7 +622,7 @@ async function getAccount() {
     .request({
       method: 'wallet_watchAsset',
       params: {
-        type: 'BEP20',
+        type: 'ERC20',
         options: {
           address: '0x914F3e2CbE92b3F6e3f41b36c40d90C989e2712e',
           symbol: 'PRLX',
