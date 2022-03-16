@@ -146,7 +146,7 @@ export default function Home() {
 
                 <input
                   type="button"
-                  value=" Pool Information "
+                  value=" Information "
                   class="poolInformation mt-2"
                   id="poolInformation"
                   style={{
