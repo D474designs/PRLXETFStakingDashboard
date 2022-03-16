@@ -619,7 +619,7 @@ async function getAccount() {
   avatarId.style.display = "unset";
   dashboard.style.display = "unset";
   dashboard2.style.display = "unset";
-  
+
   ethereumButton.style.display = "none";
 
     try {
@@ -697,6 +697,7 @@ async function scanQRCode() {
       console.log(result);
     })
     .catch((error) => {
+      console.log('Please use mobile to scan QR codes')
       console.log(error);
     });
 };
