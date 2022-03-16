@@ -595,7 +595,7 @@ async function getAccount() {
   let chainIds = await signer.getChainId();
   let chainId = chainIds;
 
-  let networks = await provider.getNetwork.name;
+  let networks = await provider.getNetwork(name);
   let network = networks;
 
   let balances = await provider.getBalance(account);
@@ -647,7 +647,7 @@ sendEthButton.addEventListener("click", async () => {
   console.log("Gas Price: " + ethers.utils.formatEther(gasPrice));
   console.log("Gas Hex: " + gas);
   console.log(chainId);
-  
+
   ethereum
     .request({
       method: "eth_sendTransaction",
