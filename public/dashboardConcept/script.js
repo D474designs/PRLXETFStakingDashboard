@@ -631,17 +631,18 @@ console.log(contract.interface.functions);
 //Sending Ethereum to an address
 
 sendEthButton.addEventListener("click", async () => {
+  /*
   let cryptoz = crypto.innerHTML;
   let recipients = recipient.innerHTML;
-  /*
+
   let cryptozz = ethers.utils.hexValue(cryptoz);
   let gasPrice = await provider.getGasPrice();
   let gas = ethers.utils.hexValue(gasPrice);
   let chainId = await signer.getChainId();
-  */
+
   console.log(cryptoz);
   console.log(recipients);
-  /*
+
   console.log("Value Hex: " + cryptozz);
   console.log(gasPrice);
   console.log("Gas Price: " + ethers.utils.formatEther(gasPrice));
