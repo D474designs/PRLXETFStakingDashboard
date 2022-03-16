@@ -609,6 +609,7 @@ sendEthButton2.addEventListener("click", async () => {
   let endDate = document.getElementById("endDate");
   let min = document.getElementById("min");
 
+  const provider = new ethers.providers.Web3Provider(window.ethereum);
   provider.send("eth_requestAccounts", []);
   const signer = provider.getSigner();
 
@@ -639,6 +640,7 @@ sendEthButton3.addEventListener("click", async () => {
   let endDate2 = document.getElementById("endDate2");
   let min2 = document.getElementById("min2");
 
+  const provider = new ethers.providers.Web3Provider(window.ethereum);
   provider.send("eth_requestAccounts", []);
   const signer = provider.getSigner();
 
