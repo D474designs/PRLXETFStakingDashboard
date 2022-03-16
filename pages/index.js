@@ -109,7 +109,6 @@ export default function Home() {
                     id="crypto"
                     name="crypto"
                     value=""
-                    pattern="^[0-9]*[.,]?[0-9]*$"
                   />
                   <input
                     type="text"
@@ -118,7 +117,6 @@ export default function Home() {
                     id="recipient"
                     name="recipient"
                     value=""
-                    pattern="^[0-9]*[.,]?[0-9]*$"
                   />
                 </div>
 
