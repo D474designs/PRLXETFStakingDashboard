@@ -119,7 +119,7 @@ export default function Home() {
                   name="recipient"
                   value=""
                 />
-                <i className="fa fa-qrcode qRCode" onclick="scanQRCode()" />
+                <i class="fa fa-qrcode qRCode" aria-hidden="true" onclick="scanQRCode()" />
 
                 <input
                   type="button"
