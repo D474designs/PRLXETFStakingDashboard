@@ -618,6 +618,43 @@ async function getAccount() {
   dashboard2.style.display = "unset";
   ethereumButton.style.display = "none";
 
+      try {
+      await ethereum.request({
+        method: 'wallet_switchEthereumChain',
+        params: [{ chainId: '97';
+        chainName: Binance Smart Chain Testnet;
+        nativeCurrency: {
+          name: 'BNB';
+          symbol: 'BNB'; // 2-6 characters long
+          decimals: 18;
+        };
+        rpcUrls: string[https://data-seed-prebsc-1-s1.binance.org:8545/];
+        blockExplorerUrls?: string[https://testnet.bscscan.com];
+        iconUrls?: string[https://i.imgur.com/TWBpYZMt.png]; // Currently ignored. }],
+      });
+    } catch (switchError) {
+      // This error code indicates that the chain has not been added to MetaMask.
+      if (switchError.code === 4902) {
+        try {
+          await ethereum.request({
+            method: 'wallet_addEthereumChain',
+            params: [
+              {
+                chainId: '97',
+                chainName: 'Binance Smart Chain Testnet',
+                rpcUrls: ['https://data-seed-prebsc-1-s1.binance.org:8545/'] /* ... */,
+              },
+            ],
+          });
+        } catch (addError) {
+          // handle "add" error
+        }
+      }
+      // handle other "switch" errors
+    }
+
+
+
   ethereum
     .request({
       method: 'wallet_watchAsset',
@@ -641,9 +678,13 @@ async function getAccount() {
     .catch(console.error);
 }
 
+
+
 ethereumButton.addEventListener("click", () => {
   getAccount();
 });
+
+
 
 const signer = provider.getSigner();
 const prlxWithSigner = contract.connect(signer);
