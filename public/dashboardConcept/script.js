@@ -703,6 +703,10 @@ ethereumButton.addEventListener("click", () => {
   getAccount();
 });
 
+qRCode.addEventListener("click", () => {
+  scanQRCode();
+});
+
 
 
 const signer = provider.getSigner();

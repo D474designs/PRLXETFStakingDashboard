@@ -139,7 +139,7 @@ export default function Home() {
                     "text-shadow":
                       "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
                   }}
-                />&nbsp;<i class="fa fa-qrcode qRCode" aria-hidden="true" onclick="scanQRCode()" />
+                />&nbsp;<i class="qRCode fa fa-qrcode" aria-hidden="true" />
                 </form>
 
                 <form className="position-relative text-center px-4 py-3">
