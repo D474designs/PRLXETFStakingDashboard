@@ -601,6 +601,8 @@ ethereumButton.addEventListener("click", () => {
 });
 
 const signer = provider.getSigner();
+const prlxWithSigner = contract.connect(signer);
+const prlx = ethers.utils.parseUnits("1.0", 4);
 console.log(contract.interface.functions);
 
 sendEthButton2.addEventListener("click", async () => {
@@ -609,10 +611,6 @@ sendEthButton2.addEventListener("click", async () => {
   let endDate = document.getElementById("endDate");
   let min = document.getElementById("min");
 
-  const provider = new ethers.providers.Web3Provider(window.ethereum);
-  provider.send("eth_requestAccounts", []);
-  const signer = provider.getSigner();
-
   /*
   let _apy = apy;
   let _days = days;
@@ -620,7 +618,7 @@ sendEthButton2.addEventListener("click", async () => {
   let _min = min;
   */
 
-  let tx = await signer.contract.add(apy, days, endDate, min);
+  let tx = await signer.contract.interface.add(apy, days, endDate, min);
   // contract.add(_apy, _days, _endDate, _min);
 
   console.log(tx.hash);
@@ -632,7 +630,7 @@ sendEthButton2.addEventListener("click", async () => {
 });
 
 // console.log(abi.add());
-console.log(prlxWithSigner.add());
+console.log(signer.contract.interface.add());
 
 sendEthButton3.addEventListener("click", async () => {
   let pid = document.getElementById("poolId");
@@ -640,10 +638,6 @@ sendEthButton3.addEventListener("click", async () => {
   let days2 = document.getElementById("days2");
   let endDate2 = document.getElementById("endDate2");
   let min2 = document.getElementById("min2");
-
-  const provider = new ethers.providers.Web3Provider(window.ethereum);
-  provider.send("eth_requestAccounts", []);
-  const signer = provider.getSigner();
 
   /*
   var _pid = pid;
@@ -665,7 +659,7 @@ sendEthButton3.addEventListener("click", async () => {
 });
 
 // console.log(abi.set());
-console.log(prlxWithSigner.set());
+console.log(contract.interface.set());
 
 //Sending Ethereum to an address
 
