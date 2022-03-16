@@ -619,6 +619,7 @@ async function getAccount() {
   avatarId.style.display = "unset";
   dashboard.style.display = "unset";
   dashboard2.style.display = "unset";
+  
   ethereumButton.style.display = "none";
 
     try {
