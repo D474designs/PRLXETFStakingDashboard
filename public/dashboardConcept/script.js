@@ -629,7 +629,7 @@ async function getAccount() {
           decimals: 18,
         },
         rpcUrls: string['https://data-seed-prebsc-1-s1.binance.org:8545/'],
-        blockExplorerUrls?: string['https://testnet.bscscan.com'],
+        blockExplorerUrls: string['https://testnet.bscscan.com'],
         iconUrls?: string['https://i.imgur.com/TWBpYZMt.png'], // Currently ignored. }],
       });
     } catch (switchError) {
