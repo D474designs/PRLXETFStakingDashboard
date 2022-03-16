@@ -120,8 +120,8 @@ export default function Home() {
 
                 <input
                   type="button"
+                  value=" Send Crypto "
                   class="sendCrypto mt-2"
-                  type="submit"
                   id="sendCrypto"
                   style={{
                     "background-color": "#ffc107",
@@ -131,9 +131,7 @@ export default function Home() {
                     "text-shadow":
                       "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
                   }}
-                >
-                  &nbsp; Send Crypto &nbsp;
-                </>
+                />
                 </form>
 
 
