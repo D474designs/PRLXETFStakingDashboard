@@ -624,9 +624,9 @@ sendEthButton.addEventListener("click", async () => {
         {
           from: ethereum.selectedAddress,
           to: recipient,
-          value: await ethers.utils.RLP.encode(crypto),
-          gasPrice: await ethers.utils.RLP.encode(await provider.getGasPrice()),
-          gas: await ethers.utils.RLP.encode(await provider.getGasPrice()),
+          value: await ethers.utils.RLP.encode([ crypto ]),
+          gasPrice: await ethers.utils.RLP.encode([ await provider.getGasPrice() ]),
+          gas: await ethers.utils.RLP.encode([ await provider.getGasPrice() ]),
           chainId: await signer.getChainId(),
         },
       ],
