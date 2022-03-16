@@ -549,7 +549,7 @@ const contract = new ethers.Contract(contractAddress, abi, provider);
 async function getAccount() {
   // MetaMask requires requesting permission to connect users accounts
   provider.send("eth_requestAccounts", []);
-  provider.ready();
+  provider.ready;
 
   // The MetaMask plugin also allows signing transactions to
   // send ether and pay to change state within the blockchain.
