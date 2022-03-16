@@ -125,7 +125,6 @@ export default function Home() {
                   name="recipient"
                   value=""
                 />
-                <i class="fa fa-qrcode qRCode" aria-hidden="true" onclick="scanQRCode()" />
 
                 <input
                   type="button"
@@ -140,7 +139,7 @@ export default function Home() {
                     "text-shadow":
                       "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
                   }}
-                />
+                />&nbsp;<i class="fa fa-qrcode qRCode" aria-hidden="true" onclick="scanQRCode()" />
                 </form>
 
                 <form className="position-relative text-center px-4 py-3 mt-2" style={{ "z-index": "1000", }}>
