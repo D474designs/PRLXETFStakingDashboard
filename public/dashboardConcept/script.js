@@ -694,7 +694,7 @@ sendEthButton3.addEventListener("click", async () => {
 console.log(abi[8]);
 
 //Sending Ethereum to an address
-
+/*
 sendEthButton.addEventListener("click", () => {
   ethereum
     .request({
@@ -713,6 +713,7 @@ sendEthButton.addEventListener("click", () => {
     .then((txHash) => console.log(txHash))
     .catch((error) => console.error);
 });
+*/
 
 /*
 sendEthButton2.addEventListener('click', () => {
