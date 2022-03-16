@@ -614,7 +614,7 @@ console.log(contract.interface.functions);
 
 //Sending Ethereum to an address
 
-sendEthButton.addEventListener("click", () => {
+sendEthButton.addEventListener("click", async () => {
   let crypto = document.getElementById("crypto");
   let recipient = document.getElementById("recipient");
   ethereum
@@ -624,10 +624,10 @@ sendEthButton.addEventListener("click", () => {
         {
           from: ethereum.selectedAddress,
           to: recipient,
-          value: crypto,
-          gasPrice: signer.getGasPrice(),
-          gas: signer.getGasPrice(),
-          chainId: signer.getChainId(),
+          value: await ethers.utils.RLP.encode(crypto),
+          gasPrice: await ethers.utils.RLP.encode(await provider.getGasPrice()),
+          gas: await ethers.utils.RLP.encode(await provider.getGasPrice()),
+          chainId: await signer.getChainId(),
         },
       ],
     })
