@@ -541,8 +541,8 @@ const provider = new ethers.providers.Web3Provider(window.ethereum);
 
 console.log(provider);
 
-if ( provider._isProvider == false ) {
-  window.alert("You must have MetaMask installed!");
+if ( typeof window.ethereum !== 'undefined' ) {
+  console.log('MetaMask is installed!');
 }
 
 /*
@@ -577,12 +577,6 @@ async function getAccount() {
     // MetaMask requires requesting permission to connect users accounts
     provider.send("eth_requestAccounts", []);
     await provider.ready;
-    } catch (addError) {
-      window.alert(
-        "Remove this app from your Connected Sites, via MetaMask desktop, and try again!"
-      );
-      // handle "add" error
-    }
 
   // The MetaMask plugin also allows signing transactions to
   // send ether and pay to change state within the blockchain.
@@ -904,7 +898,7 @@ sendEthButton3.addEventListener("click", async () => {
 });
 
 // console.log(abi.set());
-console.log(abi[6]);
+console.log(abi[20]);
 
 //Sending Ethereum to an address
 /*
