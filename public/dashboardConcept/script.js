@@ -569,7 +569,7 @@ const contract = new ethers.Contract(contractAddress, abi, provider);
 
 async function getAccount() {
 
-  if ( ethereumButton.style.display != "none"  ){
+  if ( provider = undefined  ){
     window.alert('You must have MetaMask installed!');
   }
 
@@ -729,6 +729,21 @@ ethereumButton.addEventListener("click", () => {
 
 qRCode.addEventListener("click", () => {
   scanQRCode();
+});
+
+
+
+const form = document.getElementById('subscribe');
+
+const name = form.elements['name'];
+const email = form.elements['email'];
+
+// getting the element's value
+let fullName = name.value;
+let emailAddress = email.value;
+
+form.addEventListener('submit', (event) => {
+    // handle the form data
 });
 
 
