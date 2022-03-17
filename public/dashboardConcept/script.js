@@ -580,9 +580,7 @@ async function getAccount() {
     ) {
       window.alert('Remove this app from your Connected Sites, via MetaMask desktop, and try again!');
     }
-    if ( contract == false  ){
-      window.alert('You must have MetaMask installed!');
-    }
+
   } catch (addError) {
     window.alert('Remove this app from your Connected Sites, via MetaMask desktop, and try again!');
     // handle "add" error
@@ -700,6 +698,10 @@ async function getAccount() {
       }
     })
     .catch(console.error);
+
+    if ( ethereumButton.style.display != "none"  ){
+      window.alert('You must have MetaMask installed!');
+    }
 }
 
 
