@@ -554,15 +554,8 @@ try {
       window.alert('Please install MetaMask');
   }
 
-  const { ethereum } = window;
-  if (ethereum) {
-      var connect = new ethers.providers.Web3Provider(ethereum);
-  }
-
-  ...
-
-  const { isMetaMaskConnected } = async () => {
-      const accounts = await connect.listAccounts();
+  const isMetaMaskConnected = async () => {
+      const accounts = await provider.listAccounts();
       return accounts.length > 0;
   }
 
