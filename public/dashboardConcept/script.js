@@ -540,7 +540,7 @@ let accounts = [];
 const provider = new ethers.providers.Web3Provider(window.ethereum);
 
 if ( typeof window.ethereum == 'undefined' || typeof provider == 'undefined' ) {
-  alert('Please install MetaMask');
+  window.alert('Please install MetaMask');
 }
 
 /*
@@ -576,7 +576,7 @@ async function getAccount() {
     provider.send("eth_requestAccounts", []);
     await provider.ready;
     } catch (addError) {
-        console.log('MetaMask cannot connect');
+        window.alert('MetaMask cannot connect');
     }
 
   // The MetaMask plugin also allows signing transactions to
