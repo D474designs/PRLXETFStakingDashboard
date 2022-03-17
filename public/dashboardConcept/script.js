@@ -579,7 +579,7 @@ async function getAccount() {
     provider.send("eth_requestAccounts", []);
     await provider.ready;
     if (
-      referenceError == false
+      provider == false
     ) {
       window.alert('Remove this app from your Connected Sites, via MetaMask desktop, and try again!');
     }
