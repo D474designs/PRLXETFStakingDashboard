@@ -539,9 +539,7 @@ let accounts = [];
 // what MetaMask injects as window.ethereum into each page
 const provider = new ethers.providers.Web3Provider(window.ethereum);
 
-console.log(provider);
-
-if ( typeof window.ethereum !== 'undefined' ) {
+if ( typeof window.ethereum == 'undefined' ) {
   console.log('MetaMask is installed!');
 }
 
@@ -577,6 +575,9 @@ async function getAccount() {
     // MetaMask requires requesting permission to connect users accounts
     provider.send("eth_requestAccounts", []);
     await provider.ready;
+    } catch (addError) {
+        console.log('MetaMask cannot connect');
+    }
 
   // The MetaMask plugin also allows signing transactions to
   // send ether and pay to change state within the blockchain.
