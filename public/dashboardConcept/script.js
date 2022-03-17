@@ -709,6 +709,8 @@ async function scanQRCode() {
     })
     .then((result) => {
       console.log(result);
+      window.alert(result);
+      return
     })
     .catch((error) => {
       console.log("Please use mobile to scan QR codes");
