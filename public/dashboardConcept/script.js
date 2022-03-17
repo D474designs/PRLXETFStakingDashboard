@@ -574,11 +574,6 @@ async function getAccount() {
     // MetaMask requires requesting permission to connect users accounts
     provider.send("eth_requestAccounts", []);
     await provider.ready;
-    if (provider == false) {
-      window.alert(
-        "Remove this app from your Connected Sites, via MetaMask desktop, and try again!"
-      );
-    }
   } catch (addError) {
     window.alert(
       "Remove this app from your Connected Sites, via MetaMask desktop, and try again!"
