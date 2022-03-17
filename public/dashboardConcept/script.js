@@ -539,8 +539,8 @@ let accounts = [];
 // what MetaMask injects as window.ethereum into each page
 const provider = new ethers.providers.Web3Provider(window.ethereum);
 
-if ( typeof window.ethereum == 'undefined' ) {
-  console.log('Please install MetaMask');
+if ( typeof window.ethereum == 'undefined' || typeof provider == 'undefined' ) {
+  alert('Please install MetaMask');
 }
 
 /*
