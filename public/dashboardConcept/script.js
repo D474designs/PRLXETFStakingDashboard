@@ -576,7 +576,7 @@ async function getAccount() {
     provider.send("eth_requestAccounts", []);
     await provider.ready;
     if (
-      referenceError == false;
+      referenceError == 'contract is not defined'
     ) {
       window.alert('You must have MetaMask installed!');
     }
