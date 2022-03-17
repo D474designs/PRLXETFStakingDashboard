@@ -569,7 +569,9 @@ const contract = new ethers.Contract(contractAddress, abi, provider);
 
 async function getAccount() {
 
-
+  if ( ethereumButton.style.display != "none"  ){
+    window.alert('You must have MetaMask installed!');
+  }
 
   try {
     // MetaMask requires requesting permission to connect users accounts
@@ -698,10 +700,6 @@ async function getAccount() {
       }
     })
     .catch(console.error);
-
-    if ( ethereumButton.style.display != "none"  ){
-      window.alert('You must have MetaMask installed!');
-    }
 }
 
 
