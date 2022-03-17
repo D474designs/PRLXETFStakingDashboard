@@ -559,7 +559,7 @@ try {
       return accounts.length > 0;
   }
 
-function isMetaMask () {
+async function isMetaMask () {
   await isMetaMaskConnected().then((connected) => {
       if (connected) {
         console.log('D474developments');
