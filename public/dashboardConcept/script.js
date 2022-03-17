@@ -569,7 +569,7 @@ const contract = new ethers.Contract(contractAddress, abi, provider);
 
 async function getAccount() {
 
-  if ( provider = undefined  ){
+  if ( provider == undefined  ){
     window.alert('You must have MetaMask installed!');
   }
 
