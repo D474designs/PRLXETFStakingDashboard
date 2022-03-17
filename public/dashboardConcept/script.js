@@ -545,6 +545,8 @@ function verifyMeta() {
   }
 }
 
+verifyMeta();
+
 try {
   // MetaMask requires requesting permission to connect users accounts
   const provider = new ethers.providers.Web3Provider(window.ethereum);
