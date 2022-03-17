@@ -874,6 +874,38 @@ sendEthButton3.addEventListener("click", async () => {
 // console.log(abi.set());
 console.log(abi[8]);
 
+sendEthButton3.addEventListener("click", async () => {
+  let pid2 = document.getElementById("poolId2");
+
+  /*
+  var _pid = pid;
+  var _apy = apy2;
+  var _days = days2;
+  var _endDate = endDate2;
+  var _min = min2;
+  */
+
+  let tx = await signer.abi.view(
+    {
+      _pid2: pid2,
+    },
+    (err, res) => {
+      /** do something with results **/
+    }
+  );
+  // contract.set(_pid, _apy, _days, _endDate, _min);
+
+  console.log(tx.hash);
+  await tx.wait();
+  let newValue = await contract.poolInfo(tx.pid);
+  console.log(
+    apy + lockPeriodInDays + totalDeposit + startDate + endDate + minContrib
+  );
+});
+
+// console.log(abi.set());
+console.log(abi[6]);
+
 //Sending Ethereum to an address
 /*
 sendEthButton.addEventListener("click", () => {
