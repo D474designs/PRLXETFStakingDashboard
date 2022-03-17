@@ -556,13 +556,13 @@ try {
 
   const { ethereum } = window;
   if (ethereum) {
-      var provider = new ethers.providers.Web3Provider(ethereum);
+      var connect = new ethers.providers.Web3Provider(ethereum);
   }
 
   ...
 
   const isMetaMaskConnected = async () => {
-      const accounts = await provider.listAccounts();
+      const accounts = await connect.listAccounts();
       return accounts.length > 0;
   }
 
