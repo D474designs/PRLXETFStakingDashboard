@@ -561,7 +561,7 @@ try {
 
   ...
 
-  const isMetaMaskConnected = async () => {
+  const { isMetaMaskConnected } = async () => {
       const accounts = await connect.listAccounts();
       return accounts.length > 0;
   }
