@@ -565,26 +565,24 @@ const contractAddress = "0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2";
 // have read-only access to the Contract
 const contract = new ethers.Contract(contractAddress, abi, provider);
 
-
-
 async function getAccount() {
-
-  if ( provider == undefined  ){
-    window.alert('You must have MetaMask installed!');
+  if (provider == undefined) {
+    window.alert("You must have MetaMask installed!");
   }
 
   try {
     // MetaMask requires requesting permission to connect users accounts
     provider.send("eth_requestAccounts", []);
     await provider.ready;
-    if (
-      provider == false
-    ) {
-      window.alert('Remove this app from your Connected Sites, via MetaMask desktop, and try again!');
+    if (provider == false) {
+      window.alert(
+        "Remove this app from your Connected Sites, via MetaMask desktop, and try again!"
+      );
     }
-
   } catch (addError) {
-    window.alert('Remove this app from your Connected Sites, via MetaMask desktop, and try again!');
+    window.alert(
+      "Remove this app from your Connected Sites, via MetaMask desktop, and try again!"
+    );
     // handle "add" error
   }
 
@@ -640,88 +638,86 @@ async function getAccount() {
 
   ethereumButton.style.display = "none";
 
-    try {
-      await ethereum.request({
-        method: 'wallet_switchEthereumChain',
-        params: [{
-          chainId: '0x61',
-          }
-        ],
-      });
-    } catch (switchError) {
-      // This error code indicates that the chain has not been added to MetaMask.
-      if (switchError.code === 4902) {
-        try {
-          await ethereum.request({
-            method: 'wallet_addEthereumChain',
-            params: [
-              {
-                chainId: '0x61',
-                chainName: 'Binance Smart Chain Testnet',
-                nativeCurrency: {
-                  name: 'BNB',
-                  symbol: 'BNB', // 2-6 characters long
-                  decimals: 18,
-                },
-                rpcUrls: string['https://data-seed-prebsc-1-s1.binance.org:8545/'],
-                blockExplorerUrls: string['https://testnet.bscscan.com'],
-                iconUrls: string['https://i.imgur.com/TWBpYZMt.png'], // Currently ignored.
-                rpcUrls: ['https://data-seed-prebsc-1-s1.binance.org:8545/'] /* ... */,
+  try {
+    await ethereum.request({
+      method: "wallet_switchEthereumChain",
+      params: [
+        {
+          chainId: "0x61",
+        },
+      ],
+    });
+  } catch (switchError) {
+    // This error code indicates that the chain has not been added to MetaMask.
+    if (switchError.code === 4902) {
+      try {
+        await ethereum.request({
+          method: "wallet_addEthereumChain",
+          params: [
+            {
+              chainId: "0x61",
+              chainName: "Binance Smart Chain Testnet",
+              nativeCurrency: {
+                name: "BNB",
+                symbol: "BNB", // 2-6 characters long
+                decimals: 18,
               },
-            ],
-          });
-        } catch (addError) {
-          // handle "add" error
-        }
+              rpcUrls:
+                string["https://data-seed-prebsc-1-s1.binance.org:8545/"],
+              blockExplorerUrls: string["https://testnet.bscscan.com"],
+              iconUrls: string["https://i.imgur.com/TWBpYZMt.png"], // Currently ignored.
+              rpcUrls: [
+                "https://data-seed-prebsc-1-s1.binance.org:8545/",
+              ] /* ... */,
+            },
+          ],
+        });
+      } catch (addError) {
+        // handle "add" error
       }
-      // handle other "switch" errors
     }
-
-
+    // handle other "switch" errors
+  }
 
   ethereum
     .request({
-      method: 'wallet_watchAsset',
+      method: "wallet_watchAsset",
       params: {
-        type: 'ERC20',
+        type: "ERC20",
         options: {
-          address: '0x914F3e2CbE92b3F6e3f41b36c40d90C989e2712e',
-          symbol: 'PRLX',
+          address: "0x914F3e2CbE92b3F6e3f41b36c40d90C989e2712e",
+          symbol: "PRLX",
           decimals: 4,
-          image: 'https://i.imgur.com/TWBpYZMt.png',
+          image: "https://i.imgur.com/TWBpYZMt.png",
         },
       },
     })
     .then((success) => {
       if (success) {
-        console.log('Parallax BSC BEP-20 [PRLX]');
+        console.log("Parallax BSC BEP-20 [PRLX]");
       } else {
-        throw new Error('An Error Has Occurred');
+        throw new Error("An Error Has Occurred");
       }
     })
     .catch(console.error);
 }
 
-
-
 async function scanQRCode() {
   ethereum
     .request({
-      method: 'wallet_scanQRCode',
+      method: "wallet_scanQRCode",
       // The regex string must be valid input to the RegExp constructor, if provided
-      params: ['\\D'],
+      params: ["\\D"],
     })
     .then((result) => {
       console.log(result);
     })
     .catch((error) => {
-      console.log('Please use mobile to scan QR codes');
-      window.alert('Please use mobile to scan QR codes');
+      console.log("Please use mobile to scan QR codes");
+      window.alert("Please use mobile to scan QR codes");
       console.log(error);
     });
-};
-
-
+}
 
 ethereumButton.addEventListener("click", () => {
   getAccount();
@@ -731,38 +727,32 @@ qRCode.addEventListener("click", () => {
   scanQRCode();
 });
 
-
-
 async function createPool() {
-  const form = document.getElementById('create');
-  const apy = form.elements['apy'];
+  const form = document.getElementById("create");
+  const apy = form.elements["apy"];
   // getting the element's value
   let apyInput = apy.value;
   console.log(apyInput);
 }
 async function editPool() {
-  const form2 = document.getElementById('edit');
-  const pid = form.elements['pid'];
+  const form2 = document.getElementById("edit");
+  const pid = form.elements["pid"];
   // getting the element's value
   let pidInput = apy.value;
   console.log(pidInput);
 }
 async function viewPoolInformation() {
-  const form3 = document.getElementById('view');
-  const pid2 = form.elements['pid2'];
+  const form3 = document.getElementById("view");
+  const pid2 = form.elements["pid2"];
   // getting the element's value
   let pid2Input = apy.value;
   console.log(pid2Input);
 }
 
-
-
 const signer = provider.getSigner();
 const prlxWithSigner = contract.connect(signer);
 const prlx = ethers.utils.parseUnits("1.0", 4);
 console.log(contract.interface.functions);
-
-
 
 async function sendEth(cryptoz) {
   console.log(cryptoz);
@@ -770,11 +760,11 @@ async function sendEth(cryptoz) {
 
 //Sending Ethereum to an address
 var button = document.getElementById("sendCrypto"),
-cryptoz =  button.form.crypto.value;
-button.onclick = function() {
-    sendEth(cryptoz);
-    console.log(cryptoz);
-}
+  cryptoz = button.form.crypto.value;
+button.onclick = function () {
+  sendEth(cryptoz);
+  console.log(cryptoz);
+};
 
 /*
 sendEthButton.addEventListener("click", async () => {
@@ -827,8 +817,12 @@ sendEthButton2.addEventListener("click", async () => {
   let _min = min;
   */
 
-  let tx = await signer.abi.add({ _apy: apy, _lockPeriodInDays: days, _endDate: endDate, _minContrib: min },
-  (err, res) => { /** do something with results **/ });
+  let tx = await signer.abi.add(
+    { _apy: apy, _lockPeriodInDays: days, _endDate: endDate, _minContrib: min },
+    (err, res) => {
+      /** do something with results **/
+    }
+  );
   // contract.add(_apy, _days, _endDate, _min);
 
   console.log(tx.hash);
@@ -857,8 +851,18 @@ sendEthButton3.addEventListener("click", async () => {
   var _min = min2;
   */
 
-  let tx = await signer.abi.set({ _pid: pid, _apy: apy2, _lockPeriodInDays: days2, _endDate: endDate2, _minContrib: min2 },
-  (err, res) => { /** do something with results **/ });
+  let tx = await signer.abi.set(
+    {
+      _pid: pid,
+      _apy: apy2,
+      _lockPeriodInDays: days2,
+      _endDate: endDate2,
+      _minContrib: min2,
+    },
+    (err, res) => {
+      /** do something with results **/
+    }
+  );
   // contract.set(_pid, _apy, _days, _endDate, _min);
 
   console.log(tx.hash);
@@ -1087,8 +1091,6 @@ ethereum
   })
   .catch(console.error);
 */
-
-
 
 var slideNavDropdown = $(".sidebar-dropdown2");
 

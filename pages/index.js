@@ -27,7 +27,11 @@ export default function Home() {
         strategy="beforeInteractive"
       />
 
-      <Script src="/dashboardConcept/script.js" strategy="beforeInteractive" crossorigin="anonymous" />
+      <Script
+        src="/dashboardConcept/script.js"
+        strategy="beforeInteractive"
+        crossorigin="anonymous"
+      />
 
       <Head>
         <meta charSet="UTF-8" />
@@ -107,8 +111,7 @@ export default function Home() {
                 <span class="showBalance"></span>
                 <br></br>
 
-
-
+                {/*
             			<form action="javascript:createPool();" method="post" id="create">
             				<h1>Create Pool</h1>
             				<div class="field">
@@ -144,121 +147,30 @@ export default function Home() {
                       <button type="viewPoolInformationool">View</button>
                     </div>
                   </form>
-
-
-
-                <form className="position-relative text-center px-4 py-3">
-
-                <input
-                  type="text"
-                  className="form-control w-100 border-0"
-                  placeholder="Amount of Crypto"
-                  id="crypto"
-                  name="crypto"
-                  value=""
-                />
-                <input
-                  type="text"
-                  className="form-control w-100 border-0"
-                  placeholder="Recipient Address"
-                  id="recipient"
-                  name="recipient"
-                  value=""
-                />
-
-                <input
-                  type="button"
-                  value=" Send Crypto "
-                  class="sendCrypto"
-                  id="sendCrypto"
-                  style={{
-                    "background-color": "#ffc107",
-                    color: "#fff",
-                    "-webkit-text-shadow":
-                      "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
-                    "text-shadow":
-                      "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
-                  }}
-                />&nbsp;<i class="qRCode fa fa-qrcode" aria-hidden="true" />
-                </form>
-
-                <form className="position-relative text-center px-4 py-3">
-
-                <input
-                  type="text"
-                  className="form-control w-100 border-0"
-                  placeholder="Pool ID"
-                  id="poolIdNumber"
-                  name="poolIdNumber"
-                  value=""
-                />
-
-                <input
-                  type="button"
-                  value=" Information "
-                  class="poolInformation"
-                  id="poolInformation"
-                  style={{
-                    "background-color": "#ffc107",
-                    color: "#fff",
-                    "-webkit-text-shadow":
-                      "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
-                    "text-shadow":
-                      "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
-                  }}
-                />
-                </form>
-
-              <div class="admin">
-                <br></br>
-                <br></br>
-                <div class="accounts2">Admin Options</div>
-                <span class="showId"></span>
-                <br></br>
-                <span class="showNetwork"></span>
-                <br></br>
-                <span class="showGasPrice"></span>
-                <br></br>
-                <span class="showTransactionCount"></span>
+                  */}
 
                 <form className="position-relative text-center px-4 py-3">
                   <input
                     type="text"
                     className="form-control w-100 border-0"
-                    placeholder="APY"
-                    id="apy"
-                    name="apy"
+                    placeholder="Amount of Crypto"
+                    id="crypto"
+                    name="crypto"
                     value=""
                   />
                   <input
                     type="text"
                     className="form-control w-100 border-0"
-                    placeholder="Length in Days"
-                    id="days"
-                    name="days"
-                    value=""
-                  />
-                  <input
-                    type="text"
-                    className="form-control w-100 border-0"
-                    placeholder="End Date"
-                    id="endDate"
-                    name="endDate"
-                    value=""
-                  />
-                  <input
-                    type="text"
-                    className="form-control w-100 border-0"
-                    placeholder="Minimum Contribution"
-                    id="min"
-                    name="min"
+                    placeholder="Recipient Address"
+                    id="recipient"
+                    name="recipient"
                     value=""
                   />
                   <input
                     type="button"
-                    value=" Create Pool "
-                    class="sendCrypto2"
-                    id="sendCrypto2"
+                    value=" Send Crypto "
+                    class="sendCrypto"
+                    id="sendCrypto"
                     style={{
                       "background-color": "#ffc107",
                       color: "#fff",
@@ -268,58 +180,25 @@ export default function Home() {
                         "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
                     }}
                   />
+                  &nbsp;
+                  <i class="qRCode fa fa-qrcode" aria-hidden="true" />
                 </form>
-              </div>
-
-              <div class="admin2">
-                <br></br>
 
                 <form className="position-relative text-center px-4 py-3">
                   <input
                     type="text"
                     className="form-control w-100 border-0"
                     placeholder="Pool ID"
-                    id="poolId"
-                    name="poolId"
+                    id="poolIdNumber"
+                    name="poolIdNumber"
                     value=""
                   />
-                  <input
-                    type="text"
-                    className="form-control w-100 border-0"
-                    placeholder="APY"
-                    id="apy2"
-                    name="apy2"
-                    value=""
-                  />
-                  <input
-                    type="text"
-                    className="form-control w-100 border-0"
-                    placeholder="Length in Days"
-                    id="days2"
-                    name="days2"
-                    value=""
-                  />
-                  <input
-                    type="text"
-                    className="form-control w-100 border-0"
-                    placeholder="End Date"
-                    id="endDate2"
-                    name="endDate2"
-                    value=""
-                  />
-                  <input
-                    type="text"
-                    className="form-control w-100 border-0"
-                    placeholder="Minimum Contribution"
-                    id="min2"
-                    name="min2"
-                    value=""
-                  />
+
                   <input
                     type="button"
-                    value=" Edit Pool "
-                    class="sendCrypto3"
-                    id="sendCrypto3"
+                    value=" Information "
+                    class="poolInformation"
+                    id="poolInformation"
                     style={{
                       "background-color": "#ffc107",
                       color: "#fff",
@@ -330,48 +209,168 @@ export default function Home() {
                     }}
                   />
                 </form>
-              </div>
-              <br></br><br></br>
 
-            <div class="pools">
-              <ul class="categories2 list-unstyled2">
-                <li className="has-dropdown2">
-                  <i
-                    className="uil-chart-pie fa-fw"
-                    style={{ color: "#000" }}
-                  />
-                  <a href="#" style={{ color: "#000" }}>
-                    {" "}
-                    Pools
-                  </a>
-                  <ul className="sidebar-dropdown2 list-unstyled2">
-                    <li>
-                      <a href="#">Pool ID</a>
-                    </li>
-                    <li>
-                      <a href="#">APY</a>
-                    </li>
-                    <li>
-                      <a href="#">End Date</a>
-                    </li>
-                    <li>
-                      <a href="#">Minimum</a>
-                    </li>
-                    <li>
-                      <a href="#">PRLX Invested</a>
+                <div class="admin">
+                  <br></br>
+                  <br></br>
+                  <div class="accounts2">Admin Options</div>
+                  <span class="showId"></span>
+                  <br></br>
+                  <span class="showNetwork"></span>
+                  <br></br>
+                  <span class="showGasPrice"></span>
+                  <br></br>
+                  <span class="showTransactionCount"></span>
+
+                  <form className="position-relative text-center px-4 py-3">
+                    <input
+                      type="text"
+                      className="form-control w-100 border-0"
+                      placeholder="APY"
+                      id="apy"
+                      name="apy"
+                      value=""
+                    />
+                    <input
+                      type="text"
+                      className="form-control w-100 border-0"
+                      placeholder="Length in Days"
+                      id="days"
+                      name="days"
+                      value=""
+                    />
+                    <input
+                      type="text"
+                      className="form-control w-100 border-0"
+                      placeholder="End Date"
+                      id="endDate"
+                      name="endDate"
+                      value=""
+                    />
+                    <input
+                      type="text"
+                      className="form-control w-100 border-0"
+                      placeholder="Minimum Contribution"
+                      id="min"
+                      name="min"
+                      value=""
+                    />
+                    <input
+                      type="button"
+                      value=" Create Pool "
+                      class="sendCrypto2"
+                      id="sendCrypto2"
+                      style={{
+                        "background-color": "#ffc107",
+                        color: "#fff",
+                        "-webkit-text-shadow":
+                          "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                        "text-shadow":
+                          "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                      }}
+                    />
+                  </form>
+                </div>
+
+                <div class="admin2">
+                  <br></br>
+
+                  <form className="position-relative text-center px-4 py-3">
+                    <input
+                      type="text"
+                      className="form-control w-100 border-0"
+                      placeholder="Pool ID"
+                      id="poolId"
+                      name="poolId"
+                      value=""
+                    />
+                    <input
+                      type="text"
+                      className="form-control w-100 border-0"
+                      placeholder="APY"
+                      id="apy2"
+                      name="apy2"
+                      value=""
+                    />
+                    <input
+                      type="text"
+                      className="form-control w-100 border-0"
+                      placeholder="Length in Days"
+                      id="days2"
+                      name="days2"
+                      value=""
+                    />
+                    <input
+                      type="text"
+                      className="form-control w-100 border-0"
+                      placeholder="End Date"
+                      id="endDate2"
+                      name="endDate2"
+                      value=""
+                    />
+                    <input
+                      type="text"
+                      className="form-control w-100 border-0"
+                      placeholder="Minimum Contribution"
+                      id="min2"
+                      name="min2"
+                      value=""
+                    />
+                    <input
+                      type="button"
+                      value=" Edit Pool "
+                      class="sendCrypto3"
+                      id="sendCrypto3"
+                      style={{
+                        "background-color": "#ffc107",
+                        color: "#fff",
+                        "-webkit-text-shadow":
+                          "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                        "text-shadow":
+                          "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                      }}
+                    />
+                  </form>
+                </div>
+                <br></br>
+                <br></br>
+
+                <div class="pools">
+                  <ul class="categories2 list-unstyled2">
+                    <li className="has-dropdown2">
+                      <i
+                        className="uil-chart-pie fa-fw"
+                        style={{ color: "#000" }}
+                      />
+                      <a href="#" style={{ color: "#000" }}>
+                        {" "}
+                        Pools
+                      </a>
+                      <ul className="sidebar-dropdown2 list-unstyled2">
+                        <li>
+                          <a href="#">Pool ID</a>
+                        </li>
+                        <li>
+                          <a href="#">APY</a>
+                        </li>
+                        <li>
+                          <a href="#">End Date</a>
+                        </li>
+                        <li>
+                          <a href="#">Minimum</a>
+                        </li>
+                        <li>
+                          <a href="#">PRLX Invested</a>
+                        </li>
+                      </ul>
                     </li>
                   </ul>
-                </li>
-              </ul>
-            </div>
-
-            </div>
-
+                </div>
+              </div>
             </div>
           </center>
 
           <div className="search position-relative text-center w-100 px-4 py-3">
-
             <i className="fa fa-search" style={{ color: "#6b7280" }} />
             <input
               type="text"
