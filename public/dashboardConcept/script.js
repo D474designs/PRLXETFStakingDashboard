@@ -554,6 +554,28 @@ try {
       window.alert('Please install MetaMask');
   }
 
+  const { ethereum } = window;
+  if (ethereum) {
+      var provider = new ethers.providers.Web3Provider(ethereum);
+  }
+
+  ...
+
+  const isMetaMaskConnected = async () => {
+      const accounts = await provider.listAccounts();
+      return accounts.length > 0;
+  }
+
+  await isMetaMaskConnected().then((connected) => {
+      if (connected) {
+        console.log('D474developments');
+          // metamask is connected
+      } else {
+        window.alert('Please install MetaMask');
+          // metamask is not connected
+      }
+  });
+
 
 /*
 async function getAccount() {
