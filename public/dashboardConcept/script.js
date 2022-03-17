@@ -537,23 +537,13 @@ let accounts = [];
 
 // A Web3Provider wraps a standard Web3 provider, which is
 // what MetaMask injects as window.ethereum into each page
-function metaMask () {
-  const provider = new ethers.providers.Web3Provider(window.ethereum);
-} catch (addError) {
-    window.alert('Please install MetaMask');
-}
-
-metaMask();
-
-
+const provider = new ethers.providers.Web3Provider(window.ethereum);
 
 function verifyMeta() {
   if ( typeof window.ethereum == 'undefined' || typeof provider == 'undefined' ) {
     window.alert('Please install MetaMask');
   }
 }
-
-verifyMeta();
 
 try {
   // MetaMask requires requesting permission to connect users accounts
