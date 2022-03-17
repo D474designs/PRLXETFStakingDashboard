@@ -565,7 +565,7 @@ const contractAddress = "0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2";
 // have read-only access to the Contract
 const contract = new ethers.Contract(contractAddress, abi, provider);
 
-if ( contract = false ){
+if ( contract == false  ){
   window.alert('You must have MetaMask installed!');
 }
 
