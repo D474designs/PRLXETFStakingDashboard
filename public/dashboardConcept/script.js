@@ -564,6 +564,9 @@ const contractAddress = "0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2";
 // We connect to the Contract using a Provider, so we will only
 // have read-only access to the Contract
 const contract = new ethers.Contract(contractAddress, abi, provider);
+if ( contract = false ) {
+  window.alert('You must have MetaMask installed!');
+}
 
 
 
@@ -578,11 +581,8 @@ async function getAccount() {
     if (
       referenceError == 'contract is not defined'
     ) {
-      window.alert('You must have MetaMask installed!');
+      window.alert('Remove this app from your Connected Sites, via MetaMask desktop, and try again!');
     }
-  } catch (addError) {
-    window.alert('Remove this app from your Connected Sites, via MetaMask desktop, and try again!');
-    // handle "add" error
   }
 
   // The MetaMask plugin also allows signing transactions to
