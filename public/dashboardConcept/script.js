@@ -539,6 +539,12 @@ let accounts = [];
 // what MetaMask injects as window.ethereum into each page
 const provider = new ethers.providers.Web3Provider(window.ethereum);
 
+console.log(provider);
+
+if ( provider == false ) {
+  window.alert("You must have MetaMask installed!");
+}
+
 /*
 async function getAccount() {
   let accounts = await ethereum.request({ method: 'eth_requestAccounts' });
@@ -566,10 +572,6 @@ const contractAddress = "0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2";
 const contract = new ethers.Contract(contractAddress, abi, provider);
 
 async function getAccount() {
-  console.log(provider.value);
-  if (provider.value == undefined) {
-    window.alert("You must have MetaMask installed!");
-  }
 
   try {
     // MetaMask requires requesting permission to connect users accounts
