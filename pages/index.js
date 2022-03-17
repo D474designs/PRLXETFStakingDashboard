@@ -107,6 +107,46 @@ export default function Home() {
                 <span class="showBalance"></span>
                 <br></br>
 
+
+
+            			<form action="javascript:createPool();" method="post" id="create">
+            				<h1>Create Pool</h1>
+            				<div class="field">
+            					<label for="apy">APY:</label>
+            					<input type="text" id="apy" name="apy" placeholder="Enter APY" />
+            					<small></small>
+            				</div>
+            				<div class="field">
+            					<button type="createPool">Create</button>
+            				</div>
+            			</form>
+
+                  <form action="javascript:editPool();" method="post" id="edit">
+                    <h1>Edit Pool</h1>
+                    <div class="field">
+                      <label for="pid">PID:</label>
+                      <input type="text" id="pid" name="pid" placeholder="Enter PID" />
+                      <small></small>
+                    </div>
+                    <div class="field">
+                      <button type="editPool">Edit</button>
+                    </div>
+                  </form>
+
+                  <form action="javascript:viewPoolInformation();" method="post" id="view">
+                    <h1>Pool Information</h1>
+                    <div class="field">
+                      <label for="pid2">PID:</label>
+                      <input type="text" id="pid2" name="pid2" placeholder="Enter PID" />
+                      <small></small>
+                    </div>
+                    <div class="field">
+                      <button type="viewPoolInformationool">View</button>
+                    </div>
+                  </form>
+
+
+
                 <form className="position-relative text-center px-4 py-3">
 
                 <input

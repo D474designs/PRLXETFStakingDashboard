@@ -733,18 +733,13 @@ qRCode.addEventListener("click", () => {
 
 
 
-const form = document.getElementById('subscribe');
-
-const name = form.elements['name'];
-const email = form.elements['email'];
-
-// getting the element's value
-let fullName = name.value;
-let emailAddress = email.value;
-
-form.addEventListener('submit', (event) => {
-    // handle the form data
-});
+async function createPool() {
+  const form = document.getElementById('create');
+  const apy = form.elements['apy'];
+  // getting the element's value
+  let apyInput = apy.value;
+  console.log(apyInput);
+}
 
 
 
