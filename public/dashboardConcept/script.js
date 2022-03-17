@@ -559,6 +559,7 @@ try {
       return accounts.length > 0;
   }
 
+function isMetaMask () {
   await isMetaMaskConnected().then((connected) => {
       if (connected) {
         console.log('D474developments');
@@ -568,6 +569,10 @@ try {
           // metamask is not connected
       }
   });
+}
+
+isMetaMask();
+
 
 
 /*
