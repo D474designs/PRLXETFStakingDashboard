@@ -539,14 +539,6 @@ let accounts = [];
 // what MetaMask injects as window.ethereum into each page
 const provider = new ethers.providers.Web3Provider(window.ethereum);
 
-
-
-if ( contract == false  ){
-  window.alert('You must have MetaMask installed!');
-}
-
-
-
 /*
 async function getAccount() {
   let accounts = await ethereum.request({ method: 'eth_requestAccounts' });
@@ -587,6 +579,9 @@ async function getAccount() {
       provider == false
     ) {
       window.alert('Remove this app from your Connected Sites, via MetaMask desktop, and try again!');
+    }
+    if ( contract == false  ){
+      window.alert('You must have MetaMask installed!');
     }
   } catch (addError) {
     window.alert('Remove this app from your Connected Sites, via MetaMask desktop, and try again!');
