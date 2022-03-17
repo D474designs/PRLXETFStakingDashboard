@@ -540,7 +540,7 @@ let accounts = [];
 const provider = new ethers.providers.Web3Provider(window.ethereum);
 
 if ( typeof window.ethereum == 'undefined' ) {
-  console.log('MetaMask is installed!');
+  console.log('Please install MetaMask');
 }
 
 /*
