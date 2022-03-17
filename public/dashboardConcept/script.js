@@ -541,7 +541,7 @@ const provider = new ethers.providers.Web3Provider(window.ethereum);
 
 console.log(provider);
 
-if ( provider == false ) {
+if ( provider._isProvider == false ) {
   window.alert("You must have MetaMask installed!");
 }
 
