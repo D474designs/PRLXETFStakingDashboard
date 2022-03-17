@@ -740,6 +740,20 @@ async function createPool() {
   let apyInput = apy.value;
   console.log(apyInput);
 }
+async function editPool() {
+  const form2 = document.getElementById('edit');
+  const pid = form.elements['pid'];
+  // getting the element's value
+  let pidInput = apy.value;
+  console.log(pidInput);
+}
+async function viewPoolInformation() {
+  const form3 = document.getElementById('view');
+  const pid2 = form.elements['pid2'];
+  // getting the element's value
+  let pid2Input = apy.value;
+  console.log(pid2Input);
+}
 
 
 
