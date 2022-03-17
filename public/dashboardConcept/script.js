@@ -540,8 +540,8 @@ let accounts = [];
 const provider = new ethers.providers.Web3Provider(window.ethereum);
 
 function verifyMeta() {
-  if ( typeof window.ethereum == 'undefined' || typeof provider == 'undefined' ) {
-    window.alert('Please install MetaMask');
+  if (typeof window.ethereum == "undefined" || typeof provider == "undefined") {
+    window.alert("Please install MetaMask");
   }
 }
 
@@ -550,30 +550,28 @@ verifyMeta();
 try {
   // MetaMask requires requesting permission to connect users accounts
   const provider = new ethers.providers.Web3Provider(window.ethereum);
-  } catch (addError) {
-      window.alert('Please install MetaMask');
-  }
+} catch (addError) {
+  window.alert("Please install MetaMask");
+}
 
-  const isMetaMaskConnected = async () => {
-      const accounts = await provider.listAccounts();
-      return accounts.length > 0;
-  }
+const isMetaMaskConnected = async () => {
+  const accounts = await provider.listAccounts();
+  return accounts.length > 0;
+};
 
-async function isMetaMask () {
+async function isMetaMask() {
   await isMetaMaskConnected().then((connected) => {
-      if (connected) {
-        console.log('D474developments');
-          // metamask is connected
-      } else {
-        window.alert('Please install MetaMask');
-          // metamask is not connected
-      }
+    if (connected) {
+      console.log("D474developments");
+      // metamask is connected
+    } else {
+      window.alert("Please install MetaMask");
+      // metamask is not connected
+    }
   });
 }
 
 isMetaMask();
-
-
 
 /*
 async function getAccount() {
@@ -602,14 +600,13 @@ const contractAddress = "0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2";
 const contract = new ethers.Contract(contractAddress, abi, provider);
 
 async function getAccount() {
-
   try {
     // MetaMask requires requesting permission to connect users accounts
     provider.send("eth_requestAccounts", []);
     await provider.ready;
-    } catch (addError) {
-        window.alert('MetaMask cannot connect');
-    }
+  } catch (addError) {
+    window.alert("MetaMask cannot connect");
+  }
 
   // The MetaMask plugin also allows signing transactions to
   // send ether and pay to change state within the blockchain.
@@ -737,7 +734,7 @@ async function scanQRCode() {
     .then((result) => {
       console.log(result);
       window.alert(result);
-      return
+      return;
     })
     .catch((error) => {
       console.log("Please use mobile to scan QR codes");
