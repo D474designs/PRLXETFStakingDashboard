@@ -584,6 +584,17 @@ async function isMetaMask() {
 
 isMetaMask();
 
+function handleAccountsChanged(accounts) {
+  if (provider.accounts.length === 0) {
+   // MetaMask is locked or the user has not connected any accounts
+   alert('Please install MetaMask.');
+   console.log('Please connect to MetaMask.');
+  } else {
+    console.log('in partership with D474forex, 47token, That Hill Finance, and D474com');
+    // Do any other work!
+  }
+}
+
 /*
 async function getAccount() {
   let accounts = await ethereum.request({ method: 'eth_requestAccounts' });
@@ -943,6 +954,8 @@ sendEthButton3.addEventListener("click", async () => {
 
 // console.log(abi.set());
 console.log(abi[20]);
+
+
 
 //Sending Ethereum to an address
 /*
