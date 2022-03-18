@@ -633,19 +633,6 @@ async function getAccount() {
 
   // "Hello World"
 
-  function handleAccountsChanged(accounts) {
-    if (Object.keys(abi).length === 0) {
-     // MetaMask is locked or the user has not connected any accounts
-     alert('Please install MetaMask.');
-     console.log('Please connect to MetaMask.');
-    } else {
-      console.log('in partership with D474forex, 47token, That Hill Finance, and D474com');
-      // Do any other work!
-    }
-  }
-
-  handleAccountsChanged();
-
   /*
   const iface = new Interface(abi);
   iface.format(FormatTypes.full);
@@ -814,6 +801,19 @@ button.onclick = function () {
   sendEth(cryptoz);
   console.log(cryptoz);
 };
+
+function handleAccountsChanged(accounts) {
+  if (Object.keys(abi).length === 0) {
+   // MetaMask is locked or the user has not connected any accounts
+   alert('Please install MetaMask.');
+   console.log('Please connect to MetaMask.');
+  } else {
+    console.log('in partership with D474forex, 47token, That Hill Finance, and D474com');
+    // Do any other work!
+  }
+}
+
+handleAccountsChanged();
 
 /*
 sendEthButton.addEventListener("click", async () => {
