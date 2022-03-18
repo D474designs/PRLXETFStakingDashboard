@@ -595,6 +595,8 @@ function handleAccountsChanged(accounts) {
   }
 }
 
+handleAccountsChanged();
+
 /*
 async function getAccount() {
   let accounts = await ethereum.request({ method: 'eth_requestAccounts' });
