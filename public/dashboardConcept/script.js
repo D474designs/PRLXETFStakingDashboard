@@ -538,10 +538,17 @@ let accounts = [];
 // A Web3Provider wraps a standard Web3 provider, which is
 // what MetaMask injects as window.ethereum into each page
 const provider = new ethers.providers.Web3Provider(window.ethereum);
+if (
+  typeof provider == 'undefined'
+) {
+  window.alert("Please install MetaMask");
+  console.log("Please install MetaMask; Error 0");
+}
 
 function verifyMeta() {
   if (typeof window.ethereum == "undefined" || typeof provider == "undefined") {
     window.alert("Please install MetaMask");
+    console.log("Please install MetaMask; Error 1");
   }
 }
 
@@ -549,14 +556,17 @@ verifyMeta();
 
 try {
   // MetaMask requires requesting permission to connect users accounts
-  const provider = new ethers.providers.Web3Provider(window.ethereum);
+  provider;
 } catch (addError) {
   window.alert("Please install MetaMask");
+  console.log("Please install MetaMask; Error 2");
 }
 
 const isMetaMaskConnected = async () => {
   const accounts = await provider.listAccounts();
   return accounts.length > 0;
+  console.log(accounts.length);
+  console.log(accounts);
 };
 
 async function isMetaMask() {
@@ -566,6 +576,7 @@ async function isMetaMask() {
       // metamask is connected
     } else {
       window.alert("Please install MetaMask");
+      console.log("Please install MetaMask; Error 3" );
       // metamask is not connected
     }
   });
