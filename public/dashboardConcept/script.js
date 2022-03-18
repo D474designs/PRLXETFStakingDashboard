@@ -584,19 +584,6 @@ async function isMetaMask() {
 
 isMetaMask();
 
-function handleAccountsChanged(accounts) {
-  if (provider.accounts.length === 0) {
-   // MetaMask is locked or the user has not connected any accounts
-   alert('Please install MetaMask.');
-   console.log('Please connect to MetaMask.');
-  } else {
-    console.log('in partership with D474forex, 47token, That Hill Finance, and D474com');
-    // Do any other work!
-  }
-}
-
-handleAccountsChanged();
-
 /*
 async function getAccount() {
   let accounts = await ethereum.request({ method: 'eth_requestAccounts' });
@@ -645,6 +632,19 @@ async function getAccount() {
   console.log(values);
 
   // "Hello World"
+
+  function handleAccountsChanged(accounts) {
+    if (Object.keys(abi).length === 0) {
+     // MetaMask is locked or the user has not connected any accounts
+     alert('Please install MetaMask.');
+     console.log('Please connect to MetaMask.');
+    } else {
+      console.log('in partership with D474forex, 47token, That Hill Finance, and D474com');
+      // Do any other work!
+    }
+  }
+
+  handleAccountsChanged();
 
   /*
   const iface = new Interface(abi);
