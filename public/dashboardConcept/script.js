@@ -707,6 +707,7 @@ async function getAccount() {
         });
       } catch (addError) {
         // handle "add" error
+        window.alert("MetaMask cannot connect");
       }
     }
     // handle other "switch" errors
