@@ -749,10 +749,10 @@ async function getAccount() {
       }
     })
     .catch(console.error);
-}
 
-let pools = await prlxWithSigner.poolLength();
-let pool = ethers.BigNumber.from(pools._hex);
+    let pools = await prlxWithSigner.poolLength();
+    let pool = ethers.BigNumber.from(pools._hex);
+}
 
 async function scanQRCode() {
   ethereum
