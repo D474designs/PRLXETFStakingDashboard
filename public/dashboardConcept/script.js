@@ -863,11 +863,13 @@ async function viewPoolInformation() {
   let keys5 = reciept3[Object.keys(reciept3)[1]];
   let keys6 = reciept3[Object.keys(reciept3)[2]];
   let keys7 = reciept3[Object.keys(reciept3)[3]];
+  let keys7d = ethers.BigNumber.from(keys7);
   let keys8 = reciept3[Object.keys(reciept3)[4]];
+  let keys8d = ethers.BigNumber.from(keys8);
   let keys9 = reciept3[Object.keys(reciept3)[5]];
   let values4 = JSON.parse(JSON.stringify(reciept3));
 
-  window.alert('Pool ID: ' + pid2Input + '\n' + 'APY: ' + keys4 + '\n' + 'Length: ' + keys5 + '\n' + keys6 + '\n' + keys7 + '\n' + keys8 + '\n' + keys9);
+  window.alert('Pool ID: ' + pid2Input + '\n' + 'APY: ' + keys4 + '\n' + 'Length: ' + keys5 + '\n' + 'Total Deposited: '+ keys6 + '\n' + keys7d + '\n' + keys8d + '\n' + 'Minimum: ' + keys9);
   console.log(keys4);
   console.log(values4);
 }
