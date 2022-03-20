@@ -803,7 +803,7 @@ async function createPool() {
   const reciept = await prlxWithSigner.add(apyInput, daysInput, endDateInput, minContribInput);
 
   let keys2 = reciept[Object.keys(reciept)[0]];
-  let values2 = reciept[Object.keys(reciept)[1]];
+  let values2 = JSON.parse(JSON.stringify(reciept));
 
   window.alert('You Transaction Hash: ' + keys2);
   console.log(keys2);
@@ -835,7 +835,7 @@ async function editPool() {
   const reciept2 = await prlxWithSigner.set(pidInput, apy2Input, days2Input, endDate2Input, minContrib2Input);
 
   let keys3 = reciept2[Object.keys(reciept2)[0]];
-  let values3 = reciept2[Object.keys(reciept2)[1]];
+  let values3 = JSON.parse(JSON.stringify(reciept2));
 
   window.alert('You Transaction Hash: ' + keys3);
   console.log(keys3);
