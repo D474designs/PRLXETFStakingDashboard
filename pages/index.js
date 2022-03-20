@@ -111,12 +111,21 @@ export default function Home() {
                 <span class="showBalance"></span>
                 <br></br>
 
-                {/*
+                {/* */}
             			<form action="javascript:createPool();" method="post" id="create">
-            				<h1>Create Pool</h1>
+            				<h1></h1>
             				<div class="field">
             					<label for="apy">APY:</label>
             					<input type="text" id="apy" name="apy" placeholder="Enter APY" />
+            					<small></small>
+                      <label for="apy">Length in Days:</label>
+                      <input type="text" id="days" name="days" placeholder="Enter Length" />
+            					<small></small>
+                      <label for="apy">End Date in UNIX:</label>
+                      <input type="text" id="endDate" name="endDate" placeholder="Enter End Date" />
+            					<small></small>
+                      <label for="apy">Minimum Contribution:</label>
+                      <input type="text" id="minContrib" name="minContrib" placeholder="Enter Minimum" />
             					<small></small>
             				</div>
             				<div class="field">
@@ -127,9 +136,21 @@ export default function Home() {
                   <form action="javascript:editPool();" method="post" id="edit">
                     <h1>Edit Pool</h1>
                     <div class="field">
-                      <label for="pid">PID:</label>
-                      <input type="text" id="pid" name="pid" placeholder="Enter PID" />
-                      <small></small>
+                    <label for="apy">Pool ID:</label>
+                    <input type="text" id="pid" name="pid2" placeholder="Enter Pool ID" />
+                    <small></small>
+                    <label for="apy">APY:</label>
+                    <input type="text" id="apy2" name="apy2" placeholder="Enter APY" />
+                    <small></small>
+                    <label for="apy">Length in Days:</label>
+                    <input type="text" id="days2" name="days2" placeholder="Enter Length" />
+                    <small></small>
+                    <label for="apy">End Date in UNIX:</label>
+                    <input type="text" id="endDate2" name="endDate2" placeholder="Enter End Date" />
+                    <small></small>
+                    <label for="apy">Minimum Contribution:</label>
+                    <input type="text" id="minContrib2" name="minContrib2" placeholder="Enter Minimum" />
+                    <small></small>
                     </div>
                     <div class="field">
                       <button type="editPool">Edit</button>
@@ -144,10 +165,10 @@ export default function Home() {
                       <small></small>
                     </div>
                     <div class="field">
-                      <button type="viewPoolInformationool">View</button>
+                      <button type="viewPoolInformation">View</button>
                     </div>
                   </form>
-                  */}
+
 
                 <form className="position-relative text-center px-4 py-3">
                   <input

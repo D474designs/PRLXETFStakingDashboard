@@ -541,14 +541,14 @@ const provider = new ethers.providers.Web3Provider(window.ethereum);
 if (
   typeof provider == 'undefined'
 ) {
-  window.alert("Please install MetaMask");
-  console.log("Please install MetaMask; Error 0");
+  window.alert("MetaMask cannot connect");
+  console.log("MetaMask cannot connect; Error 0");
 }
 
 function verifyMeta() {
   if (typeof window.ethereum == "undefined" || typeof provider == "undefined") {
-    window.alert("Please install MetaMask");
-    console.log("Please install MetaMask; Error 1");
+    window.alert("MetaMask cannot connect");
+    console.log("MetaMask cannot connect; Error 1");
   }
 }
 
@@ -558,8 +558,8 @@ try {
   // MetaMask requires requesting permission to connect users accounts
   provider;
 } catch (addError) {
-  window.alert("Please install MetaMask");
-  console.log("Please install MetaMask; Error 2");
+  window.alert("MetaMask cannot connect");
+  console.log("MetaMask cannot connect; Error 2");
 }
 
 const isMetaMaskConnected = async () => {
@@ -575,8 +575,8 @@ async function isMetaMask() {
       console.log("D474developments");
       // metamask is connected
     } else {
-      window.alert("Please install MetaMask");
-      console.log("Please install MetaMask; Error 3" );
+      window.alert("MetaMask cannot connect");
+      console.log("MetaMask cannot connect; Error 3" );
       // metamask is not connected
     }
   });
@@ -779,24 +779,60 @@ qRCode.addEventListener("click", () => {
 
 async function createPool() {
   const form = document.getElementById("create");
+
   const apy = form.elements["apy"];
+  const days = form.elements["days"];
+  const endDate = form.elements["endDate"];
+  const minContrib = form.elements["minContrib"];
+
   // getting the element's value
   let apyInput = apy.value;
+  let daysInput = days.value;
+  let endDateInput = endDate.value;
+  let minContribInput = minContrib.value;
+
   console.log(apyInput);
+  console.log(daysInput);
+  console.log(endDateInput);
+  console.log(minContribInput);
+
+  iface.getFunction("add(apyInput, daysInput, endDateInput, minContribInput)");
 }
 async function editPool() {
-  const form2 = document.getElementById("edit");
+  const form2 = document.getElementById("create");
+
   const pid = form.elements["pid"];
+  const apy2 = form.elements["apy2"];
+  const days2 = form.elements["days2"];
+  const endDate2 = form.elements["endDate2"];
+  const minContrib2 = form.elements["minContrib2"];
+
   // getting the element's value
-  let pidInput = apy.value;
+  let pidInput = pid.value;
+  let apy2Input = apy2.value;
+  let days2Input = days2.value;
+  let endDate2Input = endDate2.value;
+  let minContrib2Input = minContrib2.value;
+
   console.log(pidInput);
+  console.log(apy2Input);
+  console.log(days2Input);
+  console.log(endDate2Input);
+  console.log(minContrib2Input);
+
+  iface.getFunction("set(pidInput, apyInput, daysInput, endDateInput, minContribInput)");
 }
 async function viewPoolInformation() {
   const form3 = document.getElementById("view");
+
   const pid2 = form.elements["pid2"];
+
   // getting the element's value
-  let pid2Input = apy.value;
+  let pid2Input = pid2.value;
+
   console.log(pid2Input);
+
+  iface.getFunction("poolInfo(pid2)");
 }
 
 const signer = provider.getSigner();
