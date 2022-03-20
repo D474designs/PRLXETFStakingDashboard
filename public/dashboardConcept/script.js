@@ -674,7 +674,7 @@ async function getAccount() {
 
   showAccount.innerHTML = account;
   showBalance.innerHTML = balance;
-  showPools.innerHTML = pool;
+
   showId.innerHTML = chainId;
   showNetwork.innerHTML = network;
   showGasPrice.innerHTML = gasPrice;
@@ -752,6 +752,8 @@ async function getAccount() {
 
     let pools = await prlxWithSigner.poolLength();
     let pool = ethers.BigNumber.from(pools._hex);
+
+    showPools.innerHTML = pool;
 }
 
 async function scanQRCode() {
