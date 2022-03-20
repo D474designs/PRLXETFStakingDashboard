@@ -162,7 +162,7 @@ export default function Home() {
                         "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
                       "text-shadow":
                         "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
-                    }}> View </button>
+                    }}> Information </button>
                   </div>
                 </form>
                 <br></br>
@@ -236,7 +236,7 @@ export default function Home() {
                             "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
                           "text-shadow":
                             "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
-                        }}> Create </button>
+                        }}> Create Pool </button>
               				</div>
               			</form>
 
@@ -323,7 +323,7 @@ export default function Home() {
                           "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
                         "text-shadow":
                           "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
-                      }}> Edit </button>
+                      }}> Edit Pool </button>
                     </div>
                   </form>
 
