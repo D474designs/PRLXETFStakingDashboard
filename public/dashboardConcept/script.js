@@ -623,7 +623,6 @@ async function getAccount() {
   // send ether and pay to change state within the blockchain.
   // For this, you need the account signer...
   const signer = provider.getSigner();
-
   // Get the current value
   let keys = abi[Object.keys(abi)[0]];
   let values = Object.keys(abi);
@@ -777,6 +776,8 @@ qRCode.addEventListener("click", () => {
   scanQRCode();
 });
 
+const prlxWithSigner = contract.connect(signer);
+
 async function createPool() {
   const form = document.getElementById("create");
 
@@ -799,7 +800,7 @@ async function createPool() {
   // add(apyInput, daysInput, endDateInput, minContribInput);
 
   // const options = {value: ethers.utils.parseEther("1.0")}
-  const reciept = await signer.contract.add(apyInput, daysInput, endDateInput, minContribInput);
+  const reciept = await prlxWithSigner.add(apyInput, daysInput, endDateInput, minContribInput);
   window.alert(reciept);
 }
 async function editPool() {
