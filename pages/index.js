@@ -147,9 +147,9 @@ export default function Home() {
                 </form>
 
                 <form action="javascript:viewPoolInformation();" method="post" id="view" className="position-relative text-center px-4 py-3">
-                  // <h1>Pool Information</h1>
+
                   <div class="field">
-                    <label for="pid2">PID:</label>
+                    <label for="pid2"></label>
                     <input type="text" id="pid2" name="pid2" className="form-control w-100 border-0" placeholder="Enter PID" />
                     <small></small>
                   </div>
@@ -212,18 +212,18 @@ export default function Home() {
 
                   {/* */}
               			<form action="javascript:createPool();" method="post" id="create" className="position-relative text-center px-4 py-3">
-              				// <h1>Create Pool</h1>
+
               				<div class="field">
-              					<label for="apy">APY:</label>
+              					<label for="apy"></label>
               					<input type="text" id="apy" name="apy" className="form-control w-100 border-0" placeholder="APY" />
               					<small></small>
-                        <label for="apy">Length in Days:</label>
-                        <input type="text" id="days" name="days" className="form-control w-100 border-0" placeholder="Length" />
+                        <label for="apy"></label>
+                        <input type="text" id="days" name="days" className="form-control w-100 border-0" placeholder="Length in Days" />
               					<small></small>
-                        <label for="apy">End Date in UNIX:</label>
-                        <input type="text" id="endDate" name="endDate" className="form-control w-100 border-0" placeholder="End Date" />
+                        <label for="apy"></label>
+                        <input type="text" id="endDate" name="endDate" className="form-control w-100 border-0" placeholder="End Date [UNIX]" />
               					<small></small>
-                        <label for="apy">Minimum Contribution:</label>
+                        <label for="apy"></label>
                         <input type="text" id="minContrib" name="minContrib" className="form-control w-100 border-0" placeholder="Minimum" />
               					<small></small>
               				</div>
@@ -296,22 +296,22 @@ export default function Home() {
                   <br></br>
 
                   <form action="javascript:editPool();" method="post" id="edit" className="position-relative text-center px-4 py-3">
-                    // <h1>Edit Pool</h1>
+
                     <div class="field">
-                    <label for="apy">Pool ID:</label>
-                    <input type="text" id="pid" name="pid2" className="form-control w-100 border-0" placeholder="Enter Pool ID" />
+                    <label for="apy"></label>
+                    <input type="text" id="pid" name="pid2" className="form-control w-100 border-0" placeholder="Pool ID" />
                     <small></small>
-                    <label for="apy">APY:</label>
-                    <input type="text" id="apy2" name="apy2" className="form-control w-100 border-0" placeholder="Enter APY" />
+                    <label for="apy"></label>
+                    <input type="text" id="apy2" name="apy2" className="form-control w-100 border-0" placeholder="APY" />
                     <small></small>
-                    <label for="apy">Length in Days:</label>
-                    <input type="text" id="days2" name="days2" className="form-control w-100 border-0" placeholder="Enter Length" />
+                    <label for="apy"></label>
+                    <input type="text" id="days2" name="days2" className="form-control w-100 border-0" placeholder="Length in Days" />
                     <small></small>
-                    <label for="apy">End Date in UNIX:</label>
-                    <input type="text" id="endDate2" name="endDate2" className="form-control w-100 border-0" placeholder="Enter End Date" />
+                    <label for="apy"></label>
+                    <input type="text" id="endDate2" name="endDate2" className="form-control w-100 border-0" placeholder="End Date [UNIX]" />
                     <small></small>
-                    <label for="apy">Minimum Contribution:</label>
-                    <input type="text" id="minContrib2" name="minContrib2" className="form-control w-100 border-0" placeholder="Enter Minimum" />
+                    <label for="apy"></label>
+                    <input type="text" id="minContrib2" name="minContrib2" className="form-control w-100 border-0" placeholder="Minimum" />
                     <small></small>
                     </div>
                     <div class="field">
