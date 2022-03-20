@@ -776,7 +776,7 @@ qRCode.addEventListener("click", () => {
   scanQRCode();
 });
 
-const prlxWithSigner = contract.connect(signer);
+// const prlxWithSigner = contract.connect(signer);
 
 async function createPool() {
   const form = document.getElementById("create");
