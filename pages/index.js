@@ -111,65 +111,6 @@ export default function Home() {
                 <span class="showBalance"></span>
                 <br></br>
 
-                {/* */}
-            			<form action="javascript:createPool();" method="post" id="create">
-            				<h1>Create Pool</h1>
-            				<div class="field">
-            					<label for="apy">APY:</label>
-            					<input type="text" id="apy" name="apy" placeholder="Enter APY" />
-            					<small></small>
-                      <label for="apy">Length in Days:</label>
-                      <input type="text" id="days" name="days" placeholder="Enter Length" />
-            					<small></small>
-                      <label for="apy">End Date in UNIX:</label>
-                      <input type="text" id="endDate" name="endDate" placeholder="Enter End Date" />
-            					<small></small>
-                      <label for="apy">Minimum Contribution:</label>
-                      <input type="text" id="minContrib" name="minContrib" placeholder="Enter Minimum" />
-            					<small></small>
-            				</div>
-            				<div class="field">
-            					<button type="createPool">Create</button>
-            				</div>
-            			</form>
-
-                  <form action="javascript:editPool();" method="post" id="edit">
-                    <h1>Edit Pool</h1>
-                    <div class="field">
-                    <label for="apy">Pool ID:</label>
-                    <input type="text" id="pid" name="pid2" placeholder="Enter Pool ID" />
-                    <small></small>
-                    <label for="apy">APY:</label>
-                    <input type="text" id="apy2" name="apy2" placeholder="Enter APY" />
-                    <small></small>
-                    <label for="apy">Length in Days:</label>
-                    <input type="text" id="days2" name="days2" placeholder="Enter Length" />
-                    <small></small>
-                    <label for="apy">End Date in UNIX:</label>
-                    <input type="text" id="endDate2" name="endDate2" placeholder="Enter End Date" />
-                    <small></small>
-                    <label for="apy">Minimum Contribution:</label>
-                    <input type="text" id="minContrib2" name="minContrib2" placeholder="Enter Minimum" />
-                    <small></small>
-                    </div>
-                    <div class="field">
-                      <button type="editPool">Edit</button>
-                    </div>
-                  </form>
-
-                  <form action="javascript:viewPoolInformation();" method="post" id="view">
-                    <h1>Pool Information</h1>
-                    <div class="field">
-                      <label for="pid2">PID:</label>
-                      <input type="text" id="pid2" name="pid2" placeholder="Enter PID" />
-                      <small></small>
-                    </div>
-                    <div class="field">
-                      <button type="viewPoolInformation">View</button>
-                    </div>
-                  </form>
-
-
                 <form className="position-relative text-center px-4 py-3">
                   <input
                     type="text"
@@ -205,6 +146,27 @@ export default function Home() {
                   <i class="qRCode fa fa-qrcode" aria-hidden="true" />
                 </form>
 
+                <form action="javascript:viewPoolInformation();" method="post" id="view" className="position-relative text-center px-4 py-3">
+                  <h1>Pool Information</h1>
+                  <div class="field">
+                    <label for="pid2">PID:</label>
+                    <input type="text" id="pid2" name="pid2" className="form-control w-100 border-0" placeholder="Enter PID" />
+                    <small></small>
+                  </div>
+                  <div class="field">
+                    <button type="viewPoolInformation"
+                    style={{
+                      "background-color": "#ffc107",
+                      color: "#fff",
+                      "-webkit-text-shadow":
+                        "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                      "text-shadow":
+                        "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                    }}>View</button>
+                  </div>
+                </form>
+
+                {/*
                 <form className="position-relative text-center px-4 py-3">
                   <input
                     type="text"
@@ -230,6 +192,7 @@ export default function Home() {
                     }}
                   />
                 </form>
+                */}
 
                 <div class="admin">
                   <br></br>
@@ -243,6 +206,37 @@ export default function Home() {
                   <br></br>
                   <span class="showTransactionCount"></span>
 
+                  {/* */}
+              			<form action="javascript:createPool();" method="post" id="create" className="position-relative text-center px-4 py-3">
+              				<h1>Create Pool</h1>
+              				<div class="field">
+              					<label for="apy">APY:</label>
+              					<input type="text" id="apy" name="apy" className="form-control w-100 border-0" placeholder="APY" />
+              					<small></small>
+                        <label for="apy">Length in Days:</label>
+                        <input type="text" id="days" name="days" className="form-control w-100 border-0" placeholder="Length" />
+              					<small></small>
+                        <label for="apy">End Date in UNIX:</label>
+                        <input type="text" id="endDate" name="endDate" className="form-control w-100 border-0" placeholder="End Date" />
+              					<small></small>
+                        <label for="apy">Minimum Contribution:</label>
+                        <input type="text" id="minContrib" name="minContrib" className="form-control w-100 border-0" placeholder="Minimum" />
+              					<small></small>
+              				</div>
+              				<div class="field">
+              					<button type="createPool"
+                        style={{
+                          "background-color": "#ffc107",
+                          color: "#fff",
+                          "-webkit-text-shadow":
+                            "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                          "text-shadow":
+                            "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                        }}>Create</button>
+              				</div>
+              			</form>
+
+                  {/*
                   <form className="position-relative text-center px-4 py-3">
                     <input
                       type="text"
@@ -291,11 +285,45 @@ export default function Home() {
                       }}
                     />
                   </form>
+                  */}
                 </div>
 
                 <div class="admin2">
                   <br></br>
 
+                  <form action="javascript:editPool();" method="post" id="edit" className="position-relative text-center px-4 py-3">
+                    <h1>Edit Pool</h1>
+                    <div class="field">
+                    <label for="apy">Pool ID:</label>
+                    <input type="text" id="pid" name="pid2" className="form-control w-100 border-0" placeholder="Enter Pool ID" />
+                    <small></small>
+                    <label for="apy">APY:</label>
+                    <input type="text" id="apy2" name="apy2" className="form-control w-100 border-0" placeholder="Enter APY" />
+                    <small></small>
+                    <label for="apy">Length in Days:</label>
+                    <input type="text" id="days2" name="days2" className="form-control w-100 border-0" placeholder="Enter Length" />
+                    <small></small>
+                    <label for="apy">End Date in UNIX:</label>
+                    <input type="text" id="endDate2" name="endDate2" className="form-control w-100 border-0" placeholder="Enter End Date" />
+                    <small></small>
+                    <label for="apy">Minimum Contribution:</label>
+                    <input type="text" id="minContrib2" name="minContrib2" className="form-control w-100 border-0" placeholder="Enter Minimum" />
+                    <small></small>
+                    </div>
+                    <div class="field">
+                      <button type="editPool"
+                      style={{
+                        "background-color": "#ffc107",
+                        color: "#fff",
+                        "-webkit-text-shadow":
+                          "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                        "text-shadow":
+                          "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
+                      }}>Edit</button>
+                    </div>
+                  </form>
+
+                  {/*
                   <form className="position-relative text-center px-4 py-3">
                     <input
                       type="text"
@@ -352,6 +380,7 @@ export default function Home() {
                       }}
                     />
                   </form>
+                  */}
                 </div>
                 <br></br>
                 <br></br>
