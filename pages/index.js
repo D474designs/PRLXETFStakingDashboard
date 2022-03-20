@@ -113,7 +113,7 @@ export default function Home() {
 
                 {/* */}
             			<form action="javascript:createPool();" method="post" id="create">
-            				<h1></h1>
+            				<h1>Create Pool</h1>
             				<div class="field">
             					<label for="apy">APY:</label>
             					<input type="text" id="apy" name="apy" placeholder="Enter APY" />
