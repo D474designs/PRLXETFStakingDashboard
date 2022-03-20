@@ -855,9 +855,9 @@ async function viewPoolInformation() {
   const reciept3 = await prlxWithSigner.poolInfo(pid2Input);
 
   let keys4 = reciept3[Object.keys(reciept3)[0]];
-  let values4 = reciept3[Object.keys(reciept3)];
+  let values4 = Object.keys(reciept3);
 
-  window.alert('You Transaction Hash: ' + values4);
+  window.alert(values4);
   console.log(keys4);
   console.log(values4);
 }
