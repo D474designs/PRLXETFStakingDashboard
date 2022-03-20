@@ -667,9 +667,6 @@ async function getAccount() {
   let balances = await provider.getBalance(account);
   let balance = ethers.utils.formatEther(balances);
 
-  let pools = await prlxWithSigner.poolLength();
-  let pool = ethers.BigNumber.from(pools._hex);
-
   let gasPrices = await provider.getGasPrice();
   let gasPrice = ethers.utils.formatEther(gasPrices);
 
@@ -753,6 +750,9 @@ async function getAccount() {
     })
     .catch(console.error);
 }
+
+let pools = await prlxWithSigner.poolLength();
+let pool = ethers.BigNumber.from(pools._hex);
 
 async function scanQRCode() {
   ethereum
