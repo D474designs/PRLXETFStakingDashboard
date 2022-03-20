@@ -507,6 +507,7 @@ const qRCode = document.querySelector(".qRCode");
 
 const showAccount = document.querySelector(".showAccount");
 const showBalance = document.querySelector(".showBalance");
+const showPools = document.querySelector(".showPools");
 /*
 const crypto = document.querySelector("#crypto");
 const recipient = document.querySelector("#recipient");
@@ -666,6 +667,9 @@ async function getAccount() {
   let balances = await provider.getBalance(account);
   let balance = ethers.utils.formatEther(balances);
 
+  let pools = prlxWithSigner.poolLength();
+  let pool = pools;
+
   let gasPrices = await provider.getGasPrice();
   let gasPrice = ethers.utils.formatEther(gasPrices);
 
@@ -673,6 +677,7 @@ async function getAccount() {
 
   showAccount.innerHTML = account;
   showBalance.innerHTML = balance;
+  showPools.innerHTML = pool;
   showId.innerHTML = chainId;
   showNetwork.innerHTML = network;
   showGasPrice.innerHTML = gasPrice;

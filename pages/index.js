@@ -165,6 +165,10 @@ export default function Home() {
                     }}>View</button>
                   </div>
                 </form>
+                <br></br>
+                <h1>Pools in Existence:</h1>
+                <span class="showPools"></span>
+                <br></br>
 
                 {/*
                 <form className="position-relative text-center px-4 py-3">
