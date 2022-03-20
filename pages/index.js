@@ -147,7 +147,7 @@ export default function Home() {
                 </form>
 
                 <form action="javascript:viewPoolInformation();" method="post" id="view" className="position-relative text-center px-4 py-3">
-                  <h1>Pool Information</h1>
+                  // <h1>Pool Information</h1>
                   <div class="field">
                     <label for="pid2">PID:</label>
                     <input type="text" id="pid2" name="pid2" className="form-control w-100 border-0" placeholder="Enter PID" />
@@ -166,7 +166,7 @@ export default function Home() {
                   </div>
                 </form>
                 <br></br>
-                <h1>Pools in Existence:</h1>
+                // <h1>Pools in Existence:</h1>
                 <span class="showPools"></span>
                 <br></br>
 
@@ -212,7 +212,7 @@ export default function Home() {
 
                   {/* */}
               			<form action="javascript:createPool();" method="post" id="create" className="position-relative text-center px-4 py-3">
-              				<h1>Create Pool</h1>
+              				// <h1>Create Pool</h1>
               				<div class="field">
               					<label for="apy">APY:</label>
               					<input type="text" id="apy" name="apy" className="form-control w-100 border-0" placeholder="APY" />
@@ -296,7 +296,7 @@ export default function Home() {
                   <br></br>
 
                   <form action="javascript:editPool();" method="post" id="edit" className="position-relative text-center px-4 py-3">
-                    <h1>Edit Pool</h1>
+                    // <h1>Edit Pool</h1>
                     <div class="field">
                     <label for="apy">Pool ID:</label>
                     <input type="text" id="pid" name="pid2" className="form-control w-100 border-0" placeholder="Enter Pool ID" />
