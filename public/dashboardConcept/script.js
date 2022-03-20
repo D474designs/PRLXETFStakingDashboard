@@ -668,7 +668,7 @@ async function getAccount() {
   let balance = ethers.utils.formatEther(balances);
 
   let pools = prlxWithSigner.poolLength();
-  let pool = pools;
+  let pool = pools.then();
 
   let gasPrices = await provider.getGasPrice();
   let gasPrice = ethers.utils.formatEther(gasPrices);
