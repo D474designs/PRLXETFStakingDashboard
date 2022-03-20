@@ -796,7 +796,7 @@ async function createPool() {
   console.log(endDateInput);
   console.log(minContribInput);
 
-  add(apyInput, daysInput, endDateInput, minContribInput);
+  // add(apyInput, daysInput, endDateInput, minContribInput);
 
   // const options = {value: ethers.utils.parseEther("1.0")}
   const reciept = await contract.add(apyInput, daysInput, endDateInput, minContribInput);
@@ -824,7 +824,7 @@ async function editPool() {
   console.log(endDate2Input);
   console.log(minContrib2Input);
 
-  iface.getFunction("set(pidInput, apyInput, daysInput, endDateInput, minContribInput)");
+  // iface.getFunction("set(pidInput, apyInput, daysInput, endDateInput, minContribInput)");
 }
 async function viewPoolInformation() {
   const form3 = document.getElementById("view");
@@ -836,7 +836,7 @@ async function viewPoolInformation() {
 
   console.log(pid2Input);
 
-  iface.getFunction("poolInfo(pid2)");
+  // iface.getFunction("poolInfo(pid2)");
 }
 
 const signer = provider.getSigner();
