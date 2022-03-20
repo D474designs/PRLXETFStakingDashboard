@@ -796,10 +796,10 @@ async function createPool() {
   console.log(endDateInput);
   console.log(minContribInput);
 
-  iface.getFunction("add(apyInput, daysInput, endDateInput, minContribInput)");
+  signer.contract.add(apyInput, daysInput, endDateInput, minContribInput);
 }
 async function editPool() {
-  const form2 = document.getElementById("create");
+  const form2 = document.getElementById("edit");
 
   const pid = form.elements["pid"];
   const apy2 = form.elements["apy2"];
