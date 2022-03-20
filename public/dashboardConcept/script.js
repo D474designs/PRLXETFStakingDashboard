@@ -869,7 +869,7 @@ async function viewPoolInformation() {
   let keys9 = reciept3[Object.keys(reciept3)[5]];
   let values4 = JSON.parse(JSON.stringify(reciept3));
 
-  window.alert('Pool ID: ' + pid2Input + '\n' + 'APY: ' + keys4 + '\n' + 'Length: ' + keys5 + '\n' + 'Total Deposited: '+ keys6 + '\n' + keys7d + '\n' + keys8d + '\n' + 'Minimum: ' + keys9);
+  window.alert('Pool ID: ' + pid2Input + '\n' + 'APY: ' + keys4 + '\n' + 'Length: ' + keys5 + '\n' + 'Total Deposited: '+ keys6 + '\n' + 'Start Date: ' + keys7d + '\n' + 'End Date: ' + keys8d + '\n' + 'Minimum: ' + keys9);
   console.log(keys4);
   console.log(values4);
 }
