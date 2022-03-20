@@ -670,6 +670,18 @@ async function getAccount() {
   let pools = await prlxWithSigner.poolLength();
   let pool = ethers.utils.formatEther(pools);
 
+  async function getMul() {
+    for (let i = 0; i < 50; i++) {
+        try {
+            let res = await prlxWithSigner.poolLength(i, i + 1);
+            console.log('i=', i, 'res: ', res);
+        } catch (error) {
+            console.log(error);
+        }
+    }
+}
+getMul();
+
   let gasPrices = await provider.getGasPrice();
   let gasPrice = ethers.utils.formatEther(gasPrices);
 
