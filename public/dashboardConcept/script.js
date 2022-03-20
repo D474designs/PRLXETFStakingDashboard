@@ -796,7 +796,11 @@ async function createPool() {
   console.log(endDateInput);
   console.log(minContribInput);
 
-  signer.contract.add(apyInput, daysInput, endDateInput, minContribInput);
+  add(apyInput, daysInput, endDateInput, minContribInput);
+
+  // const options = {value: ethers.utils.parseEther("1.0")}
+  const reciept = await contract.add(apyInput, daysInput, endDateInput, minContribInput);
+  window.alert(reciept);
 }
 async function editPool() {
   const form2 = document.getElementById("edit");
