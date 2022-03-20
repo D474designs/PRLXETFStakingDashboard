@@ -155,7 +155,6 @@ export default function Home() {
                   </div>
                   <div class="field">
                     <button type="viewPoolInformation"
-                    value=" Information "
                     style={{
                       "background-color": "#ffc107",
                       color: "#fff",
@@ -163,7 +162,7 @@ export default function Home() {
                         "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
                       "text-shadow":
                         "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
-                    }}></button>
+                    }}>&nbsp; Information &nbsp;</button>
                   </div>
                 </form>
                 <br></br>
@@ -230,7 +229,6 @@ export default function Home() {
               				</div>
               				<div class="field">
               					<button type="createPool"
-                        value=" Create Pool "
                         style={{
                           "background-color": "#ffc107",
                           color: "#fff",
@@ -238,7 +236,7 @@ export default function Home() {
                             "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
                           "text-shadow":
                             "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
-                        }}></button>
+                        }}>&nbsp; Create Pool &nbsp;</button>
               				</div>
               			</form>
 
@@ -318,7 +316,6 @@ export default function Home() {
                     </div>
                     <div class="field">
                       <button type="editPool"
-                      value=" Edit Pool "
                       style={{
                         "background-color": "#ffc107",
                         color: "#fff",
@@ -326,7 +323,7 @@ export default function Home() {
                           "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
                         "text-shadow":
                           "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
-                      }}></button>
+                      }}>&nbsp; Edit Pool &nbsp;</button>
                     </div>
                   </form>
 
