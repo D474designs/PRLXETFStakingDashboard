@@ -155,6 +155,7 @@ export default function Home() {
                   </div>
                   <div class="field">
                     <button type="viewPoolInformation"
+                    value=" Information "
                     style={{
                       "background-color": "#ffc107",
                       color: "#fff",
@@ -162,11 +163,11 @@ export default function Home() {
                         "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
                       "text-shadow":
                         "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
-                    }}> Information </button>
+                    }}></button>
                   </div>
                 </form>
                 <br></br>
-                
+
                 <span class="showPools"></span>
                 <br></br>
 
@@ -229,6 +230,7 @@ export default function Home() {
               				</div>
               				<div class="field">
               					<button type="createPool"
+                        value=" Create Pool "
                         style={{
                           "background-color": "#ffc107",
                           color: "#fff",
@@ -236,7 +238,7 @@ export default function Home() {
                             "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
                           "text-shadow":
                             "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
-                        }}> Create Pool </button>
+                        }}></button>
               				</div>
               			</form>
 
@@ -316,6 +318,7 @@ export default function Home() {
                     </div>
                     <div class="field">
                       <button type="editPool"
+                      value=" Edit Pool "
                       style={{
                         "background-color": "#ffc107",
                         color: "#fff",
@@ -323,7 +326,7 @@ export default function Home() {
                           "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
                         "text-shadow":
                           "-1px -1px 0 #000,    1px -1px 0 #000,    -1px 1px 0 #000,    1px 1px 0 #000",
-                      }}> Edit Pool </button>
+                      }}></button>
                     </div>
                   </form>
 
