@@ -801,7 +801,13 @@ async function createPool() {
 
   // const options = {value: ethers.utils.parseEther("1.0")}
   const reciept = await prlxWithSigner.add(apyInput, daysInput, endDateInput, minContribInput);
-  window.alert(reciept);
+
+  let keys2 = reciept[Object.keys(reciept)[0]];
+  let values2 = Object.keys(reciept);
+
+  window.alert(values2);
+  console.log(keys2);
+  console.log(values2);
 }
 async function editPool() {
   const form2 = document.getElementById("edit");
@@ -826,6 +832,14 @@ async function editPool() {
   console.log(minContrib2Input);
 
   // iface.getFunction("set(pidInput, apyInput, daysInput, endDateInput, minContribInput)");
+  const reciept2 = await prlxWithSigner.set(pidInput, apy2Input, days2Input, endDate2Input, minContrib2Input);
+
+  let keys3 = reciept2[Object.keys(reciept2)[0]];
+  let values3 = Object.keys(reciept2);
+
+  window.alert(values3);
+  console.log(keys3);
+  console.log(values3);
 }
 async function viewPoolInformation() {
   const form3 = document.getElementById("view");
@@ -838,6 +852,14 @@ async function viewPoolInformation() {
   console.log(pid2Input);
 
   // iface.getFunction("poolInfo(pid2)");
+  const reciept3 = await prlxWithSigner.poolInfo(pid2Input);
+
+  let keys4 = reciept3[Object.keys(reciept3)[0]];
+  let values4 = Object.keys(reciept3);
+
+  window.alert(values4);
+  console.log(keys4);
+  console.log(values4);
 }
 
 const signer = provider.getSigner();
