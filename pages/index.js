@@ -166,7 +166,7 @@ export default function Home() {
                   </div>
                 </form>
                 <br></br>
-                // <h1>Pools in Existence:</h1>
+                
                 <span class="showPools"></span>
                 <br></br>
 
