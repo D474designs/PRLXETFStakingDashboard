@@ -803,20 +803,20 @@ async function createPool() {
   const reciept = await prlxWithSigner.add(apyInput, daysInput, endDateInput, minContribInput);
 
   let keys2 = reciept[Object.keys(reciept)[0]];
-  let values2 = Object.keys(reciept);
+  let values2 = reciept[Object.keys(reciept)];
 
-  window.alert(values2);
+  window.alert(keys2);
   console.log(keys2);
   console.log(values2);
 }
 async function editPool() {
   const form2 = document.getElementById("edit");
 
-  const pid = form.elements["pid"];
-  const apy2 = form.elements["apy2"];
-  const days2 = form.elements["days2"];
-  const endDate2 = form.elements["endDate2"];
-  const minContrib2 = form.elements["minContrib2"];
+  const pid = form2.elements["pid"];
+  const apy2 = form2.elements["apy2"];
+  const days2 = form2.elements["days2"];
+  const endDate2 = form2.elements["endDate2"];
+  const minContrib2 = form2.elements["minContrib2"];
 
   // getting the element's value
   let pidInput = pid.value;
@@ -835,16 +835,16 @@ async function editPool() {
   const reciept2 = await prlxWithSigner.set(pidInput, apy2Input, days2Input, endDate2Input, minContrib2Input);
 
   let keys3 = reciept2[Object.keys(reciept2)[0]];
-  let values3 = Object.keys(reciept2);
+  let values3 = reciept2[Object.keys(reciept2)];
 
-  window.alert(values3);
+  window.alert(keys3);
   console.log(keys3);
   console.log(values3);
 }
 async function viewPoolInformation() {
   const form3 = document.getElementById("view");
 
-  const pid2 = form.elements["pid2"];
+  const pid2 = form3.elements["pid2"];
 
   // getting the element's value
   let pid2Input = pid2.value;
@@ -855,9 +855,9 @@ async function viewPoolInformation() {
   const reciept3 = await prlxWithSigner.poolInfo(pid2Input);
 
   let keys4 = reciept3[Object.keys(reciept3)[0]];
-  let values4 = Object.keys(reciept3);
+  let values4 = reciept3[Object.keys(reciept3)];
 
-  window.alert(values4);
+  window.alert(keys4);
   console.log(keys4);
   console.log(values4);
 }
