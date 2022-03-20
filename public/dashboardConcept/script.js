@@ -921,26 +921,28 @@ sendEthButton.addEventListener("click", async () => {
     .catch((error) => console.error);
 });
 */
-
+/*
 sendEthButton2.addEventListener("click", async () => {
   let apy = document.getElementById("apy");
   let days = document.getElementById("days");
   let endDate = document.getElementById("endDate");
   let min = document.getElementById("min");
-
+*/
   /*
   let _apy = apy;
   let _days = days;
   let _endDate = endDate;
   let _min = min;
   */
-
+/*
   let tx = await signer.abi.add(
     { _apy: apy, _lockPeriodInDays: days, _endDate: endDate, _minContrib: min },
     (err, res) => {
       /** do something with results **/
+      /*
     }
   );
+
   // contract.add(_apy, _days, _endDate, _min);
 
   console.log(tx.hash);
@@ -960,7 +962,7 @@ sendEthButton3.addEventListener("click", async () => {
   let days2 = document.getElementById("days2");
   let endDate2 = document.getElementById("endDate2");
   let min2 = document.getElementById("min2");
-
+*/
   /*
   var _pid = pid;
   var _apy = apy2;
@@ -968,7 +970,7 @@ sendEthButton3.addEventListener("click", async () => {
   var _endDate = endDate2;
   var _min = min2;
   */
-
+/*
   let tx = await signer.abi.set(
     {
       _pid: pid,
@@ -978,11 +980,14 @@ sendEthButton3.addEventListener("click", async () => {
       _minContrib: min2,
     },
     (err, res) => {
+    */
       /** do something with results **/
+    /*
     }
   );
+  */
   // contract.set(_pid, _apy, _days, _endDate, _min);
-
+/*
   console.log(tx.hash);
   await tx.wait();
   let newValue = await contract.poolInfo(tx.pid);
@@ -996,7 +1001,7 @@ console.log(abi[8]);
 
 sendEthButton3.addEventListener("click", async () => {
   let pid2 = document.getElementById("poolId2");
-
+*/
   /*
   var _pid = pid;
   var _apy = apy2;
@@ -1004,17 +1009,20 @@ sendEthButton3.addEventListener("click", async () => {
   var _endDate = endDate2;
   var _min = min2;
   */
-
+/*
   let tx = await signer.abi.view(
     {
       _pid2: pid2,
     },
     (err, res) => {
+    */
       /** do something with results **/
+      /*
     }
   );
+  */
   // contract.set(_pid, _apy, _days, _endDate, _min);
-
+/*
   console.log(tx.hash);
   await tx.wait();
   let newValue = await contract.poolInfo(tx.pid);
@@ -1022,9 +1030,9 @@ sendEthButton3.addEventListener("click", async () => {
     apy + lockPeriodInDays + totalDeposit + startDate + endDate + minContrib
   );
 });
-
+*/
 // console.log(abi.set());
-console.log(abi[20]);
+// console.log(abi[20]);
 
 
 
