@@ -5,9 +5,10 @@
 # Dashboard
 
 [![Netlify x Parallax DeFi](https://i.imgur.com/GNzT3is.png) **Live Site Preview**](https://prlx-etf-staking.netlify.app/)
-[**Watch the Video Example on my YouTube Channel**](https://prlx-etf-staking.netlify.app/)
 
-[***Make sure to use the MetaMask browser if you are on mobile!***](https://metamask.io/)
+[**Watch the Video Example on my YouTube Channel**](https://prlx-etf-staking.netlify.app/) :eye_speech_bubble:
+
+[***Make sure to use the MetaMask browser if you are on mobile!***](https://metamask.io/) :fox_face:
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ce654043-3f4d-4c29-8412-01b29760fe5a/deploy-status)](https://app.netlify.com/sites/prlx-etf-staking/deploys)
 
