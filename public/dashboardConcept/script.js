@@ -616,8 +616,6 @@ async function getAccount() {
     // MetaMask requires requesting permission to connect users accounts
     provider.send("eth_requestAccounts", []);
     await provider.ready;
-    } catch (addError) {
-      window.alert("MetaMask cannot connect");
     }
 
   // The MetaMask plugin also allows signing transactions to
@@ -720,9 +718,6 @@ async function getAccount() {
             },
           ],
         });
-      } catch (addError) {
-        // handle "add" error
-        window.alert("MetaMask cannot connect");
       }
     }
     // handle other "switch" errors
@@ -772,6 +767,7 @@ async function scanQRCode() {
       console.log("Please use mobile to scan QR codes");
       window.alert("Please use mobile to scan QR codes");
       console.log(error);
+      return;
     });
 }
 
