@@ -694,7 +694,6 @@ async function getAccount() {
   } catch (switchError) {
     // This error code indicates that the chain has not been added to MetaMask.
     if (switchError.code === 4902) {
-      try {
         await ethereum.request({
           method: "wallet_addEthereumChain",
           params: [
@@ -716,7 +715,6 @@ async function getAccount() {
             },
           ],
         });
-      }
     }
     // handle other "switch" errors
   }
