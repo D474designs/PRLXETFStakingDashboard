@@ -612,11 +612,9 @@ const contractAddress = "0x15daf22b26cce33cc5f7e08a9b54d84ecd26c3a2";
 const contract = new ethers.Contract(contractAddress, abi, provider);
 
 async function getAccount() {
-  try {
     // MetaMask requires requesting permission to connect users accounts
     provider.send("eth_requestAccounts", []);
     await provider.ready;
-    }
 
   // The MetaMask plugin also allows signing transactions to
   // send ether and pay to change state within the blockchain.
