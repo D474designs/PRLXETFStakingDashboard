@@ -539,6 +539,8 @@ let accounts = [];
 // A Web3Provider wraps a standard Web3 provider, which is
 // what MetaMask injects as window.ethereum into each page
 const provider = new ethers.providers.Web3Provider(window.ethereum);
+
+/*
 if (
   typeof provider == 'undefined'
 ) {
@@ -556,12 +558,17 @@ function verifyMeta() {
 verifyMeta();
 
 try {
+  */
+
   // MetaMask requires requesting permission to connect users accounts
   provider;
+
+  /*
 } catch (addError) {
   window.alert("MetaMask cannot connect");
   console.log("MetaMask cannot connect; Error 2");
 }
+*/
 
 const isMetaMaskConnected = async () => {
   const accounts = await provider.listAccounts();
@@ -575,11 +582,14 @@ async function isMetaMask() {
     if (connected) {
       console.log("D474developments");
       // metamask is connected
-    } else {
+    }
+    /*
+    else {
       window.alert("MetaMask cannot connect");
       console.log("MetaMask cannot connect; Error 3" );
       // metamask is not connected
     }
+    */
   });
 }
 
