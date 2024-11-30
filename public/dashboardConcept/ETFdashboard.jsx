@@ -262,7 +262,7 @@
               </div>
               <div className="admin d-flex align-items-center rounded-2 p-3 mb-4">
                 <div className="img">
-                  <img className="img-fluid rounded-pill" width={75} height={75} src="../public/skullGuardianGreenZoombie.png" alt="admin" />
+                  <img className="img-fluid rounded-pill" width={75} height={75} src="https://i.imgur.com/GNzT3is.png" alt="admin" />
                 </div>
                 <div className="ms-3">
                   <h3 className="fs-5 mb-1">Ivaylo Panosyan</h3>

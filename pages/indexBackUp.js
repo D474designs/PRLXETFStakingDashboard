@@ -56,7 +56,7 @@ export default function Home() {
             <img
               className="rounded-pill img-fluid"
               width={65}
-              src="../public/skullGuardianGreenZoombie.png"
+              src="https://i.imgur.com/GNzT3is.png"
               alt
             />
             <div className="ms-2">
@@ -647,7 +647,7 @@ export default function Home() {
                           className="img-fluid rounded-pill"
                           width={75}
                           height={75}
-                          src="../public/skullGuardianGreenZoombie.png"
+                          src="https://i.imgur.com/GNzT3is.png"
                           alt="admin"
                         />
                       </div>
