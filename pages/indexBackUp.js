@@ -647,7 +647,7 @@ export default function Home() {
                           className="img-fluid rounded-pill"
                           width={75}
                           height={75}
-                          src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907086/small/1501685404/enhance"
+                          src="../public/skullGuardianGreenZoombie.png"
                           alt="admin"
                         />
                       </div>
