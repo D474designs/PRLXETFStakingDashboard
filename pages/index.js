@@ -795,7 +795,7 @@ export default function Home() {
                           className="img-fluid rounded-pill"
                           width={75}
                           height={75}
-                          src="../public/favicon.ico"
+                          src="../public/netliheart.svg"
                           /* src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907137/small/1501685404/enhance" */
                           alt="admin"
                         />
