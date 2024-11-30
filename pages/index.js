@@ -70,7 +70,8 @@ export default function Home() {
             <img
               className="rounded-pill img-fluid"
               width={65}
-              src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907008/medium/1501685726/enhance"
+              src="../public/netliheart.svg"
+              /* src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907008/medium/1501685726/enhance" */
               alt
             />
             <div className="ms-2">
