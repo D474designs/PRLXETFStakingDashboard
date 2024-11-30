@@ -70,7 +70,7 @@ export default function Home() {
             <img
               className="rounded-pill img-fluid"
               width={65}
-              src="../public/netliheart.svg"
+              src="../public/skullGuardianGreenZoombie.png"
               /* src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907008/medium/1501685726/enhance" */
               alt
             />
@@ -796,7 +796,7 @@ export default function Home() {
                           className="img-fluid rounded-pill"
                           width={75}
                           height={75}
-                          src="../public/netliheart.svg"
+                          src="../public/skullGuardianGreenZoombie.png"
                           /* src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907137/small/1501685404/enhance" */
                           alt="admin"
                         />
@@ -814,7 +814,7 @@ export default function Home() {
                           className="img-fluid rounded-pill"
                           width={75}
                           height={75}
-                          src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907019/small/1501685403/enhance"
+                          src="../public/skullGuardianGreenZoombie.png"
                           alt="admin"
                         />
                       </div>
@@ -836,7 +836,7 @@ export default function Home() {
                           className="img-fluid rounded-pill"
                           width={75}
                           height={75}
-                          src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907114/small/1501685404/enhance"
+                          src="../public/skullGuardianGreenZoombie.png"
                           alt="admin"
                         />
                       </div>
@@ -853,7 +853,7 @@ export default function Home() {
                           className="img-fluid rounded-pill"
                           width={75}
                           height={75}
-                          src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907086/small/1501685404/enhance"
+                          src="../public/skullGuardianGreenZoombie.png"
                           alt="admin"
                         />
                       </div>
@@ -870,7 +870,7 @@ export default function Home() {
                           className="img-fluid rounded-pill"
                           width={75}
                           height={75}
-                          src="https://uniim1.shutterfly.com/ng/services/mediarender/THISLIFE/021036514417/media/23148907008/medium/1501685726/enhance"
+                          src="../public/skullGuardianGreenZoombie.png"
                           alt="admin"
                         />
                       </div>
